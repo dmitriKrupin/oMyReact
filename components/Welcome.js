@@ -1,57 +1,36 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import Box from '@mui/system/Box';
+import Grid from '@mui/system/Unstable_Grid';
+import styled from '@mui/system/styled';
+import {Video} from "./Video";
+import {Access} from "./Access";
 
-export function Welcome() {
+const Item = styled('div')(({theme}) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    border: '1px solid',
+    borderColor: theme.palette.mode === 'dark' ? '#444d58' : '#ced7e0',
+    padding: theme.spacing(1),
+    borderRadius: '30px',
+    display: 'grid',
+    justifyContent: 'center',
+}));
+
+export default function WelcomePage() {
     return (
-        <Box sx={{ width: '100%', maxWidth: 500 }}>
-            <Typography variant="h1" gutterBottom>
-                h1. Heading
-            </Typography>
-            <Typography variant="h2" gutterBottom>
-                h2. Heading
-            </Typography>
-            <Typography variant="h3" gutterBottom>
-                h3. Heading
-            </Typography>
-            <Typography variant="h4" gutterBottom>
-                h4. Heading
-            </Typography>
-            <Typography variant="h5" gutterBottom>
-                h5. Heading
-            </Typography>
-            <Typography variant="h6" gutterBottom>
-                h6. Heading
-            </Typography>
-            <Typography variant="subtitle1" gutterBottom>
-                subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                blanditiis tenetur
-            </Typography>
-            <Typography variant="subtitle2" gutterBottom>
-                subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                blanditiis tenetur
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-                body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
-                neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
-                quasi quidem quibusdam.
-            </Typography>
-            <Typography variant="body2" gutterBottom>
-                body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur,
-                neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum
-                quasi quidem quibusdam.
-            </Typography>
-            <Typography variant="button" display="block" gutterBottom>
-                button text
-            </Typography>
-            <Typography variant="caption" display="block" gutterBottom>
-                caption text
-            </Typography>
-            <Typography variant="overline" display="block" gutterBottom>
-                overline text
-            </Typography>
+        <Box sx={{flexGrow: 1}}>
+            <Grid container spacing={{xs: 2, md: 1}}
+                  columns={{xs: 2, sm: 8}}>
+                <Grid xs={2} sm={4}>
+                    <Item>
+                        <Video/>
+                    </Item>
+                </Grid>
+                <Grid xs={2} sm={4}>
+                    <Item>
+                        <Access/>
+                    </Item>
+                </Grid>
+            </Grid>
         </Box>
     );
 }
