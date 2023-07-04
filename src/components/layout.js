@@ -4,14 +4,15 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Your Name';
-export const siteTitle = 'Next.js Sample Website';
+//Описание того как должен выгляеть шаблон рендеринга
+const name = 'Дмитрий';
+export const siteTitle = 'Next.js пример работы фреймворка';
 
-export default function Layout({ children, home }) {
+export default function Layout({children, home}) {
     return (
         <div className={styles.container}>
             <Head>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/favicon.ico"/>
                 <meta
                     name="description"
                     content="Learn how to build a personal website using Next.js"
@@ -22,11 +23,11 @@ export default function Layout({ children, home }) {
                         siteTitle,
                     )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
                 />
-                <meta name="og:title" content={siteTitle} />
-                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="og:title" content={siteTitle}/>
+                <meta name="twitter:card" content="summary_large_image"/>
             </Head>
             <header className={styles.header}>
-                {home ? (
+                {home ? ( //Форма выдачи описанная для главной страницы (home)
                     <>
                         <Image
                             priority
@@ -59,7 +60,7 @@ export default function Layout({ children, home }) {
                 )}
             </header>
             <main>{children}</main>
-            {!home && (
+            {!home && ( //Форма выдачи описанная для всех остальных страниц (!home)
                 <div className={styles.backToHome}>
                     <Link href="/">← Back to home</Link>
                 </div>

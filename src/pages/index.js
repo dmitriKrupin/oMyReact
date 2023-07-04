@@ -5,6 +5,7 @@ import Link from "next/link";
 import {getSortedPostsData} from '../lib/posts';
 import Date from '../components/date';
 
+//Главная страница выдачи
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
     return {

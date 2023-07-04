@@ -4,17 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511f3c92-550b-4676-b9fe-50145b588add" name="Changes" comment="Some pages have been updated.">
-      <change afterPath="$PROJECT_DIR$/pages/tailwind/tailwind.js" afterDir="false" />
+    <list default="true" id="511f3c92-550b-4676-b9fe-50145b588add" name="Changes" comment="Some folders have been sorted.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/alert.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/alert/alert.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/tailwind.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/date.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/date.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/posts/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/posts/[id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/tailwind/tailwind.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/pre-rendering.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/posts/pre-rendering.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/ssg-ssr.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/posts/ssg-ssr.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/utils.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/utils.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,13 +86,14 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dell5\dev\oMyReact\src" />
       <recent name="C:\Users\dell5\dev\oMyReact\pages\tailwind" />
       <recent name="C:\Users\dell5\dev\oMyReact" />
       <recent name="C:\Users\dell5\dev\oMyReact\public\images" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/pages/index.js" working-dir="$PROJECT_DIR$">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/pages/index.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -126,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688465448854</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Some unuseful data have been deleted.">
+      <option name="closed" value="true" />
+      <created>1688474126328</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688474126328</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +149,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Workspace.xml has been updated." />
     <MESSAGE value="Some pages have been updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some pages have been updated." />
+    <MESSAGE value="Some unuseful data have been deleted." />
+    <MESSAGE value="Some folders have been sorted." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some folders have been sorted." />
   </component>
 </project>
