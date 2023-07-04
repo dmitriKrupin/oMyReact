@@ -4,23 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511f3c92-550b-4676-b9fe-50145b588add" name="Changes" comment="Workspace.xml has been updated.">
+    <list default="true" id="511f3c92-550b-4676-b9fe-50145b588add" name="Changes" comment="Some pages have been updated.">
+      <change afterPath="$PROJECT_DIR$/pages/tailwind/tailwind.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/js-yaml.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/js-yaml.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/argparse/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/argparse/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/argparse/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/argparse/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/argparse/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/argparse/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/argparse/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/argparse/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/bin/js-yaml.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/bin/js-yaml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/dist/js-yaml.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/dist/js-yaml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/dist/js-yaml.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/dist/js-yaml.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/js-yaml/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/js-yaml/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/alert.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/alert/alert.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/tailwind.config.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +82,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dell5\dev\oMyReact\public\images" />
+      <recent name="C:\Users\dell5\dev\oMyReact\pages\tailwind" />
       <recent name="C:\Users\dell5\dev\oMyReact" />
+      <recent name="C:\Users\dell5\dev\oMyReact\public\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -123,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688371834173</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Some pages have been updated.">
+      <option name="closed" value="true" />
+      <created>1688465448853</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688465448854</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +135,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Workspace.xml has been updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Workspace.xml has been updated." />
+    <MESSAGE value="Some pages have been updated." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some pages have been updated." />
   </component>
 </project>
