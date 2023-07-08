@@ -1,0 +1,20 @@
+Index: package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\n  \"dependencies\": {\n    \"@emotion/react\": \"^11.11.1\",\n    \"@emotion/styled\": \"^11.11.0\",\n    \"@mui/icons-material\": \"^5.11.16\",\n    \"@mui/material\": \"^5.13.6\",\n    \"@mui/styles\": \"^5.13.2\",\n    \"@mui/system\": \"^5.13.6\",\n    \"eslint-config-react-app\": \"^7.0.1\",\n    \"jss\": \"^10.10.0\",\n    \"jss-plugin-template\": \"^10.10.0\",\n    \"next\": \"^13.4.7\",\n    \"react\": \"^18.2.0\",\n    \"react-dom\": \"^18.2.0\",\n    \"react-swipeable-views\": \"^0.14.0\",\n    \"react-swipeable-views-utils\": \"^0.14.0\"\n  },\n  \"scripts\": {\n    \"dev\": \"next\",\n    \"build\": \"next build\",\n    \"start\": \"next start\"\n  }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/package.json b/package.json
+--- a/package.json	(revision 5c71a99be589b35d5447b361554ac930804c6400)
++++ b/package.json	(date 1688374478418)
+@@ -16,8 +16,6 @@
+     "react-swipeable-views-utils": "^0.14.0"
+   },
+   "scripts": {
+-    "dev": "next",
+-    "build": "next build",
+-    "start": "next start"
++    "dev": "next"
+   }
+ }
