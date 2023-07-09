@@ -1,14 +1,13 @@
 'use client';
 
 import Link from "next/link";
-import '@/styles/globals.css';
 import {useState} from "react";
 import {Dialog} from '@headlessui/react'
 import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
 
 const navigation = [
     {name: 'ПРОЕКТЫ', href: '/projects'},
-    {name: 'УЗНАЙ СТОИМОСТЬ', href: '/pricing'},
+    {name: 'СТОИМОСТЬ', href: '/pricing'},
     {name: 'ОТЗЫВЫ', href: '/reviews'},
 ]
 
@@ -16,7 +15,7 @@ export default function Navigation() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="absolute inset-x-0 top-0 z-50">
+        <div className='absolute inset-x-0 top-0 z-50'>
             <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <Link href={'/'}>K-12.PRO</Link>
@@ -83,6 +82,6 @@ export default function Navigation() {
                     </div>
                 </Dialog.Panel>
             </Dialog>
-        </header>
+        </div>
     );
 }

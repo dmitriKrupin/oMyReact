@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import styles from './layout.module.css'
 import Link from 'next/link'
 import Navigation from "@/pages/navigation";
+import '@/styles/globals.css'
 
-export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'K-12.PRO | Видеонаблюдение и контроль доступа'
 
 export default function Layout({
                                    children,
@@ -13,7 +13,7 @@ export default function Layout({
     home?: boolean
 }) {
     return (
-        <div className={styles.container}>
+        <div className={'container'}>
             <Head>
                 <link rel="icon" href="/favicon.ico"/>
                 <meta
@@ -29,7 +29,7 @@ export default function Layout({
                 <meta name="og:title" content={siteTitle}/>
                 <meta name="twitter:card" content="summary_large_image"/>
             </Head>
-            <header className={styles.header}>
+            <header className={'header'}>
                 {home ? (
                     <>
                         <Navigation/>
@@ -42,7 +42,7 @@ export default function Layout({
             </header>
             <main>{children}</main>
             {!home && (
-                <div className={styles.backToHome}>
+                <div className={'backToHome'}>
                     <Link href="/" className={'btn-primary'}>← Back to home</Link>
                 </div>
             )}

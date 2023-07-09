@@ -4,20 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Features dependency has been added.">
-      <change afterPath="$PROJECT_DIR$/src/pages/authorizations/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/navigation/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/pricing/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/projects/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/reviews/index.tsx" afterDir="false" />
+    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="My header has been added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout.module.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/global.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/authorizations/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authorizations/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/posts/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/posts/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/pricing/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pricing/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/projects/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projects/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/reviews/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/reviews/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/utils.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +84,8 @@
       <workItem from="1688737610001" duration="4846000" />
       <workItem from="1688754269466" duration="976000" />
       <workItem from="1688803742667" duration="10335000" />
-      <workItem from="1688889955396" duration="6321000" />
+      <workItem from="1688889955396" duration="6587000" />
+      <workItem from="1688906266450" duration="6401000" />
     </task>
     <task id="LOCAL-00001" summary="Test application has been added.">
       <option name="closed" value="true" />
@@ -99,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688812473306</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="My header has been added.">
+      <option name="closed" value="true" />
+      <created>1688896399875</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688896399875</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +120,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test application has been added." />
     <MESSAGE value="Features dependency has been added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Features dependency has been added." />
+    <MESSAGE value="My header has been added." />
+    <option name="LAST_COMMIT_MESSAGE" value="My header has been added." />
   </component>
 </project>
