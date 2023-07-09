@@ -4,59 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511f3c92-550b-4676-b9fe-50145b588add" name="Changes" comment="Some folders have been sorted.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/date.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/date.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/posts/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/posts/[id].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/tailwind/tailwind.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-rendering.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/posts/pre-rendering.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssr.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/posts/ssg-ssr.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/utils.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/utils.module.css" afterDir="false" />
+    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Styles have been updated.">
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="add-nextJS-example" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="90ead1ba-bf7b-4320-a778-9fa5b26c6ef6" />
-        <option name="url" value="https://github.com/dmitriKrupin/oMyReact.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2RsFBQpoPjFHtm4C9sXt4xu1msn" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="2SFLX4T9k9QFm0vugzSUct0JobT" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -66,91 +31,90 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.15.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.15.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dell5/dev/oMyReact/src/posts&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.1.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\dell5\\dev\\oMyReact\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dell5\dev\oMyReact\src" />
-      <recent name="C:\Users\dell5\dev\oMyReact\pages\tailwind" />
-      <recent name="C:\Users\dell5\dev\oMyReact" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dell5\dev\oMyReact\src\posts" />
       <recent name="C:\Users\dell5\dev\oMyReact\public\images" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/pages/index.js" working-dir="$PROJECT_DIR$">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Node.js.index.js" />
-        <item itemvalue="Node.js.index.js" />
-        <item itemvalue="Node.js.index.js" />
-      </list>
-    </recent_temporary>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dell5\dev\oMyReact\src\styles" />
+      <recent name="C:\Users\dell5\dev\oMyReact\src\components" />
+      <recent name="C:\Users\dell5\dev\oMyReact\public" />
+      <recent name="C:\Users\dell5\dev\oMyReact\src\pages" />
+      <recent name="C:\Users\dell5\dev\oMyReact\src" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="511f3c92-550b-4676-b9fe-50145b588add" name="Changes" comment="" />
-      <created>1688030750318</created>
+      <changelist id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="" />
+      <created>1688737421340</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1688030750318</updated>
-      <workItem from="1688030752036" duration="9527000" />
-      <workItem from="1688367641052" duration="2189000" />
+      <updated>1688737421340</updated>
+      <workItem from="1688737422719" duration="164000" />
+      <workItem from="1688737610001" duration="4846000" />
+      <workItem from="1688754269466" duration="976000" />
+      <workItem from="1688803742667" duration="10335000" />
+      <workItem from="1688889955396" duration="6587000" />
+      <workItem from="1688906266450" duration="6746000" />
     </task>
-    <task id="LOCAL-00001" summary="Workspace.xml has been updated.">
+    <task id="LOCAL-00001" summary="Test application has been added.">
       <option name="closed" value="true" />
-      <created>1688371834173</created>
+      <created>1688812055530</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1688371834173</updated>
+      <updated>1688812055530</updated>
     </task>
-    <task id="LOCAL-00002" summary="Some pages have been updated.">
+    <task id="LOCAL-00002" summary="Features dependency has been added.">
       <option name="closed" value="true" />
-      <created>1688465448853</created>
+      <created>1688812473306</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1688465448854</updated>
+      <updated>1688812473306</updated>
     </task>
-    <task id="LOCAL-00003" summary="Some unuseful data have been deleted.">
+    <task id="LOCAL-00003" summary="My header has been added.">
       <option name="closed" value="true" />
-      <created>1688474126328</created>
+      <created>1688896399875</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1688474126328</updated>
+      <updated>1688896399875</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Styles have been updated.">
+      <option name="closed" value="true" />
+      <created>1688912760683</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688912760683</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Workspace.xml has been updated." />
-    <MESSAGE value="Some pages have been updated." />
-    <MESSAGE value="Some unuseful data have been deleted." />
-    <MESSAGE value="Some folders have been sorted." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some folders have been sorted." />
+    <MESSAGE value="Test application has been added." />
+    <MESSAGE value="Features dependency has been added." />
+    <MESSAGE value="My header has been added." />
+    <MESSAGE value="Styles have been updated." />
+    <option name="LAST_COMMIT_MESSAGE" value="Styles have been updated." />
   </component>
 </project>
