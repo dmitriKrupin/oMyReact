@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Workspace.xml has been updated.">
-      <change afterPath="$PROJECT_DIR$/public/calculator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/reviews/image-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/reviews/image-02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/reviews/image-03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/carousel.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/toggle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/authorizations/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authorizations/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigation/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/reviews/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/reviews/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-    </list>
+    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="First review has been added." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +71,7 @@
       <workItem from="1688889955396" duration="6587000" />
       <workItem from="1688906266450" duration="7424000" />
       <workItem from="1688974713089" duration="6636000" />
-      <workItem from="1688994803377" duration="6755000" />
+      <workItem from="1688994803377" duration="7073000" />
     </task>
     <task id="LOCAL-00001" summary="Test application has been added.">
       <option name="closed" value="true" />
@@ -131,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688913307396</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="First review has been added.">
+      <option name="closed" value="true" />
+      <created>1689001717723</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689001717723</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +133,7 @@
     <MESSAGE value="My header has been added." />
     <MESSAGE value="Styles have been updated." />
     <MESSAGE value="Workspace.xml has been updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Workspace.xml has been updated." />
+    <MESSAGE value="First review has been added." />
+    <option name="LAST_COMMIT_MESSAGE" value="First review has been added." />
   </component>
 </project>
