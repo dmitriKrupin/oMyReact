@@ -1,9 +1,8 @@
-import Layout from "@/components/layout";
 import Head from "next/head";
 
 export default function AuthorizationPage() {
     return (
-        <Layout>
+        <div className={'main'}>
             <Head>
                 <title>{'K-12.PRO | Авторизация'}</title>
             </Head>
@@ -70,6 +69,6 @@ export default function AuthorizationPage() {
                     </form>
                 </div>
             </div>
-        </Layout>
+        </div>
     );
 }

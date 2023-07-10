@@ -23,16 +23,26 @@
 
     { /*Стили из файла layout.module.css*/ }
     .container {
-        max-width: 36rem;
+        max-width: 70rem;
         padding: 0 1rem;
-        margin: 6rem auto 6rem;
+        margin: 1rem auto 6rem;
     }
 
     .header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: crimson;
+        top: 0;
+        backdrop-filter: blur(5px);
+        position: sticky;
+    }
+
+    .main {
+        max-width: 25rem;
+        margin: 1rem auto 1rem;
+    }
+
+    .carousel {
+        max-width: 50rem;
+        margin: 1rem auto 1rem;
+        background: #0070f3;
     }
 
     .backToHome {

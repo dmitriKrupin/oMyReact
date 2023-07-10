@@ -1,5 +1,6 @@
 import Layout from "@/components/layout";
 import Head from "next/head";
+import CarouselReviews from "@/components/carousel";
 
 export default function ReviewsPage() {
     return (
@@ -7,7 +8,9 @@ export default function ReviewsPage() {
             <Head>
                 <title>{'K-12.PRO | Отзывы'}</title>
             </Head>
-            <div>Здесь будут отзывы о выполненных работах!</div>
+            <div className={'carousel'}>
+                <CarouselReviews/>
+            </div>
         </Layout>
     );
 }
