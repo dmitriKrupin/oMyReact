@@ -8,7 +8,7 @@ export default function ReviewsPage() {
             <Head>
                 <title>{'K-12.PRO | Отзывы'}</title>
             </Head>
-            <div className={'carousel'}>
+            <div className={'main'}>
                 <CarouselReviews/>
             </div>
         </Layout>

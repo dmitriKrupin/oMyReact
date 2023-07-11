@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="First review has been added." />
+    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Workspace.xml for first review has been updated.">
+      <change afterPath="$PROJECT_DIR$/src/assets/projects/p-65.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/reviews/image-02.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/reviews/image-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/reviews/image-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/authorizations/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authorizations/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/posts/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/posts/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/projects/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projects/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/reviews/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/reviews/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +47,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/dell5/dev/oMyReact/src/assets/reviews",
+    "last_opened_file_path": "C:/Users/dell5/dev/oMyReact/src/assets/projects",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -44,6 +59,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dell5\dev\oMyReact\src\assets\projects" />
       <recent name="C:\Users\dell5\dev\oMyReact\src\assets\reviews" />
       <recent name="C:\Users\dell5\dev\oMyReact\src\posts" />
       <recent name="C:\Users\dell5\dev\oMyReact\public\images" />
@@ -71,7 +87,9 @@
       <workItem from="1688889955396" duration="6587000" />
       <workItem from="1688906266450" duration="7424000" />
       <workItem from="1688974713089" duration="6636000" />
-      <workItem from="1688994803377" duration="7073000" />
+      <workItem from="1688994803377" duration="7278000" />
+      <workItem from="1689060342757" duration="1984000" />
+      <workItem from="1689077396357" duration="8746000" />
     </task>
     <task id="LOCAL-00001" summary="Test application has been added.">
       <option name="closed" value="true" />
@@ -121,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689001717723</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Workspace.xml for first review has been updated.">
+      <option name="closed" value="true" />
+      <created>1689001979615</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689001979615</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +160,7 @@
     <MESSAGE value="Styles have been updated." />
     <MESSAGE value="Workspace.xml has been updated." />
     <MESSAGE value="First review has been added." />
-    <option name="LAST_COMMIT_MESSAGE" value="First review has been added." />
+    <MESSAGE value="Workspace.xml for first review has been updated." />
+    <option name="LAST_COMMIT_MESSAGE" value="Workspace.xml for first review has been updated." />
   </component>
 </project>

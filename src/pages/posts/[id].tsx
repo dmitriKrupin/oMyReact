@@ -18,7 +18,7 @@ export default function Post({
             <Head>
                 <title>{postData.title}</title>
             </Head>
-            <article>
+            <article className={'main'}>
                 <h1 className={'headingXl'}>{postData.title}</h1>
                 <div className={'lightText'}>
                     <Date dateString={postData.date} />

@@ -1,114 +1,56 @@
 import {Carousel, Typography, Button} from "@material-tailwind/react";
 import Image from "next/image";
 import Img01 from '@/assets/reviews/image-01.jpg';
-import Img02 from '@/assets/reviews/image-02.jpg';
-import Img03 from '@/assets/reviews/image-03.jpg';
+import Img02 from '@/assets/reviews/image-02.jpeg';
+
 
 export default function CarouselReviews() {
     return (
-        <Carousel className="rounded-xl">
+        <Carousel>
             <div className="relative h-full w-full">
-                <Image
-                    src={Img01}
-                    alt="image 1"
-                    className="h-full w-full object-cover"
-                    priority
-                />
-                <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-                    <div className="w-3/4 text-center md:w-2/4">
+                <Image src={Img01} alt={'НВС Групп. Отзыв о выполненных работах.'}
+                       className="h-full w-full object-cover"></Image>
+                <div className="absolute inset-0 bg-black/50">
+                    <div>
                         <Typography
-                            variant="h1"
+                            variant="h3"
                             color="white"
-                            className="mb-4 text-xl md:text-4xl lg:text-5xl"
                         >
-                            Контроль доступа, Структурированая кабельная сеть, РАСЦО ГОЧС, ПВ
-                        </Typography>
-                        <Typography
-                            variant="lead"
-                            color="white"
-                            className=""
-                        >
-                            Динамо-юниор
-                            <br/>г. Санкт-Петербург, ул. Фаворского, д. 7
+                            ООО "НВС Групп"
                         </Typography>
                         <div className="flex justify-center gap-2">
-                            <Button size="lg" color="white">
-                                Explore
+                            <Button>
+                                Посмотреть отзыв
                             </Button>
                             <Button size="lg" color="white" variant="text">
-                                Gallery
+                                Все проекты
                             </Button>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="relative h-full w-full">
-                <Image
-                    src={Img02}
-                    alt="image 2"
-                    className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
-                    <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
+                <Image src={Img02} alt={'Мы рядом. Отзыв о выполненных работах.'}
+                       className="h-full w-full object-cover"></Image>
+                <div className="absolute inset-0 bg-black/50">
+                    <div>
                         <Typography
-                            variant="h1"
+                            variant="h3"
                             color="white"
-                            className="mb-4 text-3xl md:text-4xl lg:text-5xl"
                         >
-                            Контроль доступа, РАСЦО ГОЧС, ПВ
+                            ООО "Мы рядом"
                         </Typography>
-                        <Typography
-                            variant="lead"
-                            color="white"
-                            className="mb-12 opacity-80"
-                        >
-                            Школа № 165
-                            <br/>г. Санкт-Петербург, Комендантский пр., д. 69 к. 2 стр. 1
-                        </Typography>
-                        <div className="flex gap-2">
-                            <Button size="lg" color="white">
-                                Explore
+                        <div className="flex justify-center gap-2">
+                            <Button>
+                                Посмотреть отзыв
                             </Button>
                             <Button size="lg" color="white" variant="text">
-                                Gallery
+                                Все проекты
                             </Button>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="relative h-full w-full">
-                <Image
-                    src={Img03}
-                    alt="image 3"
-                    className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 grid h-full w-full items-end bg-black/75">
-                    <div className="w-3/4 pl-12 pb-12 md:w-2/4 md:pl-20 md:pb-20 lg:pl-32 lg:pb-32">
-                        <Typography
-                            variant="h1"
-                            color="white"
-                            className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-                        >
-                            РАСЦО ГОЧС, ПВ
-                        </Typography>
-                        <Typography
-                            variant="lead"
-                            color="white"
-                            className="mb-12 opacity-80"
-                        >
-                            Лицей № 369
-                            <br/>г. Санкт-Петербург, ул. Маршала Захарова, д. 58
-                        </Typography>
-                        <div className="flex gap-2">
-                            <Button size="lg" color="white">
-                                Explore
-                            </Button>
-                            <Button size="lg" color="white" variant="text">
-                                Gallery
-                            </Button>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </Carousel>
     );

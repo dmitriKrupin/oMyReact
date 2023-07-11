@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function AuthorizationPage() {
     return (
-        <div className={'main'}>
+        <div className={'authorization'}>
             <Head>
                 <title>{'K-12.PRO | Авторизация'}</title>
             </Head>
@@ -19,7 +19,7 @@ export default function AuthorizationPage() {
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                     <form className="space-y-6" action="#" method="POST">
                         <div>
-                            <label htmlFor="email" className="block text-sm leading-6 text-gray-900">
+                            <label htmlFor="email" className="block text-sm text-left leading-6 text-gray-900">
                                 Email
                             </label>
                             <div className="mt-2">
