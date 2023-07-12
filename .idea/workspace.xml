@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Workspace.xml for first review has been updated.">
-      <change afterPath="$PROJECT_DIR$/src/assets/projects/p-65.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/reviews/image-02.jpeg" afterDir="false" />
+    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Projects have been updated.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/reviews/image-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/reviews/image-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/profile.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/carousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/authorizations/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authorizations/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigation/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/posts/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/posts/[id].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/projects/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projects/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/reviews/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/reviews/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,21 +32,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/dell5/dev/oMyReact/src/assets/projects",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\dell5\\dev\\oMyReact\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dell5/dev/oMyReact/src/assets/projects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\dell5\\dev\\oMyReact\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dell5\dev\oMyReact\src\assets\projects" />
@@ -89,7 +79,8 @@
       <workItem from="1688974713089" duration="6636000" />
       <workItem from="1688994803377" duration="7278000" />
       <workItem from="1689060342757" duration="1984000" />
-      <workItem from="1689077396357" duration="8746000" />
+      <workItem from="1689077396357" duration="9301000" />
+      <workItem from="1689146725534" duration="9184000" />
     </task>
     <task id="LOCAL-00001" summary="Test application has been added.">
       <option name="closed" value="true" />
@@ -147,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689001979615</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="First project has been added.">
+      <option name="closed" value="true" />
+      <created>1689086955839</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1689086955839</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +160,8 @@
     <MESSAGE value="Workspace.xml has been updated." />
     <MESSAGE value="First review has been added." />
     <MESSAGE value="Workspace.xml for first review has been updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Workspace.xml for first review has been updated." />
+    <MESSAGE value="First project has been added." />
+    <MESSAGE value="Projects have been updated." />
+    <option name="LAST_COMMIT_MESSAGE" value="Projects have been updated." />
   </component>
 </project>
