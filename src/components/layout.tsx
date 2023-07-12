@@ -43,7 +43,7 @@ export default function Layout({
             <main>{children}</main>
             {!home && (
                 <div className={'backToHome'}>
-                    <Link href="/" className={'btn-primary'}>← Back to home</Link>
+                    <Link href="/" className={'btn-primary'}>← На главную страницу</Link>
                 </div>
             )}
         </div>

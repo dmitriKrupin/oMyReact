@@ -50,6 +50,13 @@
         border-radius: 25px;
     }
 
+    .calculator {
+        max-width: 50rem;
+        margin: 1rem auto 1rem;
+        background: #ffffff;
+        border-radius: 25px;
+    }
+
     .backToHome {
         margin: 3rem 0 0;
     }
