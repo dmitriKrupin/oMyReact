@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Projects have been updated.">
-      <change afterPath="$PROJECT_DIR$/src/components/access.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cctv.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/pricing/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pricing/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/projects/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projects/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
-    </list>
+    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="CctvPage has been added." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +76,7 @@
       <workItem from="1689060342757" duration="1984000" />
       <workItem from="1689077396357" duration="9301000" />
       <workItem from="1689146725534" duration="9731000" />
-      <workItem from="1689164395273" duration="10379000" />
+      <workItem from="1689164395273" duration="10456000" />
     </task>
     <task id="LOCAL-00001" summary="Test application has been added.">
       <option name="closed" value="true" />
@@ -159,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689155964509</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="CctvPage has been added.">
+      <option name="closed" value="true" />
+      <created>1689175328921</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689175328921</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +174,7 @@
     <MESSAGE value="Workspace.xml for first review has been updated." />
     <MESSAGE value="First project has been added." />
     <MESSAGE value="Projects have been updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Projects have been updated." />
+    <MESSAGE value="CctvPage has been added." />
+    <option name="LAST_COMMIT_MESSAGE" value="CctvPage has been added." />
   </component>
 </project>
