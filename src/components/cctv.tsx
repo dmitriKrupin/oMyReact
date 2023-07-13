@@ -16,6 +16,7 @@ export default function CctvPage() {
                 <title>{'K-12.PRO | Расчет видеонаблюдения'}</title>
             </Head>
             <div className="w-full py-4 px-8">
+                <div>ЭТО ОКНО ДЛЯ ВИДЕОНАБЛЮДЕНИЯ</div>
                 <Stepper
                     activeStep={activeStep}
                     isLastStep={(value) => setIsLastStep(value)}

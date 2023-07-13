@@ -1,7 +1,6 @@
 import Layout from "@/components/layout";
 import Head from "next/head";
 import React, {Fragment, useState} from "react";
-import {Button} from "@material-tailwind/react";
 import {Dialog, Transition} from "@headlessui/react";
 import CctvPage from "@/components/cctv";
 import AccessPage from "@/components/access";
@@ -18,13 +17,21 @@ const calculateSystems = [
 ]
 
 export default function PricingPage() {
+
+    const [service, setService] = useState(<CctvPage/>);
     let [isOpen, setIsOpen] = useState(false)
 
     function closeModal() {
         setIsOpen(false)
     }
 
-    function openModal() {
+    function openModal(event: any) {
+        let innerHtml = event.target.innerHTML;
+        calculateSystems.forEach(({name, page}) => {
+            if (innerHtml === name) {
+                setService(page)
+            }
+        })
         setIsOpen(true)
     }
 
@@ -33,60 +40,82 @@ export default function PricingPage() {
             <Head>
                 <title>{'K-12.PRO | Калькулятор стоимости'}</title>
             </Head>
-            <div className={'main'}>
-                <div className={'text-center'}>Выберите систему для расчета:</div>
-                <div className={'flex justify-center'}>
-                    {calculateSystems.map((item) => (
-                        <Button
-                            onClick={openModal}
-                            key={item.name}
+            <div className={'flex flex-row justify-center'}>
+                <>
+                    {calculateSystems.map((
+                        {name}) => (
+                        <div
+                            className="flex items-center justify-center p-10"
+                            key={name}
                         >
-                            {item.name}
-                            <Transition appear show={isOpen} as={Fragment}>
-                                <Dialog as="div" className="relative z-10" onClose={closeModal}>
+                            <button
+                                type="button"
+                                onClick={openModal}
+                                className="rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+                            >
+                                {name}
+                            </button>
+                        </div>
+                    ))}
+
+                    <Transition appear show={isOpen} as={Fragment}>
+                        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0"
+                                enterTo="opacity-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100"
+                                leaveTo="opacity-0"
+                            >
+                                <div className="fixed inset-0 bg-black bg-opacity-25"/>
+                            </Transition.Child>
+
+                            <div className="fixed inset-0 overflow-y-auto">
+                                <div className="flex min-h-full items-center justify-center p-4 text-center">
                                     <Transition.Child
                                         as={Fragment}
                                         enter="ease-out duration-300"
-                                        enterFrom="opacity-0"
-                                        enterTo="opacity-100"
+                                        enterFrom="opacity-0 scale-95"
+                                        enterTo="opacity-100 scale-100"
                                         leave="ease-in duration-200"
-                                        leaveFrom="opacity-100"
-                                        leaveTo="opacity-0"
+                                        leaveFrom="opacity-100 scale-100"
+                                        leaveTo="opacity-0 scale-95"
                                     >
-                                        {/*Заблюривание фона для меню вызова калькулятора*/}
-                                        <div className="rounded-3xl fixed inset-16 backdrop-blur"/>
-                                    </Transition.Child>
-
-                                    <div>
-                                        <Transition.Child
-                                            as={Fragment}
-                                            enter="ease-out duration-300"
-                                            enterFrom="opacity-0 scale-95"
-                                            enterTo="opacity-100 scale-100"
-                                            leave="ease-in duration-200"
-                                            leaveFrom="opacity-100 scale-100"
-                                            leaveTo="opacity-0 scale-95"
-                                        >
-                                            <Dialog.Panel>
-                                                {item.page}
-                                                <div className="mt-4">
+                                        <Dialog.Panel
+                                            className="w-full h-full transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                                            <Dialog.Title
+                                                as="h3"
+                                                className="text-lg font-medium leading-6 text-gray-900"
+                                            >
+                                                <div className="text-right">
                                                     <button
                                                         type="button"
-                                                        className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                                                         onClick={closeModal}
                                                     >
-                                                        ПОЛУЧИТЬ РАСЧЕТ
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                             viewBox="0 0 24 24" stroke-width="1.5"
+                                                             stroke="currentColor"
+                                                             className="w-6 h-6"
+                                                             onClick={closeModal}
+                                                        >
+                                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                                  d="M6 18L18 6M6 6l12 12"/>
+                                                        </svg>
                                                     </button>
                                                 </div>
-                                            </Dialog.Panel>
-                                        </Transition.Child>
-                                    </div>
-                                </Dialog>
-                            </Transition>
-                        </Button>
-                    ))}
-                </div>
-
+                                            </Dialog.Title>
+                                            <div className="mt-2">
+                                                {service}
+                                            </div>
+                                        </Dialog.Panel>
+                                    </Transition.Child>
+                                </div>
+                            </div>
+                        </Dialog>
+                    </Transition>
+                </>
             </div>
         </Layout>
     );

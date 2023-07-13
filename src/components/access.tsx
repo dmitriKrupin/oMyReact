@@ -16,6 +16,7 @@ export default function AccessPage() {
                 <title>{'K-12.PRO | Расчет контроля доступа'}</title>
             </Head>
             <div className="w-full py-4 px-8">
+                <div>ЭТО ОКНО ДЛЯ КОНТРОЛЯ ДОСТУПА</div>
                 <Stepper
                     activeStep={activeStep}
                     isLastStep={(value) => setIsLastStep(value)}
@@ -27,10 +28,10 @@ export default function AccessPage() {
                 </Stepper>
                 <div className="mt-16 flex justify-between">
                     <Button onClick={handlePrev} disabled={isFirstStep}>
-                        Prev
+                        НАЗАД
                     </Button>
                     <Button onClick={handleNext} disabled={isLastStep}>
-                        Next
+                        ВПЕРЕД
                     </Button>
                 </div>
             </div>
