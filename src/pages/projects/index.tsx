@@ -35,7 +35,7 @@ const projects = [
 
 export default function ProjectsPage() {
     return (
-        <Layout>
+        <Layout home>
             <Head>
                 <title>{'K-12.PRO | Выполненные проекты'}</title>
             </Head>

@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Separated input for CCTV and ACCESS has been added.">
-      <change afterPath="$PROJECT_DIR$/src/assets/reviews/image-03.jpg" afterDir="false" />
+    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Piece of CCTV calculator has been added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/reviews/image-02.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/carousel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cctv.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/pricing/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pricing/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/projects/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projects/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/reviews/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/reviews/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +88,7 @@
       <workItem from="1689232668986" duration="10201000" />
       <workItem from="1689250181578" duration="6959000" />
       <workItem from="1689321142849" duration="1068000" />
-      <workItem from="1689573532124" duration="11110000" />
+      <workItem from="1689573532124" duration="21075000" />
     </task>
     <task id="LOCAL-00001" summary="Test application has been added.">
       <option name="closed" value="true" />
@@ -185,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689257094449</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Piece of CCTV calculator has been added.">
+      <option name="closed" value="true" />
+      <created>1689584866844</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1689584866845</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +213,7 @@
     <MESSAGE value="CctvPage has been added." />
     <MESSAGE value="Dependencies have been updated." />
     <MESSAGE value="Separated input for CCTV and ACCESS has been added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Separated input for CCTV and ACCESS has been added." />
+    <MESSAGE value="Piece of CCTV calculator has been added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Piece of CCTV calculator has been added." />
   </component>
 </project>

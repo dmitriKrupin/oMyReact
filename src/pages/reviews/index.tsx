@@ -4,7 +4,7 @@ import CarouselReviews from "@/components/carousel";
 
 export default function ReviewsPage() {
     return (
-        <Layout>
+        <Layout home>
             <Head>
                 <title>{'K-12.PRO | Отзывы'}</title>
             </Head>

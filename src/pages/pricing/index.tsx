@@ -36,11 +36,11 @@ export default function PricingPage() {
     }
 
     return (
-        <Layout>
+        <Layout home>
             <Head>
                 <title>{'K-12.PRO | Калькулятор стоимости'}</title>
             </Head>
-            <div className={'flex flex-row justify-center'}>
+            <div className={'flex flex-col lg:flex-row justify-center'}>
                 <>
                     {calculateSystems.map((
                         {name}) => (
@@ -51,7 +51,9 @@ export default function PricingPage() {
                             <button
                                 type="button"
                                 onClick={openModal}
-                                className="rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+                                className="rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white
+                                hover:bg-opacity-30 focus:outline-none focus-visible:ring-2
+                                focus-visible:ring-white focus-visible:ring-opacity-75"
                             >
                                 {name}
                             </button>
