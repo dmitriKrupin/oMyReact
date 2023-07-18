@@ -17,6 +17,7 @@ export default function CctvPage() {
 
     const handleNext = () => !isLastStep && setActiveStep((cur) => cur + 1);
     const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
+
     let lengthOfCables =
         Number(lengthOfGofra) +
         Number(lengthOfCabelCanal) +
@@ -57,6 +58,27 @@ export default function CctvPage() {
         }
     ]
 
+    const arrayOfIdsForSteps = [
+        {
+            id: 'manufacture-id',
+            stepForVisible: 'firstStep',
+            numberOfStep: 0,
+            divForInput: firstDiv()
+        },
+        {
+            id: 'countOfCameras-id',
+            stepForVisible: 'secondStep',
+            numberOfStep: 1,
+            divForInput: secondDiv()
+        },
+        {
+            id: 'countOfCables-id',
+            stepForVisible: 'thirdStep',
+            numberOfStep: 2,
+            divForInput: thirdDiv()
+        },
+    ]
+
     function getNumberOfCameras(event: any) {
         setNumberOfCameras(event.target.value);
     }
@@ -81,91 +103,217 @@ export default function CctvPage() {
         setLengthOfPodvesnoyPotok(event.target.value);
     }
 
+    function getPageCctvForStep(event: any) {
+        let idOfStep = event.target.id;
+        arrayOfIdsForSteps.forEach((element) => {
+            if (idOfStep === element.stepForVisible) {
+                setActiveStep(element.numberOfStep);
+            }
+        })
+    }
+
+    function firstDiv() {
+        return (
+            <div className={'h-8 flex flex-row justify-center items-center'}
+            >
+                <Select label="Выберите производителя оборудования">
+                    <Option>DAHUA</Option>
+                    <Option>HiWatch</Option>
+                    <Option>Не имеет значения</Option>
+                </Select>
+            </div>
+        );
+    }
+
+    function secondDiv() {
+        return (
+            <div className={'pt-4'}>
+                <div className={'h-8 flex flex-row justify-between'}>
+                    <div>Количество камер:</div>
+                    <div className={'text-blue-500 font-bold'}>{numberOfCameras}</div>
+                </div>
+                <div className={'h-8 flex flex-row justify-center items-center'}>
+                    <Slider
+                        min={0}
+                        max={32}
+                        step={1}
+                        onChange={getNumberOfCameras}
+                    />
+                </div>
+            </div>
+        );
+    }
+
+    function thirdDiv() {
+        return (
+            <div className={'h-8 flex flex-col'}>
+                <div className={'h-8 flex flex-row justify-between'}>
+                    <div>Общая длина кабельных трасс:</div>
+                    <div className={'text-blue-500 font-bold'}>{lengthOfCables}</div>
+                </div>
+                {arrayOfCctvMetrics.map((
+                        {label, lengthOfLabel, idOfSwitch, getLengthOfLabel}) => (
+                        <div className={'h-8 flex flex-row justify-around items-center gap-2'}
+                             key={label}
+                        >
+
+                            <div className={'basis-1/2'}>
+                                <Switch
+                                    id={idOfSwitch}
+                                    label={label}
+                                    ripple={true}
+                                />
+                            </div>
+                            <div className={'flex flex-row items-center basis-1/2 gap-2'}>
+                                <div className={'w-5'}>
+                                    {lengthOfLabel}
+                                </div>
+                                <div className={'w-full'}>
+                                    <Slider
+                                        min={0}
+                                        max={315}
+                                        step={15}
+                                        onChange={getLengthOfLabel}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    )
+                )}
+            </div>
+        );
+    }
+
+    function divForInput(event: any) {
+        let div;
+        arrayOfIdsForSteps.forEach((element) => {
+            if (event.target.id === element.stepForVisible) {
+                div = element.divForInput
+            }
+        })
+
+        return (
+            <div>
+                {div}
+            </div>
+        )
+    }
+
     return (
         <div className={'calculator'}>
             <Head>
                 <title>{'K-12.PRO | Расчет видеонаблюдения'}</title>
             </Head>
-            <div className="w-full h-full py-4 px-8 p-2">
-                <div className={'h-full w-full'}>
-                    <div className={'h-8 flex flex-row justify-center items-center'}>
-                        <div className={'w-full'}>
-                            <Select label="Выберите производителя оборудования">
-                                <Option>DAHUA</Option>
-                                <Option>RVI</Option>
-                                <Option>Hikvision</Option>
-                                <Option>HiWatch</Option>
-                                <Option>Не имеет значения</Option>
-                            </Select>
-                        </div>
-                    </div>
-                    <div className={'pt-4'}>
-                        <div className={'h-8 flex flex-row justify-between'}>
-                            <div>Количество камер:</div>
-                            <div className={'text-blue-500 font-bold'}>{numberOfCameras}</div>
-                        </div>
-                        <div className={'h-8 flex flex-row justify-center items-center'}>
-                            <Slider
-                                min={0}
-                                max={32}
-                                step={1}
-                                onChange={getNumberOfCameras}
-                            />
-                        </div>
-                    </div>
-                    <div className={'h-8 flex flex-row justify-between'}>
-                        <div>Общая длина кабельных трасс:</div>
-                        <div className={'text-blue-500 font-bold'}>{lengthOfCables}</div>
-                    </div>
-
-                    {arrayOfCctvMetrics.map((
-                            {label, lengthOfLabel, idOfSwitch, getLengthOfLabel}) => (
-                            <div className={'h-8 flex flex-row justify-around items-center gap-2'}
-                                 key={label}
-                            >
-                                <div className={'basis-1/2'}>
-                                    <Switch
-                                        id={idOfSwitch}
-                                        label={label}
-                                        ripple={true}
-                                    />
+            <div>
+                <div>
+                    <div>
+                        {/*<div className="w-full h-80 py-4 px-8 p-2">
+                                <div id={id}
+                                     hidden={isHidden}
+                                     className={'h-8 flex flex-row justify-center items-center'}
+                                >
+                                    <Select label="Выберите производителя оборудования">
+                                        <Option>DAHUA</Option>
+                                        <Option>HiWatch</Option>
+                                        <Option>Не имеет значения</Option>
+                                    </Select>
                                 </div>
-                                <div className={'flex flex-row items-center basis-1/2 gap-2'}>
-                                    <div className={'w-5'}>
-                                        {lengthOfLabel}
+
+                                <div
+                                    id={id}
+                                    hidden={isHidden}
+                                    className={'pt-4'}
+                                >
+                                    <div className={'h-8 flex flex-row justify-between'}>
+                                        <div>Количество камер:</div>
+                                        <div className={'text-blue-500 font-bold'}>{numberOfCameras}</div>
                                     </div>
-                                    <div className={'w-full'}>
+                                    <div className={'h-8 flex flex-row justify-center items-center'}>
                                         <Slider
                                             min={0}
-                                            max={315}
-                                            step={15}
-                                            onChange={getLengthOfLabel}
+                                            max={32}
+                                            step={1}
+                                            onChange={getNumberOfCameras}
                                         />
                                     </div>
                                 </div>
-                            </div>
-                        )
-                    )}
-                </div>
-            </div>
 
-            <Stepper
-                activeStep={activeStep}
-                isLastStep={(value) => setIsLastStep(value)}
-                isFirstStep={(value) => setIsFirstStep(value)}
-            >
-                <Step onClick={() => setActiveStep(0)}>1</Step>
-                <Step onClick={() => setActiveStep(1)}>2</Step>
-                <Step onClick={() => setActiveStep(2)}>3</Step>
-                <Step onClick={() => setActiveStep(3)}>4</Step>
-            </Stepper>
-            <div className="mt-16 flex justify-between">
-                <Button onClick={handlePrev} disabled={isFirstStep}>
-                    НАЗАД
-                </Button>
-                <Button onClick={handleNext} disabled={isLastStep}>
-                    ВПЕРЕД
-                </Button>
+                                <div
+                                    id={id}
+                                    hidden={isHidden}
+                                    className={'h-8 flex flex-col bg-amber-400'}
+                                >
+                                    <div className={'h-8 flex flex-row justify-between'}>
+                                        <div>Общая длина кабельных трасс:</div>
+                                        <div className={'text-blue-500 font-bold'}>{lengthOfCables}</div>
+                                    </div>
+                                    {arrayOfCctvMetrics.map((
+                                            {label, lengthOfLabel, idOfSwitch, getLengthOfLabel}) => (
+                                            <div className={'h-8 flex flex-row justify-around items-center gap-2'}
+                                                 key={label}
+                                            >
+
+                                                <div className={'basis-1/2'}>
+                                                    <Switch
+                                                        id={idOfSwitch}
+                                                        label={label}
+                                                        ripple={true}
+                                                    />
+                                                </div>
+                                                <div className={'flex flex-row items-center basis-1/2 gap-2'}>
+                                                    <div className={'w-5'}>
+                                                        {lengthOfLabel}
+                                                    </div>
+                                                    <div className={'w-full'}>
+                                                        <Slider
+                                                            min={0}
+                                                            max={315}
+                                                            step={15}
+                                                            onChange={getLengthOfLabel}
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )
+                                    )}
+                                </div>
+
+                            </div>*/}
+                        <div
+                            className="w-full h-80 py-4 px-8 p-2"
+                        >
+                            <div>
+                                {divForInput(event)}
+                            </div>
+                        </div>
+
+                        <Stepper
+                            activeStep={activeStep}
+                            isLastStep={(value) => setIsLastStep(value)}
+                            isFirstStep={(value) => setIsFirstStep(value)}
+                        >
+                            {arrayOfIdsForSteps.map(({stepForVisible, numberOfStep}) => (
+                                <Step
+                                    id={stepForVisible}
+                                    onClick={() => getPageCctvForStep(event)}
+                                >
+                                    {numberOfStep + 1}
+                                </Step>
+                            ))}
+                        </Stepper>
+
+                        <div className="mt-16 flex justify-between">
+                            <Button onClick={handlePrev} disabled={isFirstStep}>
+                                НАЗАД
+                            </Button>
+                            <Button onClick={handleNext} disabled={isLastStep}>
+                                ВПЕРЕД
+                            </Button>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </div>
     );

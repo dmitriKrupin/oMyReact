@@ -45,7 +45,8 @@ export default function Navigation() {
                     {navigation.map((item) => (
                         <Link
                             key={item.name}
-                            href={item.href}>
+                            href={item.href}
+                        >
                             {item.name}
                         </Link>
                     ))}
