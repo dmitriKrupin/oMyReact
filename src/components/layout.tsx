@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Navigation from "@/pages/navigation";
-import '@/styles/globals.css'
+import Navigation from '../pages/navigation';
+import '../styles/globals.css'
+import React from 'react';
 
 export const siteTitle = 'K-12.PRO | Видеонаблюдение и контроль доступа'
 
@@ -15,7 +16,7 @@ export default function Layout({
     return (
         <div className={'container'}>
             <Head>
-                <link rel="icon" href="/favicon.ico"/>
+                <link rel="icon" href="/calculator.png"/>
                 <meta
                     name="description"
                     content="Learn how to build a personal website using Next.js"
@@ -43,7 +44,7 @@ export default function Layout({
             <main>{children}</main>
             {!home && (
                 <div className={'backToHome'}>
-                    <Link href="/" className={'btn-primary'}>← Back to home</Link>
+                    <Link href="/" className={'btn-primary'}>← На главную страницу</Link>
                 </div>
             )}
         </div>

@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Styles have been updated.">
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Some changes after updating Node has been added.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +14,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="90ead1ba-bf7b-4320-a778-9fa5b26c6ef6" />
+        <option name="url" value="https://github.com/dmitriKrupin/oMyReact.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -29,32 +42,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dell5/dev/oMyReact/src/posts&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\dell5\\dev\\oMyReact\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/dell5/dev/oMyReact/src/assets/projects",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "ts.external.directory.path": "C:\\Users\\dell5\\dev\\oMyReact\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dell5\dev\oMyReact\src\assets\projects" />
+      <recent name="C:\Users\dell5\dev\oMyReact\src\assets\reviews" />
       <recent name="C:\Users\dell5\dev\oMyReact\src\posts" />
       <recent name="C:\Users\dell5\dev\oMyReact\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dell5\dev\oMyReact\src\styles" />
-      <recent name="C:\Users\dell5\dev\oMyReact\src\components" />
-      <recent name="C:\Users\dell5\dev\oMyReact\public" />
-      <recent name="C:\Users\dell5\dev\oMyReact\src\pages" />
-      <recent name="C:\Users\dell5\dev\oMyReact\src" />
+      <recent name="C:\Users\dell5\dev\oMyReact\src\components\access" />
+      <recent name="C:\Users\dell5\dev\oMyReact\src\components\cctv" />
+      <recent name="C:\Users\dell5\dev\oMyReact\src\assets\reviews" />
+      <recent name="C:\Users\dell5\dev\oMyReact\src\assets" />
+      <recent name="C:\Users\dell5\dev\oMyReact\public\images\reviews" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -70,7 +86,22 @@
       <workItem from="1688754269466" duration="976000" />
       <workItem from="1688803742667" duration="10335000" />
       <workItem from="1688889955396" duration="6587000" />
-      <workItem from="1688906266450" duration="6746000" />
+      <workItem from="1688906266450" duration="7424000" />
+      <workItem from="1688974713089" duration="6636000" />
+      <workItem from="1688994803377" duration="7278000" />
+      <workItem from="1689060342757" duration="1984000" />
+      <workItem from="1689077396357" duration="9301000" />
+      <workItem from="1689146725534" duration="9731000" />
+      <workItem from="1689164395273" duration="10456000" />
+      <workItem from="1689175680388" duration="254000" />
+      <workItem from="1689232668986" duration="10201000" />
+      <workItem from="1689250181578" duration="6959000" />
+      <workItem from="1689321142849" duration="1068000" />
+      <workItem from="1689573532124" duration="21210000" />
+      <workItem from="1689660176725" duration="17033000" />
+      <workItem from="1689688885838" duration="6705000" />
+      <workItem from="1689748852343" duration="12778000" />
+      <workItem from="1689771280298" duration="8660000" />
     </task>
     <task id="LOCAL-00001" summary="Test application has been added.">
       <option name="closed" value="true" />
@@ -104,17 +135,230 @@
       <option name="project" value="LOCAL" />
       <updated>1688912760683</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Workspace.xml has been updated.">
+      <option name="closed" value="true" />
+      <created>1688913307396</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688913307396</updated>
+    </task>
+    <task id="LOCAL-00006" summary="First review has been added.">
+      <option name="closed" value="true" />
+      <created>1689001717723</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689001717723</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Workspace.xml for first review has been updated.">
+      <option name="closed" value="true" />
+      <created>1689001979615</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689001979615</updated>
+    </task>
+    <task id="LOCAL-00008" summary="First project has been added.">
+      <option name="closed" value="true" />
+      <created>1689086955839</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1689086955839</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Projects have been updated.">
+      <option name="closed" value="true" />
+      <created>1689155964509</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689155964509</updated>
+    </task>
+    <task id="LOCAL-00010" summary="CctvPage has been added.">
+      <option name="closed" value="true" />
+      <created>1689175328921</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689175328921</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Dependencies have been updated.">
+      <option name="closed" value="true" />
+      <created>1689175785633</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1689175785633</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Separated input for CCTV and ACCESS has been added.">
+      <option name="closed" value="true" />
+      <created>1689257094449</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1689257094449</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Piece of CCTV calculator has been added.">
+      <option name="closed" value="true" />
+      <created>1689584866844</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1689584866845</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Styles for CCTV calculator has been updated.">
+      <option name="closed" value="true" />
+      <created>1689600195594</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1689600195595</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Position of elements of CCTV calculator has been updated.">
+      <option name="closed" value="true" />
+      <created>1689678530569</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1689678530569</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Correction of elements of cctv calculator is continuing">
+      <option name="closed" value="true" />
+      <created>1689695207230</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1689695207230</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Deprecated method has been deleted.">
+      <option name="closed" value="true" />
+      <created>1689772896610</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1689772896610</updated>
+    </task>
+    <task id="LOCAL-00018" summary="tslib has been added.">
+      <option name="closed" value="true" />
+      <created>1689773116375</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1689773116375</updated>
+    </task>
+    <task id="LOCAL-00019" summary="devDependencies have been added.">
+      <option name="closed" value="true" />
+      <created>1689773714698</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1689773714698</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Close button has been updated.">
+      <option name="closed" value="true" />
+      <created>1689774244366</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1689774244366</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Some styles have been updated.">
+      <option name="closed" value="true" />
+      <created>1689775431243</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1689775431243</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Some punctuations have been updated.">
+      <option name="closed" value="true" />
+      <created>1689776009142</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1689776009142</updated>
+    </task>
+    <task id="LOCAL-00023" summary="One more path for tslib has been updated.">
+      <option name="closed" value="true" />
+      <created>1689776556573</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1689776556573</updated>
+    </task>
+    <task id="LOCAL-00024" summary="tslib in devDependencies has been added.">
+      <option name="closed" value="true" />
+      <created>1689777081137</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1689777081137</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Version of tslib in devDependencies has been added.">
+      <option name="closed" value="true" />
+      <created>1689778766010</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1689778766010</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Tslib one more time in dependencies has been added.">
+      <option name="closed" value="true" />
+      <created>1689778912580</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1689778912580</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Node has been updated.">
+      <option name="closed" value="true" />
+      <created>1689779675328</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1689779675328</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Some changes after updating Node has been added.">
+      <option name="closed" value="true" />
+      <created>1689779832097</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1689779832097</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test application has been added." />
-    <MESSAGE value="Features dependency has been added." />
-    <MESSAGE value="My header has been added." />
     <MESSAGE value="Styles have been updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Styles have been updated." />
+    <MESSAGE value="Workspace.xml has been updated." />
+    <MESSAGE value="First review has been added." />
+    <MESSAGE value="Workspace.xml for first review has been updated." />
+    <MESSAGE value="First project has been added." />
+    <MESSAGE value="Projects have been updated." />
+    <MESSAGE value="CctvPage has been added." />
+    <MESSAGE value="Dependencies have been updated." />
+    <MESSAGE value="Separated input for CCTV and ACCESS has been added." />
+    <MESSAGE value="Piece of CCTV calculator has been added." />
+    <MESSAGE value="Styles for CCTV calculator has been updated." />
+    <MESSAGE value="Position of elements of CCTV calculator has been updated." />
+    <MESSAGE value="Correction of elements of cctv calculator is continuing" />
+    <MESSAGE value="Deprecated method has been deleted." />
+    <MESSAGE value="tslib has been added." />
+    <MESSAGE value="devDependencies have been added." />
+    <MESSAGE value="Close button has been updated." />
+    <MESSAGE value="Some styles have been updated." />
+    <MESSAGE value="Some punctuations have been updated." />
+    <MESSAGE value="One more path for tslib has been updated." />
+    <MESSAGE value="tslib in devDependencies has been added." />
+    <MESSAGE value="Version of tslib in devDependencies has been added." />
+    <MESSAGE value="Tslib one more time in dependencies has been added." />
+    <MESSAGE value="Node has been updated." />
+    <MESSAGE value="Some changes after updating Node has been added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some changes after updating Node has been added." />
   </component>
 </project>

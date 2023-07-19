@@ -1,5 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+/** @type {(tailwindConfig: object) => object} */
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -13,8 +15,14 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px'
+    }
   },
   plugins: [
     require('@tailwindcss/forms')
   ],
-}
+})
