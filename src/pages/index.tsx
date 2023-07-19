@@ -26,7 +26,7 @@ export default function Home({
                         <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
                     </p>
                 </section>
-                <section className={`${'headingMd'} ${'padding1px'}`}>
+                <section className={`headingMd padding1px`}>
                     <h2 className={'headingLg'}>Blog</h2>
                     <ul className={'list'}>
                         {allPostsData.map(({id, date, title}) => (

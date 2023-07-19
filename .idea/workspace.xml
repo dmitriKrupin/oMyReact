@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Position of elements of CCTV calculator has been updated.">
+    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Correction of elements of cctv calculator is continuing">
+      <change afterPath="$PROJECT_DIR$/src/components/cctv/cctv.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cctv/firstStep.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cctv/secondStep.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cctv/thirdStep.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cctv.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/access.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/access/access.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cctv.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/pricing/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pricing/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +25,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="90ead1ba-bf7b-4320-a778-9fa5b26c6ef6" />
+        <option name="url" value="https://github.com/dmitriKrupin/oMyReact.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2SFLX4T9k9QFm0vugzSUct0JobT" />
   <component name="ProjectLevelVcsManager">
@@ -30,21 +52,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dell5/dev/oMyReact/src/assets/projects&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\dell5\\dev\\oMyReact\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/dell5/dev/oMyReact/src/assets/projects",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "ts.external.directory.path": "C:\\Users\\dell5\\dev\\oMyReact\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dell5\dev\oMyReact\src\assets\projects" />
@@ -53,11 +76,11 @@
       <recent name="C:\Users\dell5\dev\oMyReact\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dell5\dev\oMyReact\src\components\access" />
+      <recent name="C:\Users\dell5\dev\oMyReact\src\components\cctv" />
       <recent name="C:\Users\dell5\dev\oMyReact\src\assets\reviews" />
       <recent name="C:\Users\dell5\dev\oMyReact\src\assets" />
       <recent name="C:\Users\dell5\dev\oMyReact\public\images\reviews" />
-      <recent name="C:\Users\dell5\dev\oMyReact\public\images" />
-      <recent name="C:\Users\dell5\dev\oMyReact\public" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -86,7 +109,9 @@
       <workItem from="1689321142849" duration="1068000" />
       <workItem from="1689573532124" duration="21210000" />
       <workItem from="1689660176725" duration="17033000" />
-      <workItem from="1689688885838" duration="6095000" />
+      <workItem from="1689688885838" duration="6705000" />
+      <workItem from="1689748852343" duration="12778000" />
+      <workItem from="1689771280298" duration="1464000" />
     </task>
     <task id="LOCAL-00001" summary="Test application has been added.">
       <option name="closed" value="true" />
@@ -208,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689678530569</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Correction of elements of cctv calculator is continuing">
+      <option name="closed" value="true" />
+      <created>1689695207230</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1689695207230</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +263,7 @@
     <MESSAGE value="Piece of CCTV calculator has been added." />
     <MESSAGE value="Styles for CCTV calculator has been updated." />
     <MESSAGE value="Position of elements of CCTV calculator has been updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Position of elements of CCTV calculator has been updated." />
+    <MESSAGE value="Correction of elements of cctv calculator is continuing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction of elements of cctv calculator is continuing" />
   </component>
 </project>

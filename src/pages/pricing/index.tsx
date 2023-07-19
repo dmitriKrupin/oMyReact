@@ -2,18 +2,17 @@ import Layout from "@/components/layout";
 import Head from "next/head";
 import React, {Fragment, useState} from "react";
 import {Dialog, Transition} from "@headlessui/react";
-import CctvPage from "@/components/cctv";
-import AccessPage from "@/components/access";
+import CctvPage from "@/components/cctv/cctv";
 
 const calculateSystems = [
     {
         name: 'ВИДЕОНАБЛЮДЕНИЕ',
         page: <CctvPage/>
     },
-    {
+    /*{
         name: 'КОНТРОЛЬ ДОСТУПА',
         page: <AccessPage/>
-    }
+    }*/
 ]
 
 export default function PricingPage() {
