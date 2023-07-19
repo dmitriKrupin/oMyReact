@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Correction of elements of cctv calculator is continuing">
-      <change afterPath="$PROJECT_DIR$/src/components/cctv/cctv.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cctv/firstStep.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cctv/secondStep.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cctv/thirdStep.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/access.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/access/access.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cctv.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/pricing/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pricing/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-    </list>
+    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Deprecated method has been deleted." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +30,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2SFLX4T9k9QFm0vugzSUct0JobT" />
   <component name="ProjectLevelVcsManager">
@@ -111,7 +99,7 @@
       <workItem from="1689660176725" duration="17033000" />
       <workItem from="1689688885838" duration="6705000" />
       <workItem from="1689748852343" duration="12778000" />
-      <workItem from="1689771280298" duration="1464000" />
+      <workItem from="1689771280298" duration="1775000" />
     </task>
     <task id="LOCAL-00001" summary="Test application has been added.">
       <option name="closed" value="true" />
@@ -241,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689695207230</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Deprecated method has been deleted.">
+      <option name="closed" value="true" />
+      <created>1689772896610</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1689772896610</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +260,7 @@
     <MESSAGE value="Styles for CCTV calculator has been updated." />
     <MESSAGE value="Position of elements of CCTV calculator has been updated." />
     <MESSAGE value="Correction of elements of cctv calculator is continuing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction of elements of cctv calculator is continuing" />
+    <MESSAGE value="Deprecated method has been deleted." />
+    <option name="LAST_COMMIT_MESSAGE" value="Deprecated method has been deleted." />
   </component>
 </project>
