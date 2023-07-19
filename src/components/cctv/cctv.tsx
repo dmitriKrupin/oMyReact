@@ -1,9 +1,9 @@
-import React from "react";
-import {Button, Step, Stepper} from "@material-tailwind/react";
-import Head from "next/head";
-import FirstStep from "@/components/cctv/firstStep";
-import SecondStep from "@/components/cctv/secondStep";
-import ThirdStep from "@/components/cctv/thirdStep";
+import React from 'react';
+import {Button, Step, Stepper} from '@material-tailwind/react';
+import Head from 'next/head';
+import FirstStep from '../../components/cctv/firstStep';
+import SecondStep from '../../components/cctv/secondStep';
+import ThirdStep from '../../components/cctv/thirdStep';
 
 export default function CctvPage() {
     const [activeStep, setActiveStep] = React.useState(0);

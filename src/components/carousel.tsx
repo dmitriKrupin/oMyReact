@@ -1,9 +1,9 @@
-import {Carousel, Typography} from "@material-tailwind/react";
-import Image from "next/image";
+import {Carousel, Typography} from '@material-tailwind/react';
+import Image from 'next/image';
 import Img01 from '@/assets/reviews/image-01.jpg';
 import Img02 from '@/assets/reviews/image-02.jpg';
 import Img03 from '@/assets/reviews/image-03.jpg';
-import Link from "next/link";
+import Link from 'next/link';
 
 const reviews = [
     {

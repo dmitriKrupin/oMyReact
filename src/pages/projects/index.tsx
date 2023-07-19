@@ -1,5 +1,5 @@
-import Layout from "@/components/layout";
-import Head from "next/head";
+import Layout from '../../components/layout';
+import Head from 'next/head';
 import {
     List,
     ListItem,
@@ -7,10 +7,10 @@ import {
     Avatar,
     Card,
     Typography,
-} from "@material-tailwind/react";
-import p65 from '@/assets/projects/p-65.jpg'
-import d23 from '@/assets/projects/d-23.jpg'
-import d25 from '@/assets/projects/d-25.jpg'
+} from '@material-tailwind/react';
+import p65 from '../../assets/projects/p-65.jpg'
+import d23 from '../../assets/projects/d-23.jpg'
+import d25 from '../../assets/projects/d-25.jpg'
 
 const projects = [
     {

@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Navigation from "@/pages/navigation";
-import '@/styles/globals.css'
-import React from "react";
+import Navigation from '../pages/navigation';
+import '../styles/globals.css'
+import React from 'react';
 
 export const siteTitle = 'K-12.PRO | Видеонаблюдение и контроль доступа'
 

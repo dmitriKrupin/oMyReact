@@ -1,5 +1,5 @@
-import {Option, Select} from "@material-tailwind/react";
-import React from "react";
+import {Option, Select} from '@material-tailwind/react';
+import React from 'react';
 
 export default function FirstStep() {
     return (

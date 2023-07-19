@@ -1,6 +1,6 @@
-import React from "react";
-import {Button, Step, Stepper} from "@material-tailwind/react";
-import Head from "next/head";
+import React from 'react';
+import {Button, Step, Stepper} from '@material-tailwind/react';
+import Head from 'next/head';
 
 export default function AccessPage() {
     const [activeStep, setActiveStep] = React.useState(0);

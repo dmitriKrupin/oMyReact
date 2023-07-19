@@ -1,6 +1,6 @@
-import Layout from "@/components/layout";
-import Head from "next/head";
-import CarouselReviews from "@/components/carousel";
+import Layout from '../../components/layout';
+import Head from 'next/head';
+import CarouselReviews from '../../components/carousel';
 
 export default function ReviewsPage() {
     return (

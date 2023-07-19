@@ -1,5 +1,5 @@
-import React from "react";
-import {Slider} from "@material-tailwind/react";
+import React from 'react';
+import {Slider} from '@material-tailwind/react';
 
 export default function SecondStep() {
     const [numberOfCameras, setNumberOfCameras] = React.useState(0);

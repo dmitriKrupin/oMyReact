@@ -1,5 +1,5 @@
-import React from "react";
-import {Slider, Switch} from "@material-tailwind/react";
+import React from 'react';
+import {Slider, Switch} from '@material-tailwind/react';
 
 export default function ThirdStep() {
     const [lengthOfGofra, setLengthOfGofra] = React.useState(0);

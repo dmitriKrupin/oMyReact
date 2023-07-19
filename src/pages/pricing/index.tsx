@@ -1,9 +1,9 @@
-import Layout from "@/components/layout";
-import Head from "next/head";
-import React, {Fragment, useState} from "react";
-import {Dialog, Transition} from "@headlessui/react";
-import CctvPage from "@/components/cctv/cctv";
-import {XMarkIcon} from "@heroicons/react/24/outline";
+import Layout from '../../components/layout';
+import Head from 'next/head';
+import React, {Fragment, useState} from 'react';
+import {Dialog, Transition} from '@headlessui/react';
+import CctvPage from '../../components/cctv/cctv';
+import {XMarkIcon} from '@heroicons/react/24/outline';
 
 const calculateSystems = [
     {
