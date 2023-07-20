@@ -1,189 +1,85 @@
 import React from 'react';
 import {Button, Step, Stepper} from '@material-tailwind/react';
 import Head from 'next/head';
-import FirstStep from '../../components/cctv/firstStep';
-import SecondStep from '../../components/cctv/secondStep';
-import ThirdStep from '../../components/cctv/thirdStep';
+import SecondStep from './secondStep';
+import ThirdStep from './thirdStep';
+import FourthStep from './fourthStep';
+import FirstStep from "./firstStep";
+import ResultStep from "@/components/cctv/resultStep";
 
 export default function CctvPage() {
     const [activeStep, setActiveStep] = React.useState(0);
     const [isLastStep, setIsLastStep] = React.useState(false);
     const [isFirstStep, setIsFirstStep] = React.useState(false);
-    const [divForInput, setDivForInput] = React.useState(<FirstStep/>);
+    const [stepForOutput, setStepForOutput] = React.useState(<FirstStep/>);
 
     function getPageCctvForStep(event: any) {
         let idOfStep = event.target.id;
         arrayOfIdsForSteps.forEach((element) => {
             if (idOfStep === element.stepForVisible) {
                 setActiveStep(element.numberOfStep);
-                setDivForInput(element.divForInput);
+                setStepForOutput(element.stepForOutput);
             }
         })
     }
 
-    /*function firstDiv() {
-        return (
-            <div className={'h-8 flex flex-row justify-center items-center'}
-            >
-                <Select label="Выберите производителя оборудования">
-                    <Option>DAHUA</Option>
-                    <Option>HiWatch</Option>
-                    <Option>Не имеет значения</Option>
-                </Select>
-            </div>
-        );
-    }*/
-
-    /*function secondDiv() {
-        const [numberOfCameras, setNumberOfCameras] = React.useState(0);
-
-        function getNumberOfCameras(event: any) {
-            setNumberOfCameras(event.target.value);
-        }
-
-        return (
-            <div className={'pt-4'}>
-                <div className={'h-8 flex flex-row justify-between'}>
-                    <div>Количество камер:</div>
-                    <div className={'text-blue-500 font-bold'}>{numberOfCameras}</div>
-                </div>
-                <div className={'h-8 flex flex-row justify-center items-center'}>
-                    <Slider
-                        min={0}
-                        max={32}
-                        step={1}
-                        onChange={getNumberOfCameras}
-                    />
-                </div>
-            </div>
-        );
-    }*/
-
-    /*function thirdDiv() {
-        const [lengthOfGofra, setLengthOfGofra] = React.useState(0);
-        const [lengthOfCabelCanal, setLengthOfCabelCanal] = React.useState(0);
-        const [lengthOfShtrob, setLengthOfShtrob] = React.useState(0);
-        const [lengthOfLotok, setLengthOfLotok] = React.useState(0);
-        const [lengthOfPodvesnoyPotok, setLengthOfPodvesnoyPotok] = React.useState(0);
-
-        function getLengthOfGofra(event: any) {
-            setLengthOfGofra(event.target.value);
-        }
-
-        function getLengthOfCabelCanal(event: any) {
-            setLengthOfCabelCanal(event.target.value);
-        }
-
-        function getLengthOfShtrob(event: any) {
-            setLengthOfShtrob(event.target.value);
-        }
-
-        function getLengthOfLotok(event: any) {
-            setLengthOfLotok(event.target.value);
-        }
-
-        function getLengthOfPodvesnoyPotok(event: any) {
-            setLengthOfPodvesnoyPotok(event.target.value);
-        }
-
-        let lengthOfCables =
-            Number(lengthOfGofra) +
-            Number(lengthOfCabelCanal) +
-            Number(lengthOfShtrob) +
-            Number(lengthOfLotok) +
-            Number(lengthOfPodvesnoyPotok);
-
-        const arrayOfCctvMetrics = [
-            {
-                label: 'В гофрированной трубе 20 мм:',
-                idOfSwitch: 'gofra-on',
-                lengthOfLabel: lengthOfGofra,
-                getLengthOfLabel: getLengthOfGofra
-            },
-            {
-                label: 'В кабель-канале 40*20 мм:',
-                idOfSwitch: 'cabelCanal-on',
-                lengthOfLabel: lengthOfCabelCanal,
-                getLengthOfLabel: getLengthOfCabelCanal
-            },
-            {
-                label: 'Необходимо проштробить шириной 20 мм и глубиной 20 мм:',
-                idOfSwitch: 'shtroba-on',
-                lengthOfLabel: lengthOfShtrob,
-                getLengthOfLabel: getLengthOfShtrob
-            },
-            {
-                label: 'Проложить в существующем металлическом лотке:',
-                idOfSwitch: 'lotok-on',
-                lengthOfLabel: lengthOfLotok,
-                getLengthOfLabel: getLengthOfLotok
-            },
-            {
-                label: 'Проложить за существующим подвесным потолком типа Armstrong:',
-                idOfSwitch: 'podvesnoyPotok-on',
-                lengthOfLabel: lengthOfPodvesnoyPotok,
-                getLengthOfLabel: getLengthOfPodvesnoyPotok
-            }
-        ]
-
-        return (
-            <div className={'h-8 flex flex-col'}>
-                <div className={'h-8 flex flex-row justify-between'}>
-                    <div>Общая длина кабельных трасс:</div>
-                    <div className={'text-blue-500 font-bold'}>{lengthOfCables}</div>
-                </div>
-                {arrayOfCctvMetrics.map(({label, lengthOfLabel, idOfSwitch, getLengthOfLabel}) => (
-                        <div className={'h-8 flex flex-row justify-around items-center gap-2'}
-                             key={label}
-                        >
-
-                            <div className={'basis-1/2'}>
-                                <Switch
-                                    id={idOfSwitch}
-                                    label={label}
-                                    ripple={true}
-                                />
-                            </div>
-                            <div className={'flex flex-row items-center basis-1/2 gap-2'}>
-                                <div className={'w-5'}>
-                                    {lengthOfLabel}
-                                </div>
-                                <div className={'w-full'}>
-                                    <Slider
-                                        min={0}
-                                        max={315}
-                                        step={15}
-                                        onChange={getLengthOfLabel}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    )
-                )}
-            </div>
-        );
-    }*/
-
     const arrayOfIdsForSteps = [
         {
-            id: 'manufacture-id',
-            stepForVisible: 'firstStep.tsx',
+            id: 'ceilingHigh-id',
+            stepForVisible: 'firstStep',
             numberOfStep: 0,
-            divForInput: <FirstStep/>
+            stepForOutput: <FirstStep/>
+        },
+        {
+            id: 'manufacture-id',
+            stepForVisible: 'secondStep',
+            numberOfStep: 1,
+            stepForOutput: <SecondStep/>
         },
         {
             id: 'countOfCameras-id',
-            stepForVisible: 'secondStep',
-            numberOfStep: 1,
-            divForInput: <SecondStep/>
+            stepForVisible: 'thirdStep',
+            numberOfStep: 2,
+            stepForOutput: <ThirdStep/>
         },
         {
             id: 'countOfCables-id',
-            stepForVisible: 'thirdStep',
-            numberOfStep: 2,
-            divForInput: <ThirdStep/>
+            stepForVisible: 'fourthStep',
+            numberOfStep: 3,
+            stepForOutput: <FourthStep/>
         }
     ]
+
+    function getSubmitOrForwardNameOfButton() {
+        //todo: добавить изменение названия кнопки с получиь расчет на СОХРАНИТЬ
+        // и добавить уведомление, что черновик сохранен в личном кабинете
+        if (isLastStep) {
+            return (
+                <Button
+                    onClick={() => setStepForOutput(<ResultStep/>)}
+                >
+                    ПОЛУЧИТЬ РАСЧЕТ
+                </Button>
+            )
+        }
+        return (
+            <Button
+                onClick={() => {
+                    if (!isLastStep) {
+                        setActiveStep((cur) => cur + 1)
+                        arrayOfIdsForSteps.forEach((element) => {
+                            if (activeStep + 1 === element.numberOfStep) {
+                                setStepForOutput(element.stepForOutput)
+                            }
+                        })
+                    }
+                }}
+                disabled={isLastStep}
+            >
+                ВПЕРЕД
+            </Button>
+        )
+    }
 
     return (
         <div className={'calculator'}>
@@ -193,7 +89,7 @@ export default function CctvPage() {
             <div>
                 <div className={'w-full h-[28rem] md:h-80 py-4 px-8 p-2'}>
                     <div>
-                        {divForInput}
+                        {stepForOutput}
                     </div>
                 </div>
 
@@ -220,7 +116,7 @@ export default function CctvPage() {
                                 setActiveStep((cur) => cur - 1)
                                 arrayOfIdsForSteps.forEach((element) => {
                                     if (activeStep - 1 === element.numberOfStep) {
-                                        setDivForInput(element.divForInput)
+                                        setStepForOutput(element.stepForOutput)
                                     }
                                 })
                             }
@@ -229,13 +125,14 @@ export default function CctvPage() {
                     >
                         НАЗАД
                     </Button>
-                    <Button
+                    {getSubmitOrForwardNameOfButton()}
+                    {/*<Button
                         onClick={() => {
                             if (!isLastStep) {
                                 setActiveStep((cur) => cur + 1)
                                 arrayOfIdsForSteps.forEach((element) => {
                                     if (activeStep + 1 === element.numberOfStep) {
-                                        setDivForInput(element.divForInput)
+                                        setStepForOutput(element.stepForOutput)
                                     }
                                 })
                             }
@@ -243,7 +140,7 @@ export default function CctvPage() {
                         disabled={isLastStep}
                     >
                         ВПЕРЕД
-                    </Button>
+                    </Button>*/}
                 </div>
             </div>
         </div>

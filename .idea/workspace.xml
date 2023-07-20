@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Some changes after updating Node has been added.">
+    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Some changes at CCTV have been added.">
+      <change afterPath="$PROJECT_DIR$/src/components/cctv/fourthStep.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cctv/resultStep.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cctv/cctv.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/cctv.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cctv/firstStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/firstStep.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cctv/secondStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/secondStep.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cctv/thirdStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/thirdStep.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigation/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +39,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2SFLX4T9k9QFm0vugzSUct0JobT" />
   <component name="ProjectLevelVcsManager">
@@ -42,24 +49,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/dell5/dev/oMyReact/src/assets/projects",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "ts.external.directory.path": "C:\\Users\\dell5\\dev\\oMyReact\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dell5/dev/oMyReact/src/components/cctv&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\dell5\\dev\\oMyReact\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dell5\dev\oMyReact\src\components\cctv" />
       <recent name="C:\Users\dell5\dev\oMyReact\src\assets\projects" />
       <recent name="C:\Users\dell5\dev\oMyReact\src\assets\reviews" />
       <recent name="C:\Users\dell5\dev\oMyReact\src\posts" />
@@ -72,6 +80,23 @@
       <recent name="C:\Users\dell5\dev\oMyReact\src\assets" />
       <recent name="C:\Users\dell5\dev\oMyReact\public\images\reviews" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -101,7 +126,9 @@
       <workItem from="1689660176725" duration="17033000" />
       <workItem from="1689688885838" duration="6705000" />
       <workItem from="1689748852343" duration="12778000" />
-      <workItem from="1689771280298" duration="8660000" />
+      <workItem from="1689771280298" duration="10339000" />
+      <workItem from="1689833233815" duration="11476000" />
+      <workItem from="1689848174623" duration="9114000" />
     </task>
     <task id="LOCAL-00001" summary="Test application has been added.">
       <option name="closed" value="true" />
@@ -327,15 +354,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689779832097</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="tslib in webpack dependencies has been added.">
+      <option name="closed" value="true" />
+      <created>1689780127842</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1689780127842</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Styles have been updated." />
-    <MESSAGE value="Workspace.xml has been updated." />
     <MESSAGE value="First review has been added." />
     <MESSAGE value="Workspace.xml for first review has been updated." />
     <MESSAGE value="First project has been added." />
@@ -359,6 +392,8 @@
     <MESSAGE value="Tslib one more time in dependencies has been added." />
     <MESSAGE value="Node has been updated." />
     <MESSAGE value="Some changes after updating Node has been added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some changes after updating Node has been added." />
+    <MESSAGE value="tslib in webpack dependencies has been added." />
+    <MESSAGE value="Some changes at CCTV have been added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some changes at CCTV have been added." />
   </component>
 </project>

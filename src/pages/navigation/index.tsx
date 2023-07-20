@@ -9,7 +9,7 @@ import AuthorizationPage from '../../pages/authorizations';
 const navigation = [
     {name: 'ПРОЕКТЫ', href: '/projects'},
     {name: 'СТОИМОСТЬ', href: '/pricing'},
-    {name: 'ОТЗЫВЫ', href: '/reviews'},
+    {name: 'ОТЗЫВЫ', href: '/reviews'}
 ]
 
 export default function Navigation() {
