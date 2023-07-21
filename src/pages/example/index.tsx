@@ -1,4 +1,4 @@
-import {useState} from 'react';
+/*import {useState} from 'react';
 
 export default function ExamplePage() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -48,5 +48,11 @@ function Panel(props: {
                 <button onClick={props.onShow}>Show</button>
             )}
         </section>
+    );
+}*/
+
+export default function ExamplePage() {
+    return (
+      <div>ЭТО СТРАНИЦА ПРМИМЕРА, НЕ ЗАБУДЬ УДАЛИТЬ</div>
     );
 }
