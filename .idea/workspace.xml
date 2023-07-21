@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Some changes at CCTV have been added.">
-      <change afterPath="$PROJECT_DIR$/src/components/cctv/fourthStep.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cctv/resultStep.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/example/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cctv/cctv.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/cctv.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cctv/firstStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/firstStep.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cctv/secondStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/secondStep.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cctv/thirdStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/thirdStep.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cctv/fourthStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/fourthStep.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigation/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2SFLX4T9k9QFm0vugzSUct0JobT" />
   <component name="ProjectLevelVcsManager">
@@ -128,7 +129,10 @@
       <workItem from="1689748852343" duration="12778000" />
       <workItem from="1689771280298" duration="10339000" />
       <workItem from="1689833233815" duration="11476000" />
-      <workItem from="1689848174623" duration="9114000" />
+      <workItem from="1689848174623" duration="9820000" />
+      <workItem from="1689861608538" duration="3808000" />
+      <workItem from="1689930328509" duration="4528000" />
+      <workItem from="1689938895703" duration="3202000" />
     </task>
     <task id="LOCAL-00001" summary="Test application has been added.">
       <option name="closed" value="true" />
@@ -362,7 +366,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689780127842</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Some changes at CCTV have been added.">
+      <option name="closed" value="true" />
+      <created>1689859787686</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1689859787686</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

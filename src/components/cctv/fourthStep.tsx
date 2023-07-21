@@ -81,6 +81,7 @@ export default function FourthStep() {
                         <div className={'flex flex-col md:flex-row basis-1/2 gap-2 justify-start w-full'}>
                             <div className={'flex flex-row gap-2 w-full'}>
                                 <Switch
+                                    //todo: добавить активацию после активации ползунка длины
                                     id={idOfSwitch}
                                 />
                                 <div className={'font-light text-sm md:text-base'}>

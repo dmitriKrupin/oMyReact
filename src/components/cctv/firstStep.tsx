@@ -20,7 +20,6 @@ export default function FirstStep() {
     ]
 
     useEffect(() => {
-        console.log(sessionStorage.getItem('stateCeilingHigh'))
         sessionStorage.setItem('stateCeilingHigh', ceilingHigh)
     }, [ceilingHigh])
 
@@ -28,10 +27,41 @@ export default function FirstStep() {
         setCeilingHigh(event.target.innerHTML);
     }
 
+    function getHighFromSessionStorage() {
+        let labelForInput = sessionStorage.getItem('stateCeilingHigh');
+        if (labelForInput !== null) {
+            console.log(sessionStorage.getItem('stateCeilingHigh'));
+            //setCeilingHigh(labelForInput);
+            return sessionStorage.getItem('stateCeilingHigh');
+        } else {
+            return '';
+        }
+    }
+
+    function getLabelOrChooseHigh() {
+        return (
+            <Select
+                label="Выберите высоту потолков в помещении"
+                value={getHighFromSessionStorage() || ''}
+            >
+                {arrayOfCeilingHigh.map(({id, high}) => (
+                    <Option
+                        key={id}
+                        //todo: добавить сохранение состояния при переходе назад или закрытии страницы
+                        //todo: добавить уведомление при начале расчета, что после авториации можно сохранять результаты
+                        onClick={setHigh}
+                    >
+                        {high}
+                    </Option>
+                ))}
+            </Select>
+        );
+    }
+
     return (
         <div className={'flex flex-col justify-center items-center gap-4'}
         >
-            <Select
+            {/*<Select
                 label="Выберите высоту потолков в помещении"
             >
                 {arrayOfCeilingHigh.map(({id, high}) => (
@@ -39,13 +69,13 @@ export default function FirstStep() {
                         key={id}
                         //todo: добавить сохранение состояния при переходе назад или закрытии страницы
                         //todo: добавить уведомление при начале расчета, что после авториации можно сохранять результаты
-                        //onClick={() => setCeilingHigh(high)}
                         onClick={setHigh}
                     >
                         {high}
                     </Option>
                 ))}
-            </Select>
+            </Select>*/}
+            {getLabelOrChooseHigh()}
         </div>
     )
         ;
