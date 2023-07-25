@@ -4,6 +4,12 @@ import React, {useEffect} from 'react';
 export default function FirstStep() {
     const [ceilingHigh, setCeilingHigh] = React.useState('');
 
+    useEffect(() => {
+        let value
+        value = localStorage.getItem('highOfCeiling') || ""
+        setCeilingHigh(value)
+    }, [])
+
     const arrayOfCeilingHigh = [
         {
             id: 0,
@@ -15,68 +21,37 @@ export default function FirstStep() {
         },
         {
             id: 2,
-            high: 'более 5-ти метров'
+            high: 'от 5-ти до 9-ти метров'
+        },
+        {
+            id: 3,
+            high: 'более 9-ти метров'
         },
     ]
 
-    useEffect(() => {
-        sessionStorage.setItem('stateCeilingHigh', ceilingHigh)
-    }, [ceilingHigh])
-
-    function setHigh(event: any) {
-        setCeilingHigh(event.target.innerHTML);
+    function saveInLocalStorage(value: any) {
+        setCeilingHigh(value)
+        localStorage.setItem('highOfCeiling', value)
     }
 
-    function getHighFromSessionStorage() {
-        let labelForInput = sessionStorage.getItem('stateCeilingHigh');
-        if (labelForInput !== null) {
-            console.log(sessionStorage.getItem('stateCeilingHigh'));
-            //setCeilingHigh(labelForInput);
-            return sessionStorage.getItem('stateCeilingHigh');
-        } else {
-            return '';
-        }
-    }
-
-    function getLabelOrChooseHigh() {
-        return (
+    return (
+        <div className={'flex flex-col justify-center items-center gap-4'}>
             <Select
-                label="Выберите высоту потолков в помещении"
-                value={getHighFromSessionStorage() || ''}
+                label={"Выберите высоту потолков в помещении:"}
+                value={ceilingHigh}
+                onChange={(value) => {
+                    saveInLocalStorage(value)
+                }}
             >
                 {arrayOfCeilingHigh.map(({id, high}) => (
                     <Option
                         key={id}
-                        //todo: добавить сохранение состояния при переходе назад или закрытии страницы
-                        //todo: добавить уведомление при начале расчета, что после авториации можно сохранять результаты
-                        onClick={setHigh}
+                        value={high}
                     >
                         {high}
                     </Option>
                 ))}
             </Select>
-        );
-    }
-
-    return (
-        <div className={'flex flex-col justify-center items-center gap-4'}
-        >
-            {/*<Select
-                label="Выберите высоту потолков в помещении"
-            >
-                {arrayOfCeilingHigh.map(({id, high}) => (
-                    <Option
-                        key={id}
-                        //todo: добавить сохранение состояния при переходе назад или закрытии страницы
-                        //todo: добавить уведомление при начале расчета, что после авториации можно сохранять результаты
-                        onClick={setHigh}
-                    >
-                        {high}
-                    </Option>
-                ))}
-            </Select>*/}
-            {getLabelOrChooseHigh()}
         </div>
-    )
-        ;
+    );
 }

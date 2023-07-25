@@ -1,58 +1,62 @@
-/*import {useState} from 'react';
+import Layout from "@/components/layout";
 
 export default function ExamplePage() {
-    const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <>
-            <h2>Almaty, Kazakhstan</h2>
-            <Panel
-                title='About'
-                isActive={activeIndex === 0}
-                onShow={() => setActiveIndex(0)}
-            >
-                With a population of about 2 million, Almaty
-                is Kazakhstan's largest city. From 1929 to
-                1997, it was its capital city.
-            </Panel>
-            <Panel
-                title='Etymology'
-                isActive={activeIndex === 1}
-                onShow={() => setActiveIndex(1)}
-            >
-                The name comes from{' '}, the Kazakh
-                word for "apple" and is often translated as
-                "full of apples". In fact, the region
-                surrounding Almaty is thought to be the
-                ancestral home of the apple, and the wild{' '}
-                Malus sieversii is
-                considered a likely candidate for the
-                ancestor of the modern domestic apple.
-            </Panel>
-        </>
+        <Layout home>
+            <div className={'text-center'}>
+                ЗДЕСЬ ХРАНЯТСЯ ПРИМЕРЫ, ДЛЯ ИСПОЛЬЗОВАНИЯ - РАСКОММЕНТИРУЙ!
+            </div>
+        </Layout>
     );
-}
 
-function Panel(props: {
-    title: string
-    children: any
-    isActive: boolean
-    onShow: () => void
-}) {
-    return (
-        <section className="panel">
-            <h3>{props.title}</h3>
-            {props.isActive ? (
-                <p>{props.children}</p>
-            ) : (
-                <button onClick={props.onShow}>Show</button>
-            )}
-        </section>
-    );
-}*/
+    {/*
+    // Set the value received from the local storage to a local state
+    const [favoriteNumber, setFavoriteNumber] = useState("")
 
-export default function ExamplePage() {
+    useEffect(() => {
+        let value
+        // Get the value from local storage if it exists
+        value = localStorage.getItem("favoriteNumber") || ""
+        setFavoriteNumber(value)
+    }, [])
+
+    // When user submits the form, save the favorite number to the local storage
+    const saveToLocalStorage = e => {
+        e.preventDefault()
+        localStorage.setItem("favoriteNumber", favoriteNumber)
+    }
+
     return (
-      <div>ЭТО СТРАНИЦА ПРМИМЕРА, НЕ ЗАБУДЬ УДАЛИТЬ</div>
-    );
+        <div>
+            <label htmlFor="number">Your favorite number</label>
+            <form onSubmit={saveToLocalStorage}>
+                <input
+                    id="number"
+                    value={favoriteNumber}
+                    onChange={e => setFavoriteNumber(e.target.value)}
+                />
+                <input type="submit" value="Save"/>
+            </form>
+        </div>
+    )*/
+    }
+
+    /*const [selectedFruit, setSelectedFruit] = useState('orange'); // Declare a state variable...
+    // ...
+    return (
+        <Select
+            value={selectedFruit} // ...force the select's value to match the state variable...
+            onChange={e => {
+                console.log(e)
+                // @ts-ignore
+                setSelectedFruit(e)
+                //setSelectedFruit(e.target.value)
+            }} // ... and update the state variable on any change!
+        >
+            <Option value='apple'>Apple</Option>
+            <Option value='banana'>Banana</Option>
+            <Option value='orange'>Orange</Option>
+        </Select>
+    );*/
 }
