@@ -1,11 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Slider} from '@material-tailwind/react';
 
 export default function ThirdStep() {
     const [numberOfCameras, setNumberOfCameras] = React.useState(0);
 
-    function getNumberOfCameras(event: any) {
-        setNumberOfCameras(event.target.value);
+    useEffect(() => {
+        let value;
+        value = localStorage.getItem('numberOfCameras') || '0';
+        setNumberOfCameras(parseInt(value));
+    })
+
+    function saveInLocalStorage(event: any) {
+        let numberOfCameras = event.target.valueAsNumber;
+        setNumberOfCameras(numberOfCameras);
+        localStorage.setItem('numberOfCameras', numberOfCameras);
     }
 
     return (
@@ -17,10 +25,12 @@ export default function ThirdStep() {
             <div className={'h-8 flex flex-row justify-center items-center'}>
                 <Slider
                     min={0}
-                    max={32}
+                    max={100}
                     step={1}
-                    defaultValue={0}
-                    onChange={getNumberOfCameras}
+                    //todo: поправить полоску индикации, чтобы она отображала правильную индикацию, если значений меньше 100
+                    defaultValue={numberOfCameras}
+                    value={numberOfCameras}
+                    onChange={saveInLocalStorage}
                 />
             </div>
         </div>

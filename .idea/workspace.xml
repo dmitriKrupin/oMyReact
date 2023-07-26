@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Page example/index.tsx has been deleted and also next.config.js has been updated.">
+    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Saving in localstorage for two steps on CCTVPage has been added.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cctv/firstStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/firstStep.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cctv/secondStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/secondStep.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/example/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/example/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cctv/fourthStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/fourthStep.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cctv/thirdStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/thirdStep.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +128,8 @@
       <workItem from="1689930328509" duration="4528000" />
       <workItem from="1689938895703" duration="3971000" />
       <workItem from="1690192722585" duration="17698000" />
-      <workItem from="1690277440377" duration="18196000" />
+      <workItem from="1690277440377" duration="18364000" />
+      <workItem from="1690355381477" duration="8593000" />
     </task>
     <task id="LOCAL-00001" summary="Test application has been added.">
       <option name="closed" value="true" />
@@ -387,14 +387,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689947960473</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Saving in localstorage for two steps on CCTVPage has been added.">
+      <option name="closed" value="true" />
+      <created>1690295875971</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1690295875971</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First project has been added." />
     <MESSAGE value="Projects have been updated." />
     <MESSAGE value="CctvPage has been added." />
     <MESSAGE value="Dependencies have been updated." />
@@ -419,6 +426,7 @@
     <MESSAGE value="Some changes at CCTV have been added." />
     <MESSAGE value="next.config.js has been updated." />
     <MESSAGE value="Page example/index.tsx has been deleted and also next.config.js has been updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Page example/index.tsx has been deleted and also next.config.js has been updated." />
+    <MESSAGE value="Saving in localstorage for two steps on CCTVPage has been added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Saving in localstorage for two steps on CCTVPage has been added." />
   </component>
 </project>

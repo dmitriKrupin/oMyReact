@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Slider, Switch} from '@material-tailwind/react';
 
 export default function FourthStep() {
@@ -8,24 +8,66 @@ export default function FourthStep() {
     const [lengthOfLotok, setLengthOfLotok] = React.useState(0);
     const [lengthOfPodvesnoyPotok, setLengthOfPodvesnoyPotok] = React.useState(0);
 
-    function getLengthOfGofra(event: any) {
-        setLengthOfGofra(event.target.value);
-    }
+    const arrayOfLengthResults = [
+        {
+            name: 'lengthOfGofra',
+            value: lengthOfGofra,
+            function: setLengthOfGofra,
+            label: 'В гофрированной трубе 20 мм:',
+            idOfSwitch: 'gofra-on',
+            getLengthOfLabel: saveInLocalStorage
+        },
+        {
+            name: 'lengthOfCabelCanal',
+            value: lengthOfCabelCanal,
+            function: setLengthOfCabelCanal,
+            label: 'В кабель-канале 40*20 мм:',
+            idOfSwitch: 'cabelCanal-on',
+            getLengthOfLabel: saveInLocalStorage
+        },
+        {
+            name: 'lengthOfShtrob',
+            value: lengthOfShtrob,
+            function: setLengthOfShtrob,
+            label: 'Необходимо проштробить шириной 20 мм и глубиной 20 мм:',
+            idOfSwitch: 'shtroba-on',
+            getLengthOfLabel: saveInLocalStorage
+        },
+        {
+            name: 'lengthOfLotok',
+            value: lengthOfLotok,
+            function: setLengthOfLotok,
+            label: 'Проложить в существующем металлическом лотке:',
+            idOfSwitch: 'lotok-on',
+            getLengthOfLabel: saveInLocalStorage
+        },
+        {
+            name: 'lengthOfPodvesnoyPotok',
+            value: lengthOfPodvesnoyPotok,
+            function: setLengthOfPodvesnoyPotok,
+            label: 'Проложить за существующим подвесным потолком типа Armstrong:',
+            idOfSwitch: 'podvesnoyPotok-on',
+            getLengthOfLabel: saveInLocalStorage
+        }
+    ]
 
-    function getLengthOfCabelCanal(event: any) {
-        setLengthOfCabelCanal(event.target.value);
-    }
+    useEffect(() => {
+        for (let i = 0; i < arrayOfLengthResults.length; i++) {
+            let value;
+            value = localStorage.getItem(arrayOfLengthResults[i].name) || '0';
+            arrayOfLengthResults[i].value = parseInt(value);
+            arrayOfLengthResults[i].function(parseInt(value));
+        }
+    })
 
-    function getLengthOfShtrob(event: any) {
-        setLengthOfShtrob(event.target.value);
-    }
-
-    function getLengthOfLotok(event: any) {
-        setLengthOfLotok(event.target.value);
-    }
-
-    function getLengthOfPodvesnoyPotok(event: any) {
-        setLengthOfPodvesnoyPotok(event.target.value);
+    function saveInLocalStorage(event: any, name: string) {
+        let value = event.target.value;
+        arrayOfLengthResults.map((entry) => {
+            if (entry.name === name) {
+                entry.function(value);
+                localStorage.setItem(entry.name, value);
+            }
+        })
     }
 
     let lengthOfCables =
@@ -35,71 +77,42 @@ export default function FourthStep() {
         Number(lengthOfLotok) +
         Number(lengthOfPodvesnoyPotok);
 
-    const arrayOfCctvMetrics = [
-        {
-            label: 'В гофрированной трубе 20 мм:',
-            idOfSwitch: 'gofra-on',
-            lengthOfLabel: lengthOfGofra,
-            getLengthOfLabel: getLengthOfGofra
-        },
-        {
-            label: 'В кабель-канале 40*20 мм:',
-            idOfSwitch: 'cabelCanal-on',
-            lengthOfLabel: lengthOfCabelCanal,
-            getLengthOfLabel: getLengthOfCabelCanal
-        },
-        {
-            label: 'Необходимо проштробить шириной 20 мм и глубиной 20 мм:',
-            idOfSwitch: 'shtroba-on',
-            lengthOfLabel: lengthOfShtrob,
-            getLengthOfLabel: getLengthOfShtrob
-        },
-        {
-            label: 'Проложить в существующем металлическом лотке:',
-            idOfSwitch: 'lotok-on',
-            lengthOfLabel: lengthOfLotok,
-            getLengthOfLabel: getLengthOfLotok
-        },
-        {
-            label: 'Проложить за существующим подвесным потолком типа Armstrong:',
-            idOfSwitch: 'podvesnoyPotok-on',
-            lengthOfLabel: lengthOfPodvesnoyPotok,
-            getLengthOfLabel: getLengthOfPodvesnoyPotok
-        }
-    ]
-
     return (
         <div className={'h-full flex flex-col'}>
             <div className={'flex flex-row justify-between font-bold'}>
                 <div>Общая длина трасс:</div>
                 <div className={'text-blue-500 font-bold'}>{lengthOfCables}</div>
             </div>
-            {arrayOfCctvMetrics.map(({label, lengthOfLabel, idOfSwitch, getLengthOfLabel}) => (
+            {arrayOfLengthResults.map((entry) => (
                     <div className={'h-full flex flex-col md:flex-row justify-around items-center gap-2'}
-                         key={label}
+                         key={entry.label}
                     >
                         <div className={'flex flex-col md:flex-row basis-1/2 gap-2 justify-start w-full'}>
                             <div className={'flex flex-row gap-2 w-full'}>
                                 <Switch
                                     //todo: добавить активацию после активации ползунка длины
-                                    id={idOfSwitch}
+                                    id={entry.idOfSwitch}
                                 />
                                 <div className={'font-light text-sm md:text-base'}>
-                                    {label}
+                                    {entry.label}
                                 </div>
                             </div>
                         </div>
                         <div className={'flex flex-row items-center basis-1/2 gap-4 w-full'}>
                             <div className={'w-5'}>
-                                {lengthOfLabel}
+                                {entry.value}
                             </div>
                             <div className={'w-full'}>
                                 <Slider
                                     min={0}
-                                    max={315}
-                                    step={15}
-                                    defaultValue={0}
-                                    onChange={getLengthOfLabel}
+                                    max={100}
+                                    step={10}
+                                    //todo: поправить полоску индикации, чтобы она отображала правильную индикацию, если значений больше 100
+                                    defaultValue={entry.value}
+                                    value={entry.value}
+                                    onChange={(event) => {
+                                        entry.getLengthOfLabel(event, entry.name)
+                                    }}
                                 />
                             </div>
                         </div>
