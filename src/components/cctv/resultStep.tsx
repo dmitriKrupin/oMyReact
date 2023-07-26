@@ -1,8 +1,81 @@
+import {IconButton, Tooltip} from "@material-tailwind/react";
+import React from "react";
+import {PencilIcon} from "@heroicons/react/20/solid";
+
+const TABLE_HEAD = [
+    "№",
+    "Количество камер",
+    "Длина трасс",
+    "Статус",
+    "Оборудование",
+    "Работы",
+    "ИТОГО"
+];
+
+function editButton() {
+    return (
+        <Tooltip content="Редактировать расчет">
+            <IconButton variant="text" color="blue-gray">
+                <PencilIcon className="h-4 w-4"/>
+            </IconButton>
+        </Tooltip>
+    );
+}
+
 export default function ResultStep() {
+    const TABLE_BODY = [
+        {
+            id: 1,
+            cameras: localStorage.getItem('numberOfCameras') || '0',
+            length: getSumOfLength(),
+            status: "Черновик",
+            costOfEquipment: "Оборудование",
+            costOfWork: "Работы",
+            total: "ИТОГО",
+            button: editButton,
+        }
+    ];
+
+    function getSumOfLength() {
+        let lengthOfGofra = Number(localStorage.getItem('lengthOfGofra'));
+        let lengthOfCabelCanal = Number(localStorage.getItem('lengthOfCabelCanal'));
+        let lengthOfShtrob = Number(localStorage.getItem('lengthOfShtrob'));
+        let lengthOfLotok = Number(localStorage.getItem('lengthOfLotok'));
+        let lengthOfPodvesnoyPotok = Number(localStorage.getItem('lengthOfPodvesnoyPotok'));
+        return (
+            lengthOfGofra + lengthOfCabelCanal + lengthOfShtrob + lengthOfLotok + lengthOfPodvesnoyPotok
+        );
+    }
+
     return (
         //todo: добавить готовый результат с указанием стоимостей за работы и необходимые оборудование и материалы
-        <div>
-            РЕЗУЛЬТАТ РАСЧЕТА!
+        <div className={'h-full flex flex-col'}>
+            <table className="table-auto">
+                <thead>
+                <tr>
+                    {TABLE_HEAD.map((entry) => (
+                        <th
+                            className={'text-center text-sm md:text-base'}
+                            key={entry}
+                        >{entry}</th>
+                    ))}
+                </tr>
+                </thead>
+                <tbody>
+                {TABLE_BODY.map((entry) => (
+                    <tr className={'text-center'} key={entry.id}>
+                        <th className={'font-light'}>{entry.id}</th>
+                        <th className={'font-light'}>{entry.cameras}</th>
+                        <th className={'font-light'}>{entry.length}</th>
+                        <th className={'font-light'}>{entry.status}</th>
+                        <th className={'font-light'}>{entry.costOfEquipment}</th>
+                        <th className={'font-light'}>{entry.costOfWork}</th>
+                        <th className={'font-light'}>{entry.total}</th>
+                        <th className={'font-light'}>{entry.button()}</th>
+                    </tr>
+                ))}
+                </tbody>
+            </table>
         </div>
-    )
+    );
 }

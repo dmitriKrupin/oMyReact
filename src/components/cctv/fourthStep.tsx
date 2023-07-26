@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Slider, Switch} from '@material-tailwind/react';
+import {Checkbox, Slider} from '@material-tailwind/react';
 
 export default function FourthStep() {
     const [lengthOfGofra, setLengthOfGofra] = React.useState(0);
@@ -15,7 +15,7 @@ export default function FourthStep() {
             function: setLengthOfGofra,
             label: 'В гофрированной трубе 20 мм:',
             idOfSwitch: 'gofra-on',
-            getLengthOfLabel: saveInLocalStorage
+            getLengthOfLabel: saveInLocalStorage,
         },
         {
             name: 'lengthOfCabelCanal',
@@ -23,7 +23,7 @@ export default function FourthStep() {
             function: setLengthOfCabelCanal,
             label: 'В кабель-канале 40*20 мм:',
             idOfSwitch: 'cabelCanal-on',
-            getLengthOfLabel: saveInLocalStorage
+            getLengthOfLabel: saveInLocalStorage,
         },
         {
             name: 'lengthOfShtrob',
@@ -31,7 +31,7 @@ export default function FourthStep() {
             function: setLengthOfShtrob,
             label: 'Необходимо проштробить шириной 20 мм и глубиной 20 мм:',
             idOfSwitch: 'shtroba-on',
-            getLengthOfLabel: saveInLocalStorage
+            getLengthOfLabel: saveInLocalStorage,
         },
         {
             name: 'lengthOfLotok',
@@ -39,7 +39,7 @@ export default function FourthStep() {
             function: setLengthOfLotok,
             label: 'Проложить в существующем металлическом лотке:',
             idOfSwitch: 'lotok-on',
-            getLengthOfLabel: saveInLocalStorage
+            getLengthOfLabel: saveInLocalStorage,
         },
         {
             name: 'lengthOfPodvesnoyPotok',
@@ -47,7 +47,7 @@ export default function FourthStep() {
             function: setLengthOfPodvesnoyPotok,
             label: 'Проложить за существующим подвесным потолком типа Armstrong:',
             idOfSwitch: 'podvesnoyPotok-on',
-            getLengthOfLabel: saveInLocalStorage
+            getLengthOfLabel: saveInLocalStorage,
         }
     ]
 
@@ -60,6 +60,13 @@ export default function FourthStep() {
         }
     })
 
+    let sumLengthOfCables =
+        Number(lengthOfGofra) +
+        Number(lengthOfCabelCanal) +
+        Number(lengthOfShtrob) +
+        Number(lengthOfLotok) +
+        Number(lengthOfPodvesnoyPotok);
+
     function saveInLocalStorage(event: any, name: string) {
         let value = event.target.value;
         arrayOfLengthResults.map((entry) => {
@@ -70,30 +77,23 @@ export default function FourthStep() {
         })
     }
 
-    let lengthOfCables =
-        Number(lengthOfGofra) +
-        Number(lengthOfCabelCanal) +
-        Number(lengthOfShtrob) +
-        Number(lengthOfLotok) +
-        Number(lengthOfPodvesnoyPotok);
-
     return (
         <div className={'h-full flex flex-col'}>
             <div className={'flex flex-row justify-between font-bold'}>
                 <div>Общая длина трасс:</div>
-                <div className={'text-blue-500 font-bold'}>{lengthOfCables}</div>
+                <div className={'text-blue-500 font-bold'}>{sumLengthOfCables}</div>
             </div>
             {arrayOfLengthResults.map((entry) => (
                     <div className={'h-full flex flex-col md:flex-row justify-around items-center gap-2'}
                          key={entry.label}
                     >
                         <div className={'flex flex-col md:flex-row basis-1/2 gap-2 justify-start w-full'}>
-                            <div className={'flex flex-row gap-2 w-full'}>
-                                <Switch
+                            <div className={'flex flex-row items-center gap-2 w-full'}>
+                                <Checkbox
                                     //todo: добавить активацию после активации ползунка длины
                                     id={entry.idOfSwitch}
                                 />
-                                <div className={'font-light text-sm md:text-base'}>
+                                <div className={'font-light text-sm md:text-base text-left'}>
                                     {entry.label}
                                 </div>
                             </div>

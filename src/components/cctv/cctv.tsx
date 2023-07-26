@@ -47,6 +47,12 @@ export default function CctvPage() {
             stepForVisible: 'fourthStep',
             numberOfStep: 3,
             stepForOutput: <FourthStep/>
+        },
+        {
+            id: 'result-id',
+            stepForVisible: 'resultStep',
+            numberOfStep: 4,
+            stepForOutput: <ResultStep/>
         }
     ]
 
@@ -58,7 +64,7 @@ export default function CctvPage() {
                 <Button
                     onClick={() => setStepForOutput(<ResultStep/>)}
                 >
-                    ПОЛУЧИТЬ РАСЧЕТ
+                    СОХРАНИТЬ РАСЧЕТ
                 </Button>
             )
         }
