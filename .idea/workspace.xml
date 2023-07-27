@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="Saving in localstorage for all steps on CCTVPage has been added.">
+    <list default="true" id="714b2d97-d7cd-4f06-81d2-0c75fe1f9350" name="Changes" comment="ResultStep has been added.">
+      <change afterPath="$PROJECT_DIR$/src/components/footer/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/cabinet/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/carousel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cctv/cctv.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/cctv.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cctv/fourthStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/fourthStep.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cctv/resultStep.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cctv/resultStep.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/example/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/example/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/authorizations/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authorizations/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigation/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +61,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\dell5\\dev\\oMyReact\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -134,7 +136,9 @@
       <workItem from="1690192722585" duration="17698000" />
       <workItem from="1690277440377" duration="18364000" />
       <workItem from="1690355381477" duration="12904000" />
-      <workItem from="1690371623996" duration="10152000" />
+      <workItem from="1690371623996" duration="10450000" />
+      <workItem from="1690437976034" duration="144000" />
+      <workItem from="1690438153713" duration="11972000" />
     </task>
     <task id="LOCAL-00001" summary="Test application has been added.">
       <option name="closed" value="true" />
@@ -408,14 +412,32 @@
       <option name="project" value="LOCAL" />
       <updated>1690364048076</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="ResultStep has been added.">
+      <option name="closed" value="true" />
+      <created>1690382137532</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1690382137533</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CctvPage has been added." />
     <MESSAGE value="Dependencies have been updated." />
     <MESSAGE value="Separated input for CCTV and ACCESS has been added." />
     <MESSAGE value="Piece of CCTV calculator has been added." />
@@ -440,6 +462,7 @@
     <MESSAGE value="Page example/index.tsx has been deleted and also next.config.js has been updated." />
     <MESSAGE value="Saving in localstorage for two steps on CCTVPage has been added." />
     <MESSAGE value="Saving in localstorage for all steps on CCTVPage has been added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Saving in localstorage for all steps on CCTVPage has been added." />
+    <MESSAGE value="ResultStep has been added." />
+    <option name="LAST_COMMIT_MESSAGE" value="ResultStep has been added." />
   </component>
 </project>

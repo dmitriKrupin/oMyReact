@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import Layout, {siteTitle} from '../components/layout'
 import {getSortedPostsData} from '@/lib/posts'
-import Link from 'next/link'
-import Date from '@/components/date'
 import {GetStaticProps} from 'next'
 
 export default function Home({
@@ -19,7 +17,10 @@ export default function Home({
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <div className={'main'}>
+
+
+
+            {/*<div className={'main'}>
                 <section className={'headingMd'}>
                     <p>
                         (This is a sample website - you’ll be building a site like this in{' '}
@@ -40,7 +41,7 @@ export default function Home({
                         ))}
                     </ul>
                 </section>
-            </div>
+            </div>*/}
         </Layout>
     )
 }

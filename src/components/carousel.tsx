@@ -33,7 +33,7 @@ const reviews = [
 
 export default function CarouselReviews() {
     return (
-        <Carousel>
+        <Carousel loop={true}>
             {reviews.map((item) => (
                 <div
                     key={item.name}>
