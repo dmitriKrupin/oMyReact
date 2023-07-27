@@ -1,73 +1,116 @@
+import React from "react";
+import {
+    Card,
+    CardBody,
+    Input,
+    Button,
+    Typography,
+    Tabs,
+    TabsHeader,
+    TabsBody,
+    Tab,
+    TabPanel,
+    Checkbox,
+} from "@material-tailwind/react";
 import Head from "next/head";
 
 export default function AuthorizationPage() {
+    const [type, setType] = React.useState("sighIn");
+
     return (
         <div className={'authorization'}>
             <Head>
                 <title>{'K-12.PRO | Авторизация'}</title>
             </Head>
-            <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-                <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                    <h1 className="mt-10 text-center text-2xl leading-9 tracking-tight text-gray-900">
-                        Добро пожаловать!
-                    </h1>
-                    <h2 className="mt-10 text-center leading-9 tracking-tight text-gray-900">
-                        Войдите, чтобы сохранить результат расчета.
-                    </h2>
-                </div>
-
-                <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form className="space-y-6" action="#" method="POST">
-                        <div>
-                            <label htmlFor="email" className="block text-sm text-left leading-6 text-gray-900">
-                                Email
-                            </label>
-                            <div className="mt-2">
-                                <input
-                                    id="email"
-                                    name="email"
-                                    type="email"
-                                    autoComplete="email"
-                                    required
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                />
-                            </div>
-                        </div>
-
-                        <div>
-                            <div className="flex items-center justify-between">
-                                <label htmlFor="password"
-                                       className="block text-sm leading-6 text-gray-900">
-                                    Password
-                                </label>
-                                <div className="text-sm">
-                                    <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                                        Зарегистрироваться
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="mt-2">
-                                <input
-                                    id="password"
-                                    name="password"
-                                    type="password"
-                                    autoComplete="current-password"
-                                    required
-                                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                                />
-                            </div>
-                        </div>
-
-                        <div>
-                            <button
-                                type="submit"
-                                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            <div className={'border-gray-300'}>
+                <Card color="transparent" shadow={false}>
+                    <CardBody>
+                        <Tabs value={type} className="pt-4 overflow-visible">
+                            <TabsHeader className="relative z-0">
+                                <Tab value="sighIn" onClick={() => setType("sighIn")}>
+                                    Войти
+                                </Tab>
+                                <Tab value="register" onClick={() => setType("register")}>
+                                    Зарегистрироваться
+                                </Tab>
+                            </TabsHeader>
+                            <TabsBody
+                                className="!overflow-x-hidden "
+                                animate={{
+                                    initial: {
+                                        x: type === "card" ? 400 : -400,
+                                    },
+                                    mount: {
+                                        x: 0,
+                                    },
+                                    unmount: {
+                                        x: type === "card" ? 400 : -400,
+                                    },
+                                }}
                             >
-                                Войти
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                                <TabPanel value="sighIn">
+                                    <Typography color="gray" className="mt-1 font-normal">
+                                        для сохранения результатов расчетов, пожалуйста, войдите в личный кабинет
+                                    </Typography>
+                                    <form className="mt-8 mb-2">
+                                        <div className="mb-4 flex flex-col gap-6">
+                                            <Input size="lg" label="Email"/>
+                                            <Input type="password" size="lg" label="Password"/>
+                                        </div>
+                                        <Checkbox
+                                            label={
+                                                <Typography
+                                                    variant="small"
+                                                    color="gray"
+                                                    className="flex items-center font-normal"
+                                                >
+                                                    У меня есть тестовый логин и пароль
+                                                </Typography>
+                                            }
+                                            containerProps={{className: "-ml-2.5"}}
+                                        />
+                                        <Button className="mt-6" fullWidth>
+                                            ВОЙТИ
+                                        </Button>
+                                    </form>
+                                </TabPanel>
+                                <TabPanel value="register">
+                                    <Typography color="gray" className="mt-1 font-normal">
+                                        для сохранения результатов расчетов, пожалуйста, зарегистрируйтесь
+                                    </Typography>
+                                    <form className="mt-8 mb-2">
+                                        <div className="mb-4 flex flex-col gap-6">
+                                            <Input size="lg" label="Name"/>
+                                            <Input size="lg" label="Email"/>
+                                            <Input type="password" size="lg" label="Password"/>
+                                        </div>
+                                        <Checkbox
+                                            label={
+                                                <Typography
+                                                    variant="small"
+                                                    color="gray"
+                                                    className="flex items-center font-normal"
+                                                >
+                                                    Я согласен
+                                                    <a
+                                                        href="#"
+                                                        className="font-medium transition-colors hover:text-blue-500"
+                                                    >
+                                                        &nbsp;Условия использования
+                                                    </a>
+                                                </Typography>
+                                            }
+                                            containerProps={{className: "-ml-2.5"}}
+                                        />
+                                        <Button className="mt-6" fullWidth>
+                                            ЗАРЕГИСТРИРОВАТЬСЯ
+                                        </Button>
+                                    </form>
+                                </TabPanel>
+                            </TabsBody>
+                        </Tabs>
+                    </CardBody>
+                </Card>
             </div>
         </div>
     );

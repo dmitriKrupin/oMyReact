@@ -33,7 +33,7 @@ const reviews = [
 
 export default function CarouselReviews() {
     return (
-        <Carousel>
+        <Carousel loop={true}>
             {reviews.map((item) => (
                 <div
                     key={item.name}>
@@ -46,7 +46,7 @@ export default function CarouselReviews() {
                                     color="white"
                                     className={'text-left mx-16 mb-10'}>
                                     <div className={'font-extrabold'}>{item.name}</div>
-                                    {item.description}
+                                    <div className={'text-xs sm:text-base'}>{item.description}</div>
                                 </Typography>
                                 <div className="flex justify-left ml-16 mb-6">
                                     <button className={'btn-secondary'}>

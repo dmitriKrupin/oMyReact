@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navigation from '../pages/navigation';
 import '../styles/globals.css'
 import React from 'react';
+import Footer from './footer'
 
 export const siteTitle = 'K-12.PRO | Видеонаблюдение и контроль доступа'
 
@@ -47,6 +48,7 @@ export default function Layout({
                     <Link href="/" className={'btn-primary'}>← На главную страницу</Link>
                 </div>
             )}
+            <Footer/>
         </div>
     )
 }

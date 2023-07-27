@@ -9,7 +9,7 @@ import AuthorizationPage from '../../pages/authorizations';
 const navigation = [
     {name: 'ПРОЕКТЫ', href: '/projects'},
     {name: 'СТОИМОСТЬ', href: '/pricing'},
-    {name: 'ОТЗЫВЫ', href: '/reviews'},
+    {name: 'ОТЗЫВЫ', href: '/reviews'}
 ]
 
 export default function Navigation() {
@@ -52,15 +52,12 @@ export default function Navigation() {
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    {/*<Link href={'/authorizations'}
-                          className={'btn-primary'}>
-                        ЛИЧНЫЙ КАБИНЕТ</Link>*/}
                     <button
                         type="button"
                         onClick={openModal}
                         className={'btn-primary'}
                     >
-                        ЛИЧНЫЙ КАБИНЕТ
+                        ВОЙТИ
                     </button>
 
                     <>
@@ -104,7 +101,7 @@ export default function Navigation() {
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                 <div className="fixed inset-0 z-50"></div>
                 <Dialog.Panel
-                    className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    className="fixed inset-y-0 right-0 z-50 w-full md:w-52 overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <Link href={'/'} className="-m-1.5 p-1.5"> K-12.PRO </Link>
                         <button
@@ -131,10 +128,13 @@ export default function Navigation() {
                             <div className="lg:flex lg:flex-1 lg:justify-end">
                                 <button
                                     type="button"
-                                    onClick={openModal}
+                                    onClick={()=> {
+                                        setMobileMenuOpen(false)
+                                        openModal()
+                                    }}
                                     className={'btn-primary'}
                                 >
-                                    ЛИЧНЫЙ КАБИНЕТ
+                                    ВОЙТИ
                                 </button>
 
                                 <>
