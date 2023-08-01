@@ -146,3 +146,27 @@ img {
     max-width: 100%;
     display: block;
 }
+
+.result-table {
+    @apply table-auto flex flex-col
+}
+
+table {
+    @apply bg-gray-200
+}
+
+thead tr {
+    @apply text-blue-500
+}
+
+thead th {
+    @apply text-center text-sm md:text-base
+}
+
+tbody tr {
+    @apply text-center text-sm md:text-base bg-gray-100
+}
+
+tbody th {
+    @apply font-light
+}

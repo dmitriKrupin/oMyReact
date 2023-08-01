@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Step, Stepper} from '@material-tailwind/react';
+import { Button, Step, Stepper } from '@material-tailwind/react';
 import Head from 'next/head';
 import SecondStep from './secondStep';
 import ThirdStep from './thirdStep';
@@ -11,7 +11,7 @@ export default function CctvPage() {
     const [activeStep, setActiveStep] = React.useState(0);
     const [isLastStep, setIsLastStep] = React.useState(false);
     const [isFirstStep, setIsFirstStep] = React.useState(false);
-    const [stepForOutput, setStepForOutput] = React.useState(<FirstStep/>);
+    const [stepForOutput, setStepForOutput] = React.useState(<FirstStep />);
 
     function getPageCctvForStep(event: any) {
         let idOfStep = event.target.id;
@@ -28,31 +28,31 @@ export default function CctvPage() {
             id: 'ceilingHigh-id',
             stepForVisible: 'firstStep',
             numberOfStep: 0,
-            stepForOutput: <FirstStep/>
+            stepForOutput: <FirstStep />
         },
         {
             id: 'manufacture-id',
             stepForVisible: 'secondStep',
             numberOfStep: 1,
-            stepForOutput: <SecondStep/>
+            stepForOutput: <SecondStep />
         },
         {
             id: 'countOfCameras-id',
             stepForVisible: 'thirdStep',
             numberOfStep: 2,
-            stepForOutput: <ThirdStep/>
+            stepForOutput: <ThirdStep />
         },
         {
             id: 'countOfCables-id',
             stepForVisible: 'fourthStep',
             numberOfStep: 3,
-            stepForOutput: <FourthStep/>
+            stepForOutput: <FourthStep />
         },
         {
             id: 'result-id',
             stepForVisible: 'resultStep',
             numberOfStep: 4,
-            stepForOutput: <ResultStep/>
+            stepForOutput: <ResultStep />
         }
     ]
 
@@ -62,12 +62,13 @@ export default function CctvPage() {
         if (isLastStep) {
             return (
                 <Button
-                    onClick={() => setStepForOutput(<ResultStep/>)}
+                    onClick={() => setStepForOutput(<ResultStep />)}
                 >
-                    СОХРАНИТЬ РАСЧЕТ
+                    СОХРАНИТЬ
                 </Button>
             )
         }
+
         return (
             <Button
                 onClick={() => {
@@ -93,18 +94,19 @@ export default function CctvPage() {
                 <title>{'K-12.PRO | Расчет видеонаблюдения'}</title>
             </Head>
             <div>
-                <div className={'w-full h-[28rem] md:h-80 py-4 px-8 p-2'}>
+                <div className={'w-full h-full md:h-80 py-4 px-8 p-2'}>
                     <div>
                         {stepForOutput}
                     </div>
                 </div>
 
                 <Stepper
+                    className='mt-8'
                     activeStep={activeStep}
                     isLastStep={(value) => setIsLastStep(value)}
                     isFirstStep={(value) => setIsFirstStep(value)}
                 >
-                    {arrayOfIdsForSteps.map(({id, stepForVisible, numberOfStep}) => (
+                    {arrayOfIdsForSteps.map(({ id, stepForVisible, numberOfStep }) => (
                         <Step
                             key={id}
                             id={stepForVisible}
@@ -115,7 +117,7 @@ export default function CctvPage() {
                     ))}
                 </Stepper>
 
-                <div className="mt-16 flex justify-between">
+                <div className="mt-8 flex justify-between">
                     <Button
                         onClick={() => {
                             if (!isFirstStep) {
