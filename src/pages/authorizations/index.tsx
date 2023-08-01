@@ -16,6 +16,51 @@ import Head from "next/head";
 
 export default function AuthorizationPage() {
     const [type, setType] = React.useState("sighIn");
+    //const [userName, setUserName] = React.useState('');
+    //const [email, setEmail] = React.useState('');
+    //const [password, setPassword] = React.useState('');
+    const [userData, setUserData] = React.useState({ userName: '', email: '', password: '', error: '' })
+
+    async function registerNewUser(event: any) {
+        event.preventDefault;
+
+        setUserData({
+            ...userData,
+            error: ''
+        })
+
+        try {
+            const {userName, email, password} = userData
+            const response = await fetch('http://localhost:8888/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type':'application/json',
+                },
+                body: JSON.stringify({userName, email, password})
+            })
+            if (response.status === 200) {
+                const { jwt_token, jwt_token_expiry } = await response.json()
+                console.log(response.body);
+                //await login({ jwt_token, jwt_token_expiry })
+              } else {
+                console.log('Login failed.')
+                let error = new Error(response.statusText)
+                //error.response = response
+                throw error
+              }
+        } catch(error) {
+            console.error(
+                'You have an error in your code or there are Network issues.',
+                error
+            )
+            /*const { response } = error
+            setUserData(
+                Object.assign({}, userData, {
+                error: response ? response.statusText : error.message
+                })
+            )*/
+        }
+    }
 
     return (
         <div className={'authorization'}>
@@ -78,11 +123,40 @@ export default function AuthorizationPage() {
                                     <Typography color="gray" className="mt-1 font-normal">
                                         для сохранения результатов расчетов, пожалуйста, зарегистрируйтесь
                                     </Typography>
-                                    <form className="mt-8 mb-2">
+                                    <form 
+                                        className="mt-8 mb-2"
+                                    >
                                         <div className="mb-4 flex flex-col gap-6">
-                                            <Input size="lg" label="Name"/>
-                                            <Input size="lg" label="Email"/>
-                                            <Input type="password" size="lg" label="Password"/>
+                                            <Input size="lg" label="Name"
+                                                id='userName'
+                                                name='userName'
+                                                value={userData.userName}
+                                                onChange={(e)=>
+                                                    setUserData({
+                                                        ...userData,
+                                                        userName: e.target.value
+                                                    })
+                                                }/>
+                                            <Input size="lg" label="Email"
+                                                id='email'
+                                                name='email'
+                                                value={userData.email}
+                                                onChange={(e)=>
+                                                    setUserData({
+                                                        ...userData,
+                                                        email: e.target.value
+                                                    })
+                                                }/>
+                                            <Input type="password" size="lg" label="Password"
+                                                id='password'
+                                                name='password'
+                                                value={userData.password}
+                                                onChange={(e)=>
+                                                    setUserData({
+                                                        ...userData,
+                                                        password: e.target.value
+                                                    })
+                                                }/>
                                         </div>
                                         <Checkbox
                                             label={
@@ -102,9 +176,13 @@ export default function AuthorizationPage() {
                                             }
                                             containerProps={{className: "-ml-2.5"}}
                                         />
-                                        <Button className="mt-6" fullWidth>
+                                        <Button 
+                                            className="mt-6" fullWidth
+                                            onClick={registerNewUser}
+                                        >
                                             ЗАРЕГИСТРИРОВАТЬСЯ
                                         </Button>
+                                        {userData.error && <p className='error'>Error: {userData.error}</p>}
                                     </form>
                                 </TabPanel>
                             </TabsBody>
