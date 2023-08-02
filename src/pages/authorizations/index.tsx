@@ -13,6 +13,7 @@ import {
     Checkbox,
 } from "@material-tailwind/react";
 import Head from "next/head";
+import { da } from "date-fns/locale";
 
 export default function AuthorizationPage() {
     const [type, setType] = React.useState("sighIn");
@@ -38,10 +39,15 @@ export default function AuthorizationPage() {
                 },
                 body: JSON.stringify({userName, email, password})
             })
+
+            
+
             if (response.status === 200) {
-                const { jwt_token, jwt_token_expiry } = await response.json()
-                console.log(response.body);
+                //const { jwt_token, jwt_token_expiry } = await response.json()
                 //await login({ jwt_token, jwt_token_expiry })
+                response.json().then((data) => {
+                    localStorage.setItem('token', data.token)
+                });
               } else {
                 console.log('Login failed.')
                 let error = new Error(response.statusText)
