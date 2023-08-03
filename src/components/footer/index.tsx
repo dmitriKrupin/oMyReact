@@ -14,7 +14,7 @@ export default function Footer() {
     return (
         <footer>
             <div
-                className={'p-16 bottom-0 h-16 text-center text-blue-500 flex flex-row justify-center items-end gap-4'}>
+                className={'font-light md:font-normal p-16 bottom-0 h-16 text-center text-blue-500 flex flex-row justify-center items-end gap-4'}>
                 <Link
                     href="mailto:master@dkrupin.ru"
                     onMouseEnter={handleMouseEnter}

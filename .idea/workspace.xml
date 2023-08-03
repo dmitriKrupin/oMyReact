@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d06a2fc-dace-4163-95f9-0ae96bc03841" name="Changes" comment="Fifth commit for testing deploying on Vercel have been added.">
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/authorizations/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authorizations/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/navigation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/navigation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/pricing/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/pricing/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +90,7 @@
       <workItem from="1690466478307" duration="2969000" />
       <workItem from="1690469527220" duration="1067000" />
       <workItem from="1690792152979" duration="384000" />
+      <workItem from="1691066616741" duration="703000" />
     </task>
     <task id="LOCAL-00001" summary="Commit for testing deploying on Vercel have been added.">
       <option name="closed" value="true" />

@@ -134,21 +134,6 @@ export default function CctvPage() {
                         НАЗАД
                     </Button>
                     {getSubmitOrForwardNameOfButton()}
-                    {/*<Button
-                        onClick={() => {
-                            if (!isLastStep) {
-                                setActiveStep((cur) => cur + 1)
-                                arrayOfIdsForSteps.forEach((element) => {
-                                    if (activeStep + 1 === element.numberOfStep) {
-                                        setStepForOutput(element.stepForOutput)
-                                    }
-                                })
-                            }
-                        }}
-                        disabled={isLastStep}
-                    >
-                        ВПЕРЕД
-                    </Button>*/}
                 </div>
             </div>
         </div>

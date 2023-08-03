@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import {Fragment, useState} from 'react';
-import {Dialog, Transition} from '@headlessui/react'
-import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
+import {Fragment, useEffect, useState} from 'react';
+import {Dialog, Transition} from '@headlessui/react';
+import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline';
 import AuthorizationPage from '../../pages/authorizations';
 
 const navigation = [
@@ -14,6 +14,8 @@ const navigation = [
 
 export default function Navigation() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [nameOfLoginButton, setNameOfLoginButton] = useState('ВОЙТИ')
+    const [isAuthorized, setIsAuthorized] = useState(true)
 
     let [isOpen, setIsOpen] = useState(false)
 
@@ -24,6 +26,17 @@ export default function Navigation() {
     function openModal() {
         setIsOpen(true)
     }
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (token !== null) {
+            setIsAuthorized(true)
+            setNameOfLoginButton('ЛИЧНЫЙ КАБИНЕТ')
+        } else {
+            setIsAuthorized(false)
+            setNameOfLoginButton('ВОЙТИ')
+        }
+    }, [])
 
     return (
         <div className='header'> {/*absolute inset-x-0 top-0 z-50*/}
@@ -57,7 +70,7 @@ export default function Navigation() {
                         onClick={openModal}
                         className={'btn-primary'}
                     >
-                        ВОЙТИ
+                        {nameOfLoginButton}
                     </button>
 
                     <>
@@ -134,7 +147,7 @@ export default function Navigation() {
                                     }}
                                     className={'btn-primary'}
                                 >
-                                    ВОЙТИ
+                                    {nameOfLoginButton}
                                 </button>
 
                                 <>
