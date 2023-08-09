@@ -6,6 +6,9 @@ import SecondStep from '../access/secondStep';
 import ThirdStep from '../access/thirdStep';
 import FourthStep from '../access/fourthStep';
 import ResultStep from '../access/resultStep';
+import FifthStep from '../access/fifthStep';
+import SixthStep from '../access/sixthStep';
+import SeventhStep from '../access/seventhStep';
 
 export default function AccessPage() {
     const [activeStep, setActiveStep] = React.useState(0);
@@ -25,33 +28,51 @@ export default function AccessPage() {
 
     const arrayOfIdsForSteps = [
         {
-            id: 'ceilingHigh-id',
+            id: 'accessManufacture-id',
             stepForVisible: 'firstStep',
             numberOfStep: 0,
             stepForOutput: <FirstStep />
         },
         {
-            id: 'manufacture-id',
+            id: 'entrance-id',
             stepForVisible: 'secondStep',
             numberOfStep: 1,
             stepForOutput: <SecondStep />
         },
         {
-            id: 'countOfCameras-id',
+            id: 'exit-id',
             stepForVisible: 'thirdStep',
             numberOfStep: 2,
             stepForOutput: <ThirdStep />
         },
         {
-            id: 'countOfCables-id',
+            id: 'controller-id',
             stepForVisible: 'fourthStep',
             numberOfStep: 3,
             stepForOutput: <FourthStep />
         },
         {
+            id: 'power-id',
+            stepForVisible: 'fifthStep',
+            numberOfStep: 4,
+            stepForOutput: <FifthStep />
+        },
+        {
+            id: 'door-id',
+            stepForVisible: 'sixthStep',
+            numberOfStep: 5,
+            stepForOutput: <SixthStep />
+        },
+        {
+            id: 'cable-id',
+            stepForVisible: 'seventhStep',
+            numberOfStep: 6,
+            stepForOutput: <SeventhStep />
+        },
+        {
             id: 'result-id',
             stepForVisible: 'resultStep',
-            numberOfStep: 4,
+            numberOfStep: 7,
             stepForOutput: <ResultStep />
         }
     ]

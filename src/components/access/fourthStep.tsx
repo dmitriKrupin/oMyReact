@@ -1,5 +1,5 @@
 export default function FourthStep() {
     return(
-        <div>ЧЕТВЕРТЫЙ ШАГ</div>
+        <div>высота установки controller</div>
     );
 }
