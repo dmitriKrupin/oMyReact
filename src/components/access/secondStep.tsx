@@ -13,20 +13,171 @@ export default function SecondStep() {
     const arrayOfAccessReader = [
         {
             id: 0,
-            manufacture: 'IRON LOGIC'
+            name: 'Считыватель (белый)',
+            model: 'Matrix-II',
+            readers: 'EM-Marin',
+            interface: 'Dallas Touch Memory',
+            manufacture: 'Iron Logic'
         },
         {
             id: 1,
-            manufacture: 'НПО БОЛИД'
+            name: 'Считыватель (белый)',
+            model: 'ST-PR011EM-WT',
+            readers: 'EM-Marin',
+            interface: 'Wiegand 26',
+            manufacture: 'SMARTEC'
         },
         {
             id: 2,
-            manufacture: 'PERCO'
+            name: 'Считыватель накладной антивандальный',
+            model: 'CP-Z2L',
+            readers: 'EM-Marin',
+            interface: 'Dallas Touch Memory || Wiegand 26',
+            manufacture: 'Iron Logic'
         },
         {
             id: 3,
-            manufacture: 'Не имеет значения'
+            name: 'Считыватель (серый)',
+            model: 'Proxy-2МА',
+            readers: 'MIFARE || EM-Marin || HID ProxCard II',
+            interface: 'Wiegand-26/37/44 || Dallas Touch Memory || RS-232 || ABA TRACK II',
+            manufacture: 'НПВ Болид'
         },
+        {
+            id: 4,
+            name: 'Считыватель (черная рамка)',
+            model: 'Proxy-3MA',
+            readers: 'MIFARE || EM-Marin || HID ProxCard II',
+            interface: 'Wiegand-26/37/44 || Dallas Touch Memory || RS-232 || ABA TRACK II',
+            manufacture: 'НПВ Болид'
+        },
+        {
+            id: 5,
+            name: 'Считыватель (белый)',
+            model: 'PERCo-IR13G	',
+            readers: 'EM-Marin || HID ProxCard II',
+            interface: 'RS-485 (PERCo) || Wiegand-26/34/42/58',
+            manufacture: 'PERCo'
+        },
+    ]
+
+    const arrayOfButtonEntrance = [
+        {
+            id: 0,
+            name: 'Вызывная видеопанель (серая) AHD 1080p',
+            model: 'iPanel 2 WG EM HD',
+            readers: 'EM-Marin',
+            interface: 'Wiegand 26',
+            manufacture: 'Tantos'
+        },
+        {
+            id: 1,
+            name: 'Вызывная видеопанель (серая) 1000 ТВЛ',
+            model: 'CTV-D3002EM S',
+            readers: 'EM-Marin',
+            interface: 'Wiegand 26',
+            manufacture: 'CTV'
+        },
+        {
+            id: 2,
+            name: 'Вызывная панель IP-видеодомофона (черно-серая) 2 Mp',
+            model: 'DS-KV6113-PE1',
+            readers: 'Mifare',
+            interface: 'Только с видеодомофоном',
+            manufacture: 'Hikvision'
+        },
+        {
+            id: 3,
+            name: 'Вызывная панель IP-видеодомофона (черно-серая) 2 Mp',
+            model: 'DS-KV6103-PE1(С)',
+            readers: 'Без считывателя',
+            interface: 'Только с видеодомофоном',
+            manufacture: 'Hikvision'
+        },
+        {
+            id: 4,
+            name: 'Будет только считыватель. Без вызывной панели.',
+            model: '',
+            readers: '',
+            interface: '',
+            manufacture: ''
+        }
+    ]
+
+    const arrayOfVideoMonitor = [
+        {
+            id: 0,
+            name: 'Монитор видеодомофона (белая)',
+            model: 'Amelie',
+            manufacture: 'Tantos'
+        },
+        {
+            id: 1,
+            name: 'Монитор видеодомофона (серый)',
+            model: 'CTV-M1703 S',
+            manufacture: 'CTV'
+        },
+        {
+            id: 2,
+            name: 'Монитор IP-домофона (черно-черый)',
+            model: 'DS-KH6320-TE1',
+            manufacture: 'Hikvision'
+        }
+    ]
+
+
+    const arrayOfCodePanel = [
+        {
+            id: 0,
+            name: '',
+            model: '',
+            manufacture: ''
+        },
+        {
+            id: 1,
+            name: '',
+            model: '',
+            manufacture: ''
+        },
+        {
+            id: 2,
+            name: '',
+            model: '',
+            manufacture: ''
+        },
+        {
+            id: 3,
+            name: '',
+            model: '',
+            manufacture: ''
+        }
+    ]
+
+    const arrayOfBioPanel = [
+        {
+            id: 0,
+            name: '',
+            model: '',
+            manufacture: ''
+        },
+        {
+            id: 1,
+            name: '',
+            model: '',
+            manufacture: ''
+        },
+        {
+            id: 2,
+            name: '',
+            model: '',
+            manufacture: ''
+        },
+        {
+            id: 3,
+            name: '',
+            model: '',
+            manufacture: ''
+        }
     ]
 
     function saveInLocalStorage(value: any) {
@@ -37,9 +188,9 @@ export default function SecondStep() {
     //todo: составить спецификацию оборудования, которая будет соответствовать отмеченным параметрам
     // или исходя из готовой спецификации сделать такой калькулятор, который подбирал бы оборудование для этой спецификации
     return (
-        <div className={'flex flex-col justify-center items-center gap-4'}>
+        <div className={'flex flex-col justify-center gap-4'}>
             <div className='flex flex-row gap-6'>
-                <Checkbox 
+                <Checkbox
                     label='Считыватель'
                 />
                 <Select
@@ -49,12 +200,12 @@ export default function SecondStep() {
                         saveInLocalStorage(value)
                     }}
                 >
-                    {arrayOfAccessReader.map(({id, manufacture}) => (
+                    {arrayOfAccessReader.map(({id, name, model, manufacture}) => (
                         <Option
                             key={id}
                             value={manufacture}
                         >
-                            {manufacture}
+                            {name + " || " + model + " || " + manufacture}
                         </Option>
                     ))}
                 </Select>
@@ -71,12 +222,12 @@ export default function SecondStep() {
                         saveInLocalStorage(value)
                     }}
                 >
-                    {arrayOfAccessReader.map(({id, manufacture}) => (
+                    {arrayOfButtonEntrance.map(({id, name: buttonExit}) => (
                         <Option
                             key={id}
-                            value={manufacture}
+                            value={buttonExit}
                         >
-                            {manufacture}
+                            {buttonExit}
                         </Option>
                     ))}
                 </Select>
@@ -93,7 +244,7 @@ export default function SecondStep() {
                         saveInLocalStorage(value)
                     }}
                 >
-                    {arrayOfAccessReader.map(({id, manufacture}) => (
+                    {arrayOfCodePanel.map(({id, manufacture}) => (
                         <Option
                             key={id}
                             value={manufacture}
@@ -115,7 +266,7 @@ export default function SecondStep() {
                         saveInLocalStorage(value)
                     }}
                 >
-                    {arrayOfAccessReader.map(({id, manufacture}) => (
+                    {arrayOfBioPanel.map(({id, manufacture}) => (
                         <Option
                             key={id}
                             value={manufacture}
