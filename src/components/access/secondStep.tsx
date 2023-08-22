@@ -1,4 +1,4 @@
-import { Checkbox, Option, Select } from "@material-tailwind/react";
+import { Checkbox, Option, Select, Avatar } from "@material-tailwind/react";
 import React, { useEffect } from "react";
 
 export default function SecondStep() {
@@ -18,6 +18,8 @@ export default function SecondStep() {
       readers: "EM-Marin",
       interface: "Dallas Touch Memory",
       manufacture: "Iron Logic",
+      imageSrc:
+        "https://shop.ironlogic.ru/sites/default/files/imagecache/product/mII.png",
     },
     {
       id: 1,
@@ -26,6 +28,8 @@ export default function SecondStep() {
       readers: "EM-Marin",
       interface: "Wiegand 26",
       manufacture: "SMARTEC",
+      imageSrc:
+        "https://smartec-security.com/upload/iblock/2a5/ST-PR011EM-WT.jpg",
     },
     {
       id: 2,
@@ -34,6 +38,8 @@ export default function SecondStep() {
       readers: "EM-Marin",
       interface: "Dallas Touch Memory || Wiegand 26",
       manufacture: "Iron Logic",
+      imageSrc:
+        "https://ironlogic.ru/il.nsf/img/ru_cpz2ln.jpg/$FILE/cpz2ln.jpg",
     },
     {
       id: 3,
@@ -43,6 +49,7 @@ export default function SecondStep() {
       interface:
         "Wiegand-26/37/44 || Dallas Touch Memory || RS-232 || ABA TRACK II",
       manufacture: "НПВ Болид",
+      imageSrc: "https://bolid.ru/files/341/532/c2_proxy_thumb1_0.jpeg",
     },
     {
       id: 4,
@@ -52,14 +59,18 @@ export default function SecondStep() {
       interface:
         "Wiegand-26/37/44 || Dallas Touch Memory || RS-232 || ABA TRACK II",
       manufacture: "НПВ Болид",
+      imageSrc:
+        "https://bolid.ru/files/341/532/Proxy_3M_Proxy_3MA_aktiven_thumb3.png",
     },
     {
       id: 5,
       name: "Считыватель (белый)",
-      model: "PERCo-IR13G	",
+      model: "PERCo-IR13G",
       readers: "EM-Marin || HID ProxCard II",
       interface: "RS-485 (PERCo) || Wiegand-26/34/42/58",
       manufacture: "PERCo",
+      imageSrc:
+        "https://www.perco.ru/images/products/readers/IR19/IR19G.v2.jpg",
     },
   ];
 
@@ -71,6 +82,8 @@ export default function SecondStep() {
       readers: "EM-Marin",
       interface: "Wiegand 26",
       manufacture: "Tantos",
+      imageSrc:
+        "https://tantos.pro/images/cat-items/1469/ipanel-2-wg-em-hd_3.jpeg",
     },
     {
       id: 1,
@@ -79,6 +92,8 @@ export default function SecondStep() {
       readers: "EM-Marin",
       interface: "Wiegand 26",
       manufacture: "CTV",
+      imageSrc:
+        "https://ctvcctv.ru/upload/image/catalog/Domofony/D3002EM_solo.jpg",
     },
     {
       id: 2,
@@ -87,6 +102,7 @@ export default function SecondStep() {
       readers: "Mifare",
       interface: "Только с видеодомофоном",
       manufacture: "Hikvision",
+      imageSrc: "https://hikvision.ru/media/product/201911//o3odjjxp.png",
     },
     {
       id: 3,
@@ -95,14 +111,8 @@ export default function SecondStep() {
       readers: "Без считывателя",
       interface: "Только с видеодомофоном",
       manufacture: "Hikvision",
-    },
-    {
-      id: 4,
-      name: "Будет только считыватель. Без вызывной панели.",
-      model: "",
-      readers: "",
-      interface: "",
-      manufacture: "",
+      imageSrc:
+        "https://www.hikvision.com/content/dam/hikvision/products/S000000001/S000000083/S000000129/S000000131/OFR002275/M000058900/images/DS-KV6103-PE1B_基线_门口机_正视图.png.thumb.319.319.png?f=webp",
     },
   ];
 
@@ -112,18 +122,22 @@ export default function SecondStep() {
       name: "Монитор видеодомофона (белая)",
       model: "Amelie",
       manufacture: "Tantos",
+      imageSrc: "https://tantos.pro/images/cat-items/93/amelie.jpeg",
     },
     {
       id: 1,
       name: "Монитор видеодомофона (серый)",
       model: "CTV-M1703 S",
       manufacture: "CTV",
+      imageSrc:
+        "https://ctvcctv.ru/upload/image/catalog/Domofony/M1703_silver.jpg",
     },
     {
       id: 2,
       name: "Монитор IP-домофона (черно-черый)",
       model: "DS-KH6320-TE1",
       manufacture: "Hikvision",
+      imageSrc: "https://hikvision.ru/media/product/201904//ginvlsv5.png",
     },
   ];
 
@@ -135,6 +149,8 @@ export default function SecondStep() {
       readers: "MIFARE || EM-Marin",
       interface: "Wiegand 26/44",
       manufacture: "TANTOS",
+      imageSrc:
+        "https://tantos.pro/images/cat-items/1602/ts-kbd-emf-plastic.jpeg",
     },
     {
       id: 1,
@@ -143,6 +159,7 @@ export default function SecondStep() {
       readers: "EM-Marin",
       interface: "Wiegand 26/44",
       manufacture: "TANTOS",
+      imageSrc: "https://tantos.pro/images/cat-items/1136/ts-kbd-em-ip66.jpeg",
     },
     {
       id: 2,
@@ -151,6 +168,7 @@ export default function SecondStep() {
       readers: "EM-Marin",
       interface: "Wiegand 26/44",
       manufacture: "CCTV",
+      imageSrc: "https://ctvcctv.ru/upload/file/image/WF.jpg",
     },
     {
       id: 3,
@@ -159,14 +177,8 @@ export default function SecondStep() {
       readers: "EM-Marin",
       interface: "Wiegand 26/44",
       manufacture: "AccordTec",
-    },
-    {
-      id: 4,
-      name: "Будет только считыватель. Без кодонаборной панели.",
-      model: "",
-      readers: "",
-      interface: "",
-      manufacture: "",
+      imageSrc:
+        "https://accordtec.ru/upload/iblock/26e/h8b7mrcpxv4r8raeg5urv5bpdl80l6cf/0d17fa96-51cb-11e8-9607-a4bf01347322_0416be80-7338-11ea-b3f4-a4bf01347322.jpg",
     },
   ];
 
@@ -178,6 +190,7 @@ export default function SecondStep() {
       readers: "EM-Marin || MIFARE (опционально)",
       interface: "Wiegand 26 || Контроллер SC011 || Ethernet к ПК",
       manufacture: "Anviz",
+      imageSrc: "https://www.anviz.com/file/image/1546/1000_1000/M7-02.png",
     },
     {
       id: 1,
@@ -186,6 +199,8 @@ export default function SecondStep() {
       readers: "EM-Marin",
       interface: "Связь с Орион ПРО через Ethernet",
       manufacture: "НПВ Болид",
+      imageSrc:
+        "https://bolid.ru/files/341/532/s2000_BIOAccess_SF10T_thumb5.png",
     },
     {
       id: 2,
@@ -194,6 +209,8 @@ export default function SecondStep() {
       readers: "EM-Marin || MIFARE (опционально)",
       interface: "Wiegand 26 || Ethernet к ПК",
       manufacture: "ZKTeco",
+      imageSrc:
+        "https://zkteco.pro/components/com_jshopping/files/img_products/full_ZKF22IDWIFIn.png",
     },
     {
       id: 3,
@@ -202,14 +219,8 @@ export default function SecondStep() {
       readers: "EM-Marin || MIFARE (опционально)",
       interface: "Wiegand 26 || Ethernet к ПК",
       manufacture: "ZKTeco",
-    },
-    {
-      id: 4,
-      name: "Будет только считыватель. Без биометрической панели.",
-      model: "",
-      readers: "",
-      interface: "",
-      manufacture: "",
+      imageSrc:
+        "https://zkteco.pro/components/com_jshopping/files/img_products/full_n_ZKF16ID_2.png",
     },
   ];
 
@@ -230,11 +241,19 @@ export default function SecondStep() {
             saveInLocalStorage(value);
           }}
         >
-          {arrayOfAccessReader.map(({ id, name, model, manufacture }) => (
-            <Option key={id} value={manufacture}>
-              {name + " || " + model + " || " + manufacture}
-            </Option>
-          ))}
+          {arrayOfAccessReader.map(
+            ({ id, name, model, manufacture, imageSrc }) => (
+              <Option key={id} value={manufacture}>
+                <Avatar
+                  variant="circular"
+                  alt={model}
+                  src={imageSrc}
+                  size="xs"
+                />
+                {" " + name + " || " + model + " || " + manufacture}
+              </Option>
+            )
+          )}
         </Select>
       </div>
 
@@ -247,11 +266,19 @@ export default function SecondStep() {
             saveInLocalStorage(value);
           }}
         >
-          {arrayOfButtonEntrance.map(({ id, name, model, manufacture }) => (
-            <Option key={id} value={manufacture}>
-              {name + " || " + model + " || " + manufacture}
-            </Option>
-          ))}
+          {arrayOfButtonEntrance.map(
+            ({ id, name, model, manufacture, imageSrc }) => (
+              <Option key={id} value={manufacture}>
+                <Avatar
+                  variant="circular"
+                  alt={model}
+                  src={imageSrc}
+                  size="xs"
+                />
+                {" " + name + " || " + model + " || " + manufacture}
+              </Option>
+            )
+          )}
         </Select>
       </div>
 
@@ -264,11 +291,19 @@ export default function SecondStep() {
             saveInLocalStorage(value);
           }}
         >
-          {arrayOfCodePanel.map(({ id, name, model, manufacture }) => (
-            <Option key={id} value={manufacture}>
-              {name + " || " + model + " || " + manufacture}
-            </Option>
-          ))}
+          {arrayOfCodePanel.map(
+            ({ id, name, model, manufacture, imageSrc }) => (
+              <Option key={id} value={manufacture}>
+                <Avatar
+                  variant="circular"
+                  alt={model}
+                  src={imageSrc}
+                  size="xs"
+                />
+                {" " + name + " || " + model + " || " + manufacture}
+              </Option>
+            )
+          )}
         </Select>
       </div>
 
@@ -281,9 +316,10 @@ export default function SecondStep() {
             saveInLocalStorage(value);
           }}
         >
-          {arrayOfBioPanel.map(({ id, name, model, manufacture }) => (
+          {arrayOfBioPanel.map(({ id, name, model, manufacture, imageSrc }) => (
             <Option key={id} value={manufacture}>
-              {name + " || " + model + " || " + manufacture}
+              <Avatar variant="circular" alt={model} src={imageSrc} size="xs" />
+              {" " + name + " || " + model + " || " + manufacture}
             </Option>
           ))}
         </Select>
