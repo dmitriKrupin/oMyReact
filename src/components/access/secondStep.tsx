@@ -1,8 +1,32 @@
-import { Checkbox, Option, Select, Avatar } from "@material-tailwind/react";
+import {
+  Option,
+  Checkbox,
+  Select,
+  Avatar,
+  Dialog,
+  DialogBody,
+  Button,
+  Card,
+  CardBody,
+  CardHeader,
+  Typography,
+  CardFooter,
+} from "@material-tailwind/react";
 import React, { useEffect } from "react";
 
 export default function SecondStep() {
   const [accessEntrance, setAccessEntrance] = React.useState("");
+  const [open, setOpen] = React.useState(false);
+  const [arrayForCard, setArrayForCard] = React.useState({
+    id: "",
+    name: "",
+    model: "",
+    manufacture: "",
+    readers: "",
+    interface: "",
+    imageSrc: "",
+    price: "",
+  });
 
   useEffect(() => {
     let value;
@@ -20,6 +44,7 @@ export default function SecondStep() {
       manufacture: "Iron Logic",
       imageSrc:
         "https://shop.ironlogic.ru/sites/default/files/imagecache/product/mII.png",
+      price: "2 290",
     },
     {
       id: 1,
@@ -30,6 +55,7 @@ export default function SecondStep() {
       manufacture: "SMARTEC",
       imageSrc:
         "https://smartec-security.com/upload/iblock/2a5/ST-PR011EM-WT.jpg",
+      price: "990",
     },
     {
       id: 2,
@@ -40,6 +66,7 @@ export default function SecondStep() {
       manufacture: "Iron Logic",
       imageSrc:
         "https://ironlogic.ru/il.nsf/img/ru_cpz2ln.jpg/$FILE/cpz2ln.jpg",
+      price: "1 649",
     },
     {
       id: 3,
@@ -50,6 +77,7 @@ export default function SecondStep() {
         "Wiegand-26/37/44 || Dallas Touch Memory || RS-232 || ABA TRACK II",
       manufacture: "НПВ Болид",
       imageSrc: "https://bolid.ru/files/341/532/c2_proxy_thumb1_0.jpeg",
+      price: "6 989",
     },
     {
       id: 4,
@@ -61,6 +89,7 @@ export default function SecondStep() {
       manufacture: "НПВ Болид",
       imageSrc:
         "https://bolid.ru/files/341/532/Proxy_3M_Proxy_3MA_aktiven_thumb3.png",
+      price: "10 265",
     },
     {
       id: 5,
@@ -71,6 +100,7 @@ export default function SecondStep() {
       manufacture: "PERCo",
       imageSrc:
         "https://www.perco.ru/images/products/readers/IR19/IR19G.v2.jpg",
+      price: "9 140",
     },
   ];
 
@@ -229,35 +259,145 @@ export default function SecondStep() {
     localStorage.setItem("accessEntrance", value);
   }
 
+  function openDetailByAvatar(event: any) {
+    let model = event.target.alt;
+    getInfoForCardInput("findByAvatar", model);
+    setOpen(!open);
+  }
+
+  function openDetailById(event: any) {
+    let id = event.target.id;
+    getInfoForCardInput("findById", id);
+    setOpen(!open);
+  }
+
+  function getInfoForCardInput(tag: string, infoFromEvent: string) {
+    let array;
+    if (tag === "findByAvatar") {
+      array = arrayOfAccessReader.find(
+        (element) => element.model === infoFromEvent
+      );
+    }
+    if (tag === "findById") {
+      array = arrayOfAccessReader.find(
+        (element) => element.id === Number(infoFromEvent)
+      );
+    }
+    setArrayForCard({
+      id: String(array?.id),
+      name: String(array?.name),
+      model: String(array?.model),
+      manufacture: String(array?.manufacture),
+      readers: String(array?.readers),
+      interface: String(array?.interface),
+      imageSrc: String(array?.imageSrc),
+      price: String(array?.price),
+    });
+  }
+
+  const [statusOfReaderCheckbox, setStatusOfReaderCheckbox] =
+    React.useState(true);
+
   //todo: исправить сохранение на сохранение как объект: список или список с внутренним список кнопок, считывателей и т.д.
   return (
-    <div className={"flex flex-col justify-center gap-4"}>
-      <div className="flex flex-row gap-6">
-        <Checkbox label="Считыватель" />
+    <div className={"grid grid-rows-2 grid-flow-col gap-4"}>
+      <div className="flex flex-col gap-6">
+        <Checkbox
+          label="Считыватель"
+          onClick={() => setStatusOfReaderCheckbox(false)}
+        />
         <Select
           label={"Выберите модель считывателя:"}
           value={accessEntrance}
           onChange={(value) => {
             saveInLocalStorage(value);
           }}
+          disabled={statusOfReaderCheckbox}
         >
-          {arrayOfAccessReader.map(
-            ({ id, name, model, manufacture, imageSrc }) => (
-              <Option key={id} value={manufacture}>
-                <Avatar
-                  variant="circular"
-                  alt={model}
-                  src={imageSrc}
-                  size="xs"
-                />
-                {" " + name + " || " + model + " || " + manufacture}
-              </Option>
-            )
-          )}
+          {arrayOfAccessReader.map(({ id, model, manufacture, imageSrc }) => (
+            <Option
+              key={id}
+              value={manufacture}
+              className="group/item flex flex-row justify-between items-center"
+            >
+              <Avatar
+                variant="circular"
+                alt={model}
+                src={imageSrc}
+                size="xs"
+                onClick={openDetailByAvatar}
+              />
+              {" " + model + " " + manufacture}
+              <span className="group/edit invisible hover:bg-slate-200 group-hover/item:visible">
+                <button className="group-hover/edit:text-blue-500 font-bold align-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                    id={String(id)}
+                    onClick={openDetailById}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      id={String(id)}
+                      d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </Option>
+          ))}
         </Select>
+
+        <Dialog open={open} handler={() => setOpen(!open)}>
+          <DialogBody divider className="flex justify-center">
+            <Card className="w-96">
+              <CardHeader shadow={true} floated={false} className="h-96">
+                <img
+                  src={arrayForCard.imageSrc}
+                  alt={arrayForCard.model}
+                  className="h-full w-full object-cover"
+                />
+              </CardHeader>
+              <CardBody>
+                <div className="mb-2 flex items-center justify-between">
+                  <Typography color="blue-gray" className="font-medium">
+                    {arrayForCard.model}
+                  </Typography>
+                  <Typography color="blue-gray" className="font-medium">
+                    ₽ {arrayForCard.price}.00
+                  </Typography>
+                </div>
+                <Typography
+                  variant="small"
+                  color="gray"
+                  className="font-normal opacity-75"
+                >
+                  {arrayForCard.name} {arrayForCard.manufacture} Поддерживаемые
+                  интерфейсы контроллеров: {arrayForCard.interface}{" "}
+                  Поддерживаемые форматы карт доступа: {arrayForCard.readers}
+                </Typography>
+              </CardBody>
+              <CardFooter className="pt-0">
+                <Button
+                  ripple={false}
+                  fullWidth={true}
+                  className="bg-blue-500 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
+                  onClick={() => setOpen(!open)}
+                >
+                  ВЕРНУТЬСЯ К ВЫБОРУ
+                </Button>
+              </CardFooter>
+            </Card>
+          </DialogBody>
+        </Dialog>
       </div>
 
-      <div className="flex flex-row gap-6">
+      <div className="flex flex-col gap-6">
         <Checkbox label="Кнопка вызова" />
         <Select
           label={"Выберите модель вызывной панели:"}
@@ -282,7 +422,7 @@ export default function SecondStep() {
         </Select>
       </div>
 
-      <div className="flex flex-row gap-6">
+      <div className="flex flex-col gap-6">
         <Checkbox label="Кодонаборная панель" />
         <Select
           label={"Выберите модель кодонаборной панели:"}
@@ -307,7 +447,7 @@ export default function SecondStep() {
         </Select>
       </div>
 
-      <div className="flex flex-row gap-6">
+      <div className="flex flex-col gap-6">
         <Checkbox label="Биометрическая панель" />
         <Select
           label={"Выберите модель биометрической панели:"}
