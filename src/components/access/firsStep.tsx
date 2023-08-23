@@ -14,7 +14,7 @@ import {
 import React, { useEffect } from "react";
 
 export default function FirstStep() {
-  const [accessModel, setAccessModel] = React.useState("");
+  const [accessController, setAccessController] = React.useState("");
   const [open, setOpen] = React.useState(false);
   const [arrayForCard, setArrayForCard] = React.useState({
     id: "",
@@ -29,8 +29,8 @@ export default function FirstStep() {
 
   useEffect(() => {
     let value;
-    value = localStorage.getItem("accessModel") || "";
-    setAccessModel(value);
+    value = localStorage.getItem("accessController") || "";
+    setAccessController(value);
   }, []);
 
   const arrayOfAccessManufacture = [
@@ -90,8 +90,8 @@ export default function FirstStep() {
   ];
 
   function saveInLocalStorage(value: any) {
-    setAccessModel(value);
-    localStorage.setItem("accessModel", value);
+    setAccessController(value);
+    localStorage.setItem("accessController", value);
   }
 
   function openDetailByAvatar(event: any) {
@@ -134,7 +134,7 @@ export default function FirstStep() {
     <div className={"flex flex-col justify-center items-center gap-4"}>
       <Select
         label={"Выберите модель контроллера:"}
-        value={accessModel}
+        value={accessController}
         onChange={(value) => {
           saveInLocalStorage(value);
         }}

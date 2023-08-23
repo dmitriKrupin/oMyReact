@@ -12,11 +12,29 @@ import {
   Typography,
   CardFooter,
 } from "@material-tailwind/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
+//todo: разнести текст на несколько классов: считыватель, вызывная панель и т.д.
 export default function SecondStep() {
-  const [accessEntrance, setAccessEntrance] = React.useState("");
+  const [accessEntranceGroup, setAccessEntranceGroup] = useState({
+    data: {
+      reader: "",
+      buttonEntrance: "",
+      videoMonitor: "",
+      codePanel: "",
+      bioPanel: "",
+    },
+    statuses: {
+      readerCheckbox: false,
+      buttonEntranceCheckbox: false,
+      videoMonitorCheckbox: false,
+      codePanelCheckbox: false,
+      bioPanelCheckbox: false,
+    },
+  });
+
   const [open, setOpen] = React.useState(false);
+
   const [arrayForCard, setArrayForCard] = React.useState({
     id: "",
     name: "",
@@ -30,8 +48,12 @@ export default function SecondStep() {
 
   useEffect(() => {
     let value;
-    value = localStorage.getItem("accessEntrance") || "";
-    setAccessEntrance(value);
+    try {
+      value = JSON.parse(localStorage.getItem("accessEntranceGroup") || "");
+      setAccessEntranceGroup(value);
+    } catch (error: any) {
+      console.log(error);
+    }
   }, []);
 
   const arrayOfAccessReader = [
@@ -146,6 +168,7 @@ export default function SecondStep() {
     },
   ];
 
+  //todo: доделать реализацию с появлением меню для выбора домофона, если выбрана вызывная панель
   const arrayOfVideoMonitor = [
     {
       id: 0,
@@ -254,9 +277,172 @@ export default function SecondStep() {
     },
   ];
 
-  function saveInLocalStorage(value: any) {
-    setAccessEntrance(value);
-    localStorage.setItem("accessEntrance", value);
+  function readerChange(value: any) {
+    setAccessEntranceGroup({
+      ...accessEntranceGroup,
+      data: {
+        ...accessEntranceGroup.data,
+        reader: value,
+      },
+    });
+    localStorage.setItem(
+      "accessEntranceGroup",
+      JSON.stringify({
+        ...accessEntranceGroup,
+        data: {
+          ...accessEntranceGroup.data,
+          reader: value,
+        },
+      })
+    );
+  }
+
+  function readerCheckboxChange(event: any) {
+    {
+      setAccessEntranceGroup({
+        ...accessEntranceGroup,
+        statuses: {
+          ...accessEntranceGroup.statuses,
+          readerCheckbox: event.target.checked,
+        },
+      });
+      localStorage.setItem(
+        "accessEntranceGroup",
+        JSON.stringify({
+          ...accessEntranceGroup,
+          statuses: {
+            ...accessEntranceGroup.statuses,
+            readerCheckbox: event.target.checked,
+          },
+        })
+      );
+    }
+  }
+
+  function buttonEntranceChange(value: any) {
+    setAccessEntranceGroup({
+      ...accessEntranceGroup,
+      data: {
+        ...accessEntranceGroup.data,
+        buttonEntrance: value,
+      },
+    });
+    localStorage.setItem(
+      "accessEntranceGroup",
+      JSON.stringify({
+        ...accessEntranceGroup,
+        data: {
+          ...accessEntranceGroup.data,
+          buttonEntrance: value,
+        },
+      })
+    );
+  }
+
+  function buttonEntranceCheckboxChange(event: any) {
+    {
+      setAccessEntranceGroup({
+        ...accessEntranceGroup,
+        statuses: {
+          ...accessEntranceGroup.statuses,
+          buttonEntranceCheckbox: event.target.checked,
+        },
+      });
+      localStorage.setItem(
+        "accessEntranceGroup",
+        JSON.stringify({
+          ...accessEntranceGroup,
+          statuses: {
+            ...accessEntranceGroup.statuses,
+            buttonEntranceCheckbox: event.target.checked,
+          },
+        })
+      );
+    }
+  }
+
+  function codePanelChange(value: any) {
+    setAccessEntranceGroup({
+      ...accessEntranceGroup,
+      data: {
+        ...accessEntranceGroup.data,
+        codePanel: value,
+      },
+    });
+    localStorage.setItem(
+      "accessEntranceGroup",
+      JSON.stringify({
+        ...accessEntranceGroup,
+        data: {
+          ...accessEntranceGroup.data,
+          codePanel: value,
+        },
+      })
+    );
+  }
+
+  function codePanelCheckboxChange(event: any) {
+    {
+      setAccessEntranceGroup({
+        ...accessEntranceGroup,
+        statuses: {
+          ...accessEntranceGroup.statuses,
+          codePanelCheckbox: event.target.checked,
+        },
+      });
+      localStorage.setItem(
+        "accessEntranceGroup",
+        JSON.stringify({
+          ...accessEntranceGroup,
+          statuses: {
+            ...accessEntranceGroup.statuses,
+            codePanelCheckbox: event.target.checked,
+          },
+        })
+      );
+    }
+  }
+
+  function bioPanelChange(value: any) {
+    setAccessEntranceGroup({
+      ...accessEntranceGroup,
+      data: {
+        ...accessEntranceGroup.data,
+        bioPanel: value,
+      },
+    });
+    localStorage.setItem(
+      "accessEntranceGroup",
+      JSON.stringify({
+        ...accessEntranceGroup,
+        data: {
+          ...accessEntranceGroup.data,
+          bioPanel: value,
+        },
+      })
+    );
+  }
+
+  function bioPanelCheckboxChange(event: any) {
+    {
+      setAccessEntranceGroup({
+        ...accessEntranceGroup,
+        statuses: {
+          ...accessEntranceGroup.statuses,
+          bioPanelCheckbox: event.target.checked,
+        },
+      });
+      localStorage.setItem(
+        "accessEntranceGroup",
+        JSON.stringify({
+          ...accessEntranceGroup,
+          statuses: {
+            ...accessEntranceGroup.statuses,
+            bioPanelCheckbox: event.target.checked,
+          },
+        })
+      );
+    }
   }
 
   function openDetailByAvatar(event: any) {
@@ -295,29 +481,24 @@ export default function SecondStep() {
     });
   }
 
-  const [statusOfReaderCheckbox, setStatusOfReaderCheckbox] =
-    React.useState(true);
-
-  //todo: исправить сохранение на сохранение как объект: список или список с внутренним список кнопок, считывателей и т.д.
   return (
-    <div className={"grid grid-rows-2 grid-flow-col gap-4"}>
+    <div className={"grid grid-rows-4 md:grid-rows-2 grid-flow-col gap-4"}>
       <div className="flex flex-col gap-6">
         <Checkbox
           label="Считыватель"
-          onClick={() => setStatusOfReaderCheckbox(false)}
+          checked={accessEntranceGroup.statuses.readerCheckbox}
+          onChange={readerCheckboxChange}
         />
         <Select
           label={"Выберите модель считывателя:"}
-          value={accessEntrance}
-          onChange={(value) => {
-            saveInLocalStorage(value);
-          }}
-          disabled={statusOfReaderCheckbox}
+          value={accessEntranceGroup.data.reader}
+          onChange={(value) => readerChange(value)}
+          disabled={!accessEntranceGroup.statuses.readerCheckbox}
         >
           {arrayOfAccessReader.map(({ id, model, manufacture, imageSrc }) => (
             <Option
               key={id}
-              value={manufacture}
+              value={model}
               className="group/item flex flex-row justify-between items-center"
             >
               <Avatar
@@ -398,68 +579,156 @@ export default function SecondStep() {
       </div>
 
       <div className="flex flex-col gap-6">
-        <Checkbox label="Кнопка вызова" />
+        <Checkbox
+          label="Кнопка вызова"
+          checked={accessEntranceGroup.statuses.buttonEntranceCheckbox}
+          onChange={buttonEntranceCheckboxChange}
+        />
         <Select
           label={"Выберите модель вызывной панели:"}
-          value={accessEntrance}
-          onChange={(value) => {
-            saveInLocalStorage(value);
-          }}
+          value={accessEntranceGroup.data.buttonEntrance}
+          onChange={(value) => buttonEntranceChange(value)}
+          disabled={!accessEntranceGroup.statuses.buttonEntranceCheckbox}
         >
-          {arrayOfButtonEntrance.map(
-            ({ id, name, model, manufacture, imageSrc }) => (
-              <Option key={id} value={manufacture}>
-                <Avatar
-                  variant="circular"
-                  alt={model}
-                  src={imageSrc}
-                  size="xs"
-                />
-                {" " + name + " || " + model + " || " + manufacture}
-              </Option>
-            )
-          )}
+          {arrayOfButtonEntrance.map(({ id, model, manufacture, imageSrc }) => (
+            <Option
+              key={id}
+              value={model}
+              className="group/item flex flex-row justify-between items-center"
+            >
+              <Avatar
+                variant="circular"
+                alt={model}
+                src={imageSrc}
+                size="xs"
+                onClick={openDetailByAvatar}
+              />
+              {" " + model + " " + manufacture}
+              <span className="group/edit invisible hover:bg-slate-200 group-hover/item:visible">
+                <button className="group-hover/edit:text-blue-500 font-bold align-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                    id={String(id)}
+                    onClick={openDetailById}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      id={String(id)}
+                      d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </Option>
+          ))}
         </Select>
       </div>
 
       <div className="flex flex-col gap-6">
-        <Checkbox label="Кодонаборная панель" />
+        <Checkbox
+          label="Кодонаборная панель"
+          checked={accessEntranceGroup.statuses.codePanelCheckbox}
+          onChange={codePanelCheckboxChange}
+        />
         <Select
           label={"Выберите модель кодонаборной панели:"}
-          value={accessEntrance}
-          onChange={(value) => {
-            saveInLocalStorage(value);
-          }}
+          value={accessEntranceGroup.data.codePanel}
+          onChange={codePanelChange}
+          disabled={!accessEntranceGroup.statuses.codePanelCheckbox}
         >
-          {arrayOfCodePanel.map(
-            ({ id, name, model, manufacture, imageSrc }) => (
-              <Option key={id} value={manufacture}>
-                <Avatar
-                  variant="circular"
-                  alt={model}
-                  src={imageSrc}
-                  size="xs"
-                />
-                {" " + name + " || " + model + " || " + manufacture}
-              </Option>
-            )
-          )}
+          {arrayOfCodePanel.map(({ id, model, manufacture, imageSrc }) => (
+            <Option
+              key={id}
+              value={manufacture}
+              className="group/item flex flex-row justify-between items-center"
+            >
+              <Avatar
+                variant="circular"
+                alt={model}
+                src={imageSrc}
+                size="xs"
+                onClick={openDetailByAvatar}
+              />
+              {" " + model + " " + manufacture}
+              <span className="group/edit invisible hover:bg-slate-200 group-hover/item:visible">
+                <button className="group-hover/edit:text-blue-500 font-bold align-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                    id={String(id)}
+                    onClick={openDetailById}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      id={String(id)}
+                      d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                    />
+                  </svg>
+                </button>
+              </span>
+            </Option>
+          ))}
         </Select>
       </div>
 
       <div className="flex flex-col gap-6">
-        <Checkbox label="Биометрическая панель" />
+        <Checkbox
+          label="Биометрическая панель"
+          checked={accessEntranceGroup.statuses.bioPanelCheckbox}
+          onChange={bioPanelCheckboxChange}
+        />
         <Select
           label={"Выберите модель биометрической панели:"}
-          value={accessEntrance}
-          onChange={(value) => {
-            saveInLocalStorage(value);
-          }}
+          value={accessEntranceGroup.data.bioPanel}
+          onChange={(value) => bioPanelChange(value)}
+          disabled={!accessEntranceGroup.statuses.bioPanelCheckbox}
         >
-          {arrayOfBioPanel.map(({ id, name, model, manufacture, imageSrc }) => (
-            <Option key={id} value={manufacture}>
-              <Avatar variant="circular" alt={model} src={imageSrc} size="xs" />
-              {" " + name + " || " + model + " || " + manufacture}
+          {arrayOfBioPanel.map(({ id, model, manufacture, imageSrc }) => (
+            <Option
+              key={id}
+              value={model}
+              className="group/item flex flex-row justify-between items-center"
+            >
+              <Avatar
+                variant="circular"
+                alt={model}
+                src={imageSrc}
+                size="xs"
+                onClick={openDetailByAvatar}
+              />
+              {" " + model + " " + manufacture}
+              <span className="group/edit invisible hover:bg-slate-200 group-hover/item:visible">
+                <button className="group-hover/edit:text-blue-500 font-bold align-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                    id={String(id)}
+                    onClick={openDetailById}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      id={String(id)}
+                      d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                    />
+                  </svg>
+                </button>
+              </span>
             </Option>
           ))}
         </Select>
