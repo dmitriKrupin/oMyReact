@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Step, Stepper } from "@material-tailwind/react";
+import { Button, Step, Stepper, Typography } from "@material-tailwind/react";
 import Head from "next/head";
 import FirstStep from "../access/firsStep";
 import SecondStep from "../access/secondStep";
@@ -107,6 +107,50 @@ export default function AccessPage() {
     );
   }
 
+  const STEPPER = () => (
+    <Stepper
+      className="mt-8"
+      activeStep={activeStep}
+      isLastStep={(value) => setIsLastStep(value)}
+      isFirstStep={(value) => setIsFirstStep(value)}
+    >
+      {arrayOfIdsForSteps.map(({ id, stepForVisible, numberOfStep }) => (
+        <Step key={id} id={stepForVisible} onClick={getPageAccessForStep}>
+          {numberOfStep + 1}
+        </Step>
+      ))}
+    </Stepper>
+  );
+
+  const PAGINATION = () => (
+    <div className="flex justify-center">
+      <Typography color="gray" className="font-normal">
+        <strong className="text-blue-500 rounded-full">{activeStep + 1}</strong>{" "}
+        - <strong className="text-blue-500">{arrayOfIdsForSteps.length}</strong>
+      </Typography>
+    </div>
+  );
+
+  const [paginationOrStepper, setPaginationOrStepper] = React.useState(STEPPER);
+
+  const changePagination = () => {
+    if (window.innerWidth > 768) {
+      setPaginationOrStepper(STEPPER);
+    } else {
+      setPaginationOrStepper(PAGINATION);
+    }
+  };
+
+  React.useEffect(() => {
+    const onResize = () => changePagination();
+
+    window.addEventListener("resize", onResize);
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+    };
+  });
+
   return (
     <div className={"calculator"}>
       <Head>
@@ -117,18 +161,7 @@ export default function AccessPage() {
           <div>{stepForOutput}</div>
         </div>
 
-        <Stepper
-          className="mt-8"
-          activeStep={activeStep}
-          isLastStep={(value) => setIsLastStep(value)}
-          isFirstStep={(value) => setIsFirstStep(value)}
-        >
-          {arrayOfIdsForSteps.map(({ id, stepForVisible, numberOfStep }) => (
-            <Step key={id} id={stepForVisible} onClick={getPageAccessForStep}>
-              {numberOfStep + 1}
-            </Step>
-          ))}
-        </Stepper>
+        {paginationOrStepper}
 
         <div className="mt-8 flex justify-between">
           <Button

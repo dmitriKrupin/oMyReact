@@ -13,15 +13,30 @@ import {
   Button,
   CardFooter,
 } from "@material-tailwind/react";
+import { data } from "autoprefixer";
 import React, { useEffect } from "react";
 
 export default function ThirdStep() {
   const [exitButton, setExitButton] = React.useState("");
+  const [exitButtonsGroup, setExitButtonsGroup] = React.useState({
+    data: {
+      simpleButton: "",
+      greenButton: "",
+    },
+    statuses: {
+      readerCheckbox: false,
+      buttonEntranceCheckbox: false,
+      videoMonitorCheckbox: false,
+      codePanelCheckbox: false,
+      bioPanelCheckbox: false,
+    },
+  });
+
   const [open, setOpen] = React.useState(false);
 
   useEffect(() => {
     let value;
-    value = localStorage.getItem("exitButton") || "";
+    value = localStorage.getItem("exitButtonsGroup") || "";
     setExitButton(value);
   }, []);
 
@@ -69,11 +84,30 @@ export default function ThirdStep() {
       imageSrc: "https://tantos.pro/images/cat-items/151/ho-02_1.jpeg",
       price: "114",
     },
+    {
+      id: 4,
+      name: "Считыватель из предыдущего шага: ",
+      model: getJsonFromPreviousStep()["data"].reader,
+      manufacture: getJsonFromPreviousStep()["data"].manufacture,
+      imageSrc: "https://tantos.pro/images/cat-items/151/ho-02_1.jpeg",
+      price: "114",
+    },
   ];
 
+  function getJsonFromPreviousStep(): string | any {
+    let value;
+    try {
+      value = JSON.parse(localStorage.getItem("accessEntranceGroup") || "");
+      return value;
+    } catch (error: any) {
+      console.log(error);
+    }
+  }
+
   function saveInLocalStorage(value: any) {
+    console.log(value);
     setExitButton(value);
-    localStorage.setItem("exitButton", value);
+    localStorage.setItem("exitButtonsGroup", value);
   }
 
   function openDetailByAvatar(event: any) {
@@ -119,17 +153,18 @@ export default function ThirdStep() {
           {arrayOfButtonExit.map(({ id, name, model, imageSrc }) => (
             <ListItem key={id}>
               <label
-                htmlFor={String(id)}
+                //htmlFor={String(id)}
                 className="group/item flex flex-row items-center cursor-pointer w-full"
-                onClick={(value) => {
+                onChange={(value) => {
                   saveInLocalStorage(value);
                 }}
               >
                 <ListItemPrefix className="mr-3">
                   <Checkbox
                     id={String(id)}
+                    //checked={true}
                     ripple={false}
-                    className="hover:before:opacity-0"
+                    //className="hover:before:opacity-0"
                     containerProps={{
                       className: "p-0",
                     }}
