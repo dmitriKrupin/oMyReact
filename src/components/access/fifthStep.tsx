@@ -1,5 +1,5 @@
 export default function FifthStep() {
     return (
-        <div>высота установки блока power</div>
+        <div>тип блока питания, высота установки блока питания power</div>
     );
 }

@@ -184,6 +184,8 @@ export default function FirstStep() {
         )}
       </Select>
 
+      <div>высота установки controller</div>
+
       <Dialog open={open} handler={() => setOpen(!open)}>
         <DialogBody divider className="flex justify-center">
           <Card className="w-96">

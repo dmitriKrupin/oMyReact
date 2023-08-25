@@ -8,7 +8,6 @@ import FourthStep from "../access/fourthStep";
 import ResultStep from "../access/resultStep";
 import FifthStep from "../access/fifthStep";
 import SixthStep from "../access/sixthStep";
-import SeventhStep from "../access/seventhStep";
 
 export default function AccessPage() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -28,7 +27,7 @@ export default function AccessPage() {
 
   const arrayOfIdsForSteps = [
     {
-      id: "accessManufacture-id",
+      id: "controller-id",
       stepForVisible: "firstStep",
       numberOfStep: 0,
       stepForOutput: <FirstStep />,
@@ -46,7 +45,7 @@ export default function AccessPage() {
       stepForOutput: <ThirdStep />,
     },
     {
-      id: "controller-id",
+      id: "door-id",
       stepForVisible: "fourthStep",
       numberOfStep: 3,
       stepForOutput: <FourthStep />,
@@ -58,21 +57,15 @@ export default function AccessPage() {
       stepForOutput: <FifthStep />,
     },
     {
-      id: "door-id",
+      id: "cable-id",
       stepForVisible: "sixthStep",
       numberOfStep: 5,
       stepForOutput: <SixthStep />,
     },
     {
-      id: "cable-id",
-      stepForVisible: "seventhStep",
-      numberOfStep: 6,
-      stepForOutput: <SeventhStep />,
-    },
-    {
       id: "result-id",
       stepForVisible: "resultStep",
-      numberOfStep: 7,
+      numberOfStep: 6,
       stepForOutput: <ResultStep />,
     },
   ];
