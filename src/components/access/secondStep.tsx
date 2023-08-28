@@ -494,6 +494,7 @@ export default function SecondStep() {
           value={accessEntranceGroup.data.reader}
           onChange={(value) => readerChange(value)}
           disabled={!accessEntranceGroup.statuses.readerCheckbox}
+          color="blue"
         >
           {arrayOfAccessReader.map(({ id, model, manufacture, imageSrc }) => (
             <Option
@@ -534,47 +535,50 @@ export default function SecondStep() {
           ))}
         </Select>
 
-        <Dialog open={open} handler={() => setOpen(!open)}>
-          <DialogBody divider className="flex justify-center">
-            <Card className="w-96">
-              <CardHeader shadow={true} floated={false} className="h-96">
-                <img
-                  src={arrayForCard.imageSrc}
-                  alt={arrayForCard.model}
-                  className="h-full w-full object-cover"
-                />
-              </CardHeader>
-              <CardBody>
-                <div className="mb-2 flex items-center justify-between">
-                  <Typography color="blue-gray" className="font-medium">
-                    {arrayForCard.model}
-                  </Typography>
-                  <Typography color="blue-gray" className="font-medium">
-                    ₽ {arrayForCard.price}.00
-                  </Typography>
-                </div>
-                <Typography
-                  variant="small"
-                  color="gray"
-                  className="font-normal opacity-75"
-                >
-                  {arrayForCard.name} {arrayForCard.manufacture} Поддерживаемые
-                  интерфейсы контроллеров: {arrayForCard.interface}{" "}
-                  Поддерживаемые форматы карт доступа: {arrayForCard.readers}
+        <Dialog
+          open={open}
+          handler={() => setOpen(!open)}
+          className="flex justify-center"
+          size="sm"
+        >
+          <Card className="w-96">
+            <CardHeader shadow={true} floated={false} className="h-96">
+              <img
+                src={arrayForCard.imageSrc}
+                alt={arrayForCard.model}
+                className="h-full w-full object-cover"
+              />
+            </CardHeader>
+            <CardBody>
+              <div className="mb-2 flex items-center justify-between">
+                <Typography color="blue-gray" className="font-medium">
+                  {arrayForCard.model}
                 </Typography>
-              </CardBody>
-              <CardFooter className="pt-0">
-                <Button
-                  ripple={false}
-                  fullWidth={true}
-                  className="bg-blue-500 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-                  onClick={() => setOpen(!open)}
-                >
-                  ВЕРНУТЬСЯ К ВЫБОРУ
-                </Button>
-              </CardFooter>
-            </Card>
-          </DialogBody>
+                <Typography color="blue-gray" className="font-medium">
+                  ₽ {arrayForCard.price}.00
+                </Typography>
+              </div>
+              <Typography
+                variant="small"
+                color="gray"
+                className="font-normal opacity-75"
+              >
+                {arrayForCard.name} {arrayForCard.manufacture} Поддерживаемые
+                интерфейсы контроллеров: {arrayForCard.interface} Поддерживаемые
+                форматы карт доступа: {arrayForCard.readers}
+              </Typography>
+            </CardBody>
+            <CardFooter className="pt-0">
+              <Button
+                ripple={false}
+                fullWidth={true}
+                className="bg-blue-500 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
+                onClick={() => setOpen(!open)}
+              >
+                ВЕРНУТЬСЯ К ВЫБОРУ
+              </Button>
+            </CardFooter>
+          </Card>
         </Dialog>
       </div>
 
@@ -589,6 +593,7 @@ export default function SecondStep() {
           value={accessEntranceGroup.data.buttonEntrance}
           onChange={(value) => buttonEntranceChange(value)}
           disabled={!accessEntranceGroup.statuses.buttonEntranceCheckbox}
+          color="blue"
         >
           {arrayOfButtonEntrance.map(({ id, model, manufacture, imageSrc }) => (
             <Option
@@ -641,6 +646,7 @@ export default function SecondStep() {
           value={accessEntranceGroup.data.codePanel}
           onChange={codePanelChange}
           disabled={!accessEntranceGroup.statuses.codePanelCheckbox}
+          color="blue"
         >
           {arrayOfCodePanel.map(({ id, model, manufacture, imageSrc }) => (
             <Option
@@ -693,6 +699,7 @@ export default function SecondStep() {
           value={accessEntranceGroup.data.bioPanel}
           onChange={(value) => bioPanelChange(value)}
           disabled={!accessEntranceGroup.statuses.bioPanelCheckbox}
+          color="blue"
         >
           {arrayOfBioPanel.map(({ id, model, manufacture, imageSrc }) => (
             <Option

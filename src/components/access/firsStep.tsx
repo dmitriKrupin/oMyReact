@@ -3,7 +3,6 @@ import {
   Select,
   Avatar,
   Dialog,
-  DialogBody,
   Button,
   Card,
   CardBody,
@@ -138,6 +137,7 @@ export default function FirstStep() {
         onChange={(value) => {
           saveInLocalStorage(value);
         }}
+        color="blue"
       >
         {arrayOfAccessManufacture.map(
           ({ id, name, model, manufacture, imageSrc }) => (
@@ -186,45 +186,48 @@ export default function FirstStep() {
 
       <div>высота установки controller</div>
 
-      <Dialog open={open} handler={() => setOpen(!open)}>
-        <DialogBody divider className="flex justify-center">
-          <Card className="w-96">
-            <CardHeader shadow={true} floated={false} className="h-96">
-              <img
-                src={arrayForCard.imageSrc}
-                alt={arrayForCard.model}
-                className="h-full w-full object-cover"
-              />
-            </CardHeader>
-            <CardBody>
-              <div className="mb-2 flex items-center justify-between">
-                <Typography color="blue-gray" className="font-medium">
-                  {arrayForCard.model}
-                </Typography>
-                <Typography color="blue-gray" className="font-medium">
-                  ₽ {arrayForCard.price}.00
-                </Typography>
-              </div>
-              <Typography
-                variant="small"
-                color="gray"
-                className="font-normal opacity-75"
-              >
-                {arrayForCard.name} {arrayForCard.manufacture}
+      <Dialog
+        open={open}
+        handler={() => setOpen(!open)}
+        className="flex justify-center"
+        size="sm"
+      >
+        <Card className="w-96">
+          <CardHeader shadow={true} floated={false} className="h-96">
+            <img
+              src={arrayForCard.imageSrc}
+              alt={arrayForCard.model}
+              className="h-full w-full object-cover"
+            />
+          </CardHeader>
+          <CardBody>
+            <div className="mb-2 flex items-center justify-between">
+              <Typography color="blue-gray" className="font-medium">
+                {arrayForCard.model}
               </Typography>
-            </CardBody>
-            <CardFooter className="pt-0">
-              <Button
-                ripple={false}
-                fullWidth={true}
-                className="bg-blue-500 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-                onClick={() => setOpen(!open)}
-              >
-                ВЕРНУТЬСЯ К ВЫБОРУ
-              </Button>
-            </CardFooter>
-          </Card>
-        </DialogBody>
+              <Typography color="blue-gray" className="font-medium">
+                ₽ {arrayForCard.price}.00
+              </Typography>
+            </div>
+            <Typography
+              variant="small"
+              color="gray"
+              className="font-normal opacity-75"
+            >
+              {arrayForCard.name} {arrayForCard.manufacture}
+            </Typography>
+          </CardBody>
+          <CardFooter className="pt-0">
+            <Button
+              ripple={false}
+              fullWidth={true}
+              className="bg-blue-500 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
+              onClick={() => setOpen(!open)}
+            >
+              ВЕРНУТЬСЯ К ВЫБОРУ
+            </Button>
+          </CardFooter>
+        </Card>
       </Dialog>
     </div>
   );

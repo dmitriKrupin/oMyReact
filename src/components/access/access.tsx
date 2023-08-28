@@ -104,7 +104,10 @@ export default function AccessPage() {
     <Stepper
       className="mt-8"
       activeStep={activeStep}
-      isLastStep={(value) => setIsLastStep(value)}
+      isLastStep={(value) => {
+        console.log("STEPPER " + activeStep);
+        setIsLastStep(value);
+      }}
       isFirstStep={(value) => setIsFirstStep(value)}
     >
       {arrayOfIdsForSteps.map(({ id, stepForVisible, numberOfStep }) => (
@@ -127,6 +130,7 @@ export default function AccessPage() {
   const [paginationOrStepper, setPaginationOrStepper] = React.useState(STEPPER);
 
   const changePagination = () => {
+    console.log(activeStep);
     if (window.innerWidth > 768) {
       setPaginationOrStepper(STEPPER);
     } else {
