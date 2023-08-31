@@ -131,7 +131,7 @@ export default function ProjectsPage() {
   const [open, setOpen] = useState(false);
 
   const [arrayForCard, setArrayForCard] = React.useState({
-    image: { g47 }.g47,
+    image: "",
     alt: "",
     service: "",
     object: "",
@@ -145,7 +145,7 @@ export default function ProjectsPage() {
       (element) => element.id === Number(event?.target.id)
     );
     setArrayForCard({
-      image: array?.image,
+      image: String(array?.image.src),
       alt: String(array?.alt),
       service: String(array?.service),
       object: String(array?.object),
@@ -213,6 +213,8 @@ export default function ProjectsPage() {
             <Image
               src={arrayForCard.image}
               alt={arrayForCard.alt}
+              height={555}
+              width={400}
               className="h-full w-full object-cover"
             />
           </CardHeader>
