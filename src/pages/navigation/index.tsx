@@ -5,6 +5,7 @@ import { Fragment, useEffect, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import AuthorizationPage from "../../pages/authorizations";
+import { Button } from "@material-tailwind/react";
 
 const navigation = [
   { name: "ПРОЕКТЫ", href: "/projects" },
@@ -67,9 +68,9 @@ export default function Navigation() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <button type="button" onClick={openModal} className={"btn-primary"}>
+          <Button type="button" onClick={openModal} className={"btn-primary"}>
             {nameOfLoginButton}
-          </button>
+          </Button>
 
           <>
             <Transition appear show={isOpen} as={Fragment}>
@@ -144,7 +145,7 @@ export default function Navigation() {
                 ))}
               </div>
               <div className="lg:flex lg:flex-1 lg:justify-end">
-                <button
+                <Button
                   type="button"
                   onClick={() => {
                     setMobileMenuOpen(false);
@@ -153,7 +154,7 @@ export default function Navigation() {
                   className={"btn-primary"}
                 >
                   {nameOfLoginButton}
-                </button>
+                </Button>
 
                 <>
                   <Transition appear show={isOpen} as={Fragment}>

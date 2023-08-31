@@ -12,7 +12,6 @@ import {
   Checkbox,
 } from "@material-tailwind/react";
 import React, { useEffect } from "react";
-import SecondStep from "./secondStep";
 
 export default function ThirdStep() {
   const [exitButtonsGroup, setExitButtonsGroup] = React.useState({
@@ -447,7 +446,7 @@ export default function ThirdStep() {
           label={"Выберите модель считывателя:"}
           value={exitButtonsGroup.data.reader}
           onChange={(value) => readerChange(value)}
-          disabled={!exitButtonsGroup.statuses.simpleButtonCheckbox}
+          disabled={!exitButtonsGroup.statuses.readerCheckbox}
           color="blue"
         >
           {arrayOfAccessReader.map(({ id, model, imageSrc, manufacture }) => (
