@@ -166,10 +166,10 @@ export default function ProjectsPage() {
               <ListItem>
                 <label
                   id={String(item.id)}
-                  className="flex w-full cursor-pointer items-center px-3 py-2"
+                  className="flex w-full cursor-pointer items-center" //px-3 py-2
                   onClick={getInfoForCardInput}
                 >
-                  <ListItemPrefix>
+                  <ListItemPrefix className="flex-none">
                     <Avatar
                       id={String(item.id)}
                       variant="circular"
@@ -177,7 +177,7 @@ export default function ProjectsPage() {
                       src={item.image.src}
                     />
                   </ListItemPrefix>
-                  <div>
+                  <div className="">
                     <Typography
                       id={String(item.id)}
                       variant="h6"
@@ -213,7 +213,7 @@ export default function ProjectsPage() {
             <Image
               src={arrayForCard.image}
               alt={arrayForCard.alt}
-              height={555}
+              height={400}
               width={400}
               className="h-full w-full object-cover"
             />
