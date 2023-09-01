@@ -158,7 +158,27 @@ export default function AccessPage() {
           <div>{stepForOutput}</div>
         </div>
 
-        {paginationOrStepper}
+        {/*paginationOrStepper*/}
+
+        <Stepper
+          className="mt-8"
+          activeStep={activeStep}
+          isLastStep={(value) => {
+            setIsLastStep(value);
+          }}
+          isFirstStep={(value) => setIsFirstStep(value)}
+        >
+          {arrayOfIdsForSteps.map(({ id, stepForVisible, numberOfStep }) => (
+            <Step
+              key={id}
+              id={stepForVisible}
+              onClick={getPageAccessForStep}
+              className="w-7 md:w-10 h-7 md:h-10"
+            >
+              {numberOfStep + 1}
+            </Step>
+          ))}
+        </Stepper>
 
         <div className="mt-8 flex justify-between">
           <Button

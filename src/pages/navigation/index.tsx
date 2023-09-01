@@ -68,9 +68,7 @@ export default function Navigation() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button type="button" onClick={openModal} className={"btn-primary"}>
-            {nameOfLoginButton}
-          </Button>
+          <Button onClick={openModal}>{nameOfLoginButton}</Button>
 
           <>
             <Transition appear show={isOpen} as={Fragment}>
@@ -146,12 +144,10 @@ export default function Navigation() {
               </div>
               <div className="lg:flex lg:flex-1 lg:justify-end">
                 <Button
-                  type="button"
                   onClick={() => {
                     setMobileMenuOpen(false);
                     openModal();
                   }}
-                  className={"btn-primary"}
                 >
                   {nameOfLoginButton}
                 </Button>

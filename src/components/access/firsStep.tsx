@@ -10,10 +10,12 @@ import {
   Typography,
   CardFooter,
 } from "@material-tailwind/react";
+import { hi } from "date-fns/locale";
 import React, { useEffect } from "react";
 
 export default function FirstStep() {
   const [accessController, setAccessController] = React.useState("");
+  const [high, setHigh] = React.useState("");
   const [open, setOpen] = React.useState(false);
   const [arrayForCard, setArrayForCard] = React.useState({
     id: "",
@@ -27,9 +29,13 @@ export default function FirstStep() {
   });
 
   useEffect(() => {
-    let value;
-    value = localStorage.getItem("accessController") || "";
-    setAccessController(value);
+    let controller;
+    controller = localStorage.getItem("accessController") || "";
+    setAccessController(controller);
+
+    let high;
+    high = localStorage.getItem("highOfController") || "";
+    setHigh(high);
   }, []);
 
   const arrayOfAccessManufacture = [
@@ -86,6 +92,12 @@ export default function FirstStep() {
       imageSrc: "http://skd-gate.ru/images/cms/data/gate/gate-8000_sm.png",
       price: "9 320",
     },
+  ];
+
+  const arrayOfAccessHigh = [
+    { id: 0, high: "до 3-х метров" },
+    { id: 1, high: "от 3-х до 5-ти метров" },
+    { id: 2, high: "от 5-ти до 9-ти метров" },
   ];
 
   function saveInLocalStorage(value: any) {
@@ -184,7 +196,25 @@ export default function FirstStep() {
         )}
       </Select>
 
-      <div>высота установки controller</div>
+      <Select
+        label={"Выберите высоту установки контроллера:"}
+        value={high}
+        onChange={(value) => {
+          localStorage.setItem("highOfController", value || "");
+          setHigh(value || "");
+        }}
+        color="blue"
+      >
+        {arrayOfAccessHigh.map(({ id, high }) => (
+          <Option
+            key={id}
+            value={high}
+            className="group/item flex flex-row justify-between items-center"
+          >
+            {" " + high}
+          </Option>
+        ))}
+      </Select>
 
       <Dialog
         open={open}
