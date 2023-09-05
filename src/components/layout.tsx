@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Navigation from '../pages/navigation';
-import '../styles/globals.css'
 import React from 'react';
 import Footer from './footer'
 

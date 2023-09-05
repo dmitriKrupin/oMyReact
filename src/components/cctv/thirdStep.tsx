@@ -8,7 +8,7 @@ export default function ThirdStep() {
         let value;
         value = localStorage.getItem('numberOfCameras') || '0';
         setNumberOfCameras(parseInt(value));
-    })
+    }, [])
 
     function saveInLocalStorage(event: any) {
         let numberOfCameras = event.target.valueAsNumber;

@@ -23,7 +23,7 @@ export default function SecondStep() {
         let value;
         value = localStorage.getItem('manufacture') || ''
         setManufacture(value)
-    })
+    }, [])
 
     function saveInLocalStorage(value: any) {
         setManufacture(value);

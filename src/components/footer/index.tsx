@@ -14,14 +14,7 @@ export default function Footer() {
     return (
         <footer>
             <div
-                className={'p-16 bottom-0 h-16 text-center text-blue-500 flex flex-row justify-center items-end gap-4'}>
-                <Link
-                    href="mailto:master@dkrupin.ru"
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                >
-                    ИП КРУПИН Д.А.
-                </Link>
+                className={'p-16 bottom-0 h-16 text-cente text-blue-500 flex flex-row justify-center items-center gap-4 text-xs md:text-base'}>
                 <Link
                     href="mailto:master@dkrupin.ru"
                     onMouseEnter={handleMouseEnter}
@@ -45,6 +38,13 @@ export default function Footer() {
                                 d="M1.5 9.589v-.745a3 3 0 011.578-2.641l7.5-4.039a3 3 0 012.844 0l7.5 4.039A3 3 0 0122.5 8.844v.745l-8.426 4.926-.652-.35a3 3 0 00-2.844 0l-.652.35L1.5 9.59z"/>
                         </svg>
                     }
+                </Link>
+                <Link
+                    href="mailto:master@dkrupin.ru"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    ИП КРУПИН Д.А.
                 </Link>
             </div>
         </footer>
