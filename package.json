@@ -26,6 +26,7 @@
     "next": "13.4.9",
     "next-compose-plugins": "^2.2.1",
     "next-transpile-modules": "^10.0.0",
+    "node": "^20.5.1",
     "postcss": "8.4.25",
     "react": "18.2.0",
     "react-dom": "18.2.0",
