@@ -14,7 +14,6 @@ import {
 } from "@material-tailwind/react";
 import Head from "next/head";
 
-//todo: поправить выдачу авторизации без дублирования кода
 export default function AuthorizationPage() {
     const [type, setType] = React.useState("sighIn");
     const [userData, setUserData] = React.useState({ userName: '', email: '', password: '', error: '' })
