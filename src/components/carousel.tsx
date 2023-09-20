@@ -41,7 +41,7 @@ export default function CarouselReviews() {
                         <div className="absolute inset-0 bg-black/50 rounded-3xl">
                             <div className={'absolute text-center inset-x-0 bottom-10'}>
                                 <Typography
-                                    variant="h8"
+                                    variant="h6"
                                     color="white"
                                     className={'text-left mx-16 mb-10'}>
                                     <div className={'font-extrabold'}>{item.name}</div>
