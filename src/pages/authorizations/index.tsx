@@ -87,7 +87,7 @@ export default function AuthorizationPage() {
               }
         } catch(error) {
             console.error(
-                'You have an error in your code or there are Network issues.', error
+                'Ошибка: ', error
             )
         }
     }
