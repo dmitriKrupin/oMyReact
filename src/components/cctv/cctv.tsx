@@ -92,7 +92,7 @@ export default function CctvPage() {
         <title>{"K-12.PRO | Расчет видеонаблюдения"}</title>
       </Head>
       <div>
-        <div className={"w-full h-full py-4 px-8 p-2"}>
+        <div className={"w-full h-full py-4 px-0 p-2"}>
           <div>{stepForOutput}</div>
         </div>
 

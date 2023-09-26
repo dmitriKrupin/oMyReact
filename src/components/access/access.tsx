@@ -154,7 +154,7 @@ export default function AccessPage() {
         <title>{"K-12.PRO | Расчет контроля доступа"}</title>
       </Head>
       <div>
-        <div className={"w-full h-full py-4 px-8 p-2"}>
+        <div className={"w-full h-full py-4 px-0 p-2"}>
           <div>{stepForOutput}</div>
         </div>
 
