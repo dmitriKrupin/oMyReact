@@ -1,248 +1,161 @@
-import {
-  MagnifyingGlassIcon,
-  ChevronUpDownIcon,
-} from "@heroicons/react/24/outline";
-import { PencilIcon, UserPlusIcon } from "@heroicons/react/24/solid";
-import {
-  Card,
-  CardHeader,
-  Input,
-  Typography,
-  Button,
-  CardBody,
-  Chip,
-  CardFooter,
-  Tabs,
-  TabsHeader,
-  Tab,
-  Avatar,
-  IconButton,
-  Tooltip,
-} from "@material-tailwind/react";
+import { ChevronDownIcon, TrashIcon } from "@heroicons/react/24/solid";
+import PencilSquareIcon from "@heroicons/react/24/solid/PencilSquareIcon";
+import { Collapse, IconButton, Tooltip } from "@material-tailwind/react";
+import React from "react";
 
-const TABS = [
+const TABLE_HEAD = [
   {
-    label: "All",
-    value: "all",
-  },
-  {
-    label: "Monitored",
-    value: "monitored",
-  },
-  {
-    label: "Unmonitored",
-    value: "unmonitored",
-  },
-];
-
-const TABLE_HEAD = ["Member", "Function", "Status", "Employed", ""];
-
-const TABLE_ROWS = [
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-3.jpg",
-    name: "John Michael",
-    email: "john@creative-tim.com",
-    job: "Manager",
-    org: "Organization",
-    online: true,
-    date: "23/04/18",
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-2.jpg",
-    name: "Alexa Liras",
-    email: "alexa@creative-tim.com",
-    job: "Programator",
-    org: "Developer",
-    online: false,
-    date: "23/04/18",
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-1.jpg",
-    name: "Laurent Perrier",
-    email: "laurent@creative-tim.com",
-    job: "Executive",
-    org: "Projects",
-    online: false,
-    date: "19/09/17",
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-4.jpg",
-    name: "Michael Levi",
-    email: "michael@creative-tim.com",
-    job: "Programator",
-    org: "Developer",
-    online: true,
-    date: "24/12/08",
-  },
-  {
-    img: "https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-5.jpg",
-    name: "Richard Gran",
-    email: "richard@creative-tim.com",
-    job: "Manager",
-    org: "Executive",
-    online: false,
-    date: "04/10/21",
+    number: "№",
+    cameras: "Количество устройств",
+    length: "Длина трасс",
+    status: "Статус",
+    equipment: "Оборудование и материалы",
+    work: "Работы",
+    total: "ИТОГО",
+    button: "   ",
   },
 ];
 
 export default function ResultStep() {
-  return (
-    <Card className="h-full w-full">
-      <CardHeader floated={false} shadow={false} className="rounded-none">
-        <div className="mb-8 flex items-center justify-between gap-8">
-          <div>
-            <Typography variant="h5" color="blue-gray">
-              Members list
-            </Typography>
-            <Typography color="gray" className="mt-1 font-normal">
-              See information about all members
-            </Typography>
-          </div>
-          <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
-            <Button variant="outlined" size="sm">
-              view all
-            </Button>
-            <Button className="flex items-center gap-3" size="sm">
-              <UserPlusIcon strokeWidth={2} className="h-4 w-4" /> Add member
-            </Button>
-          </div>
-        </div>
-        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <Tabs value="all" className="w-full md:w-max">
-            <TabsHeader>
-              {TABS.map(({ label, value }) => (
-                <Tab key={value} value={value}>
-                  &nbsp;&nbsp;{label}&nbsp;&nbsp;
-                </Tab>
-              ))}
-            </TabsHeader>
-          </Tabs>
-          <div className="w-full md:w-72">
-            <Input
-              label="Search"
-              icon={<MagnifyingGlassIcon className="h-5 w-5" />}
-            />
-          </div>
-        </div>
-      </CardHeader>
-      <CardBody className="overflow-scroll px-0">
-        <table className="mt-4 w-full min-w-max table-auto text-left">
-          <thead>
-            <tr>
-              {TABLE_HEAD.map((head, index) => (
-                <th
-                  key={head}
-                  className="cursor-pointer border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 transition-colors hover:bg-blue-gray-50"
-                >
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="flex items-center justify-between gap-2 font-normal leading-none opacity-70"
-                  >
-                    {head}{" "}
-                    {index !== TABLE_HEAD.length - 1 && (
-                      <ChevronUpDownIcon strokeWidth={2} className="h-4 w-4" />
-                    )}
-                  </Typography>
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {TABLE_ROWS.map(
-              ({ img, name, email, job, org, online, date }, index) => {
-                const isLast = index === TABLE_ROWS.length - 1;
-                const classes = isLast
-                  ? "p-4"
-                  : "p-4 border-b border-blue-gray-50";
+  const TABLE_BODY = [
+    {
+      id: 1,
+      cameras: localStorage.getItem("numberOfCameras") || "0",
+      length: getSumOfLength(),
+      status: "Черновик",
+      costOfEquipment: "Оборудование",
+      costOfWork: "Работы",
+      total: "ИТОГО",
+      button: editButton,
+    },
+    {
+      id: 2,
+      cameras: localStorage.getItem("numberOfCameras") || "0",
+      length: getSumOfLength(),
+      status: "Черновик",
+      costOfEquipment: "Оборудование",
+      costOfWork: "Работы",
+      total: "ИТОГО",
+      button: editButton,
+    },
+  ];
 
-                return (
-                  <tr key={name}>
-                    <td className={classes}>
-                      <div className="flex items-center gap-3">
-                        <Avatar src={img} alt={name} size="sm" />
-                        <div className="flex flex-col">
-                          <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal"
-                          >
-                            {name}
-                          </Typography>
-                          <Typography
-                            variant="small"
-                            color="blue-gray"
-                            className="font-normal opacity-70"
-                          >
-                            {email}
-                          </Typography>
-                        </div>
-                      </div>
-                    </td>
-                    <td className={classes}>
-                      <div className="flex flex-col">
-                        <Typography
-                          variant="small"
-                          color="blue-gray"
-                          className="font-normal"
-                        >
-                          {job}
-                        </Typography>
-                        <Typography
-                          variant="small"
-                          color="blue-gray"
-                          className="font-normal opacity-70"
-                        >
-                          {org}
-                        </Typography>
-                      </div>
-                    </td>
-                    <td className={classes}>
-                      <div className="w-max">
-                        <Chip
-                          variant="ghost"
-                          size="sm"
-                          value={online ? "online" : "offline"}
-                          color={online ? "green" : "blue-gray"}
-                        />
-                      </div>
-                    </td>
-                    <td className={classes}>
-                      <Typography
-                        variant="small"
-                        color="blue-gray"
-                        className="font-normal"
-                      >
-                        {date}
-                      </Typography>
-                    </td>
-                    <td className={classes}>
-                      <Tooltip content="Edit User">
-                        <IconButton variant="text">
-                          <PencilIcon className="h-4 w-4" />
-                        </IconButton>
-                      </Tooltip>
-                    </td>
-                  </tr>
-                );
-              }
-            )}
-          </tbody>
-        </table>
-      </CardBody>
-      <CardFooter className="flex items-center justify-between border-t border-blue-gray-50 p-4">
-        <Typography variant="small" color="blue-gray" className="font-normal">
-          Page 1 of 10
-        </Typography>
-        <div className="flex gap-2">
-          <Button variant="outlined" size="sm">
-            Previous
-          </Button>
-          <Button variant="outlined" size="sm">
-            Next
-          </Button>
+  function getSumOfLength() {
+    let lengthOfGofra = Number(localStorage.getItem("lengthOfGofra"));
+    let lengthOfCabelCanal = Number(localStorage.getItem("lengthOfCabelCanal"));
+    let lengthOfShtrob = Number(localStorage.getItem("lengthOfShtrob"));
+    let lengthOfLotok = Number(localStorage.getItem("lengthOfLotok"));
+    let lengthOfPodvesnoyPotok = Number(
+      localStorage.getItem("lengthOfPodvesnoyPotok")
+    );
+    return (
+      lengthOfGofra +
+      lengthOfCabelCanal +
+      lengthOfShtrob +
+      lengthOfLotok +
+      lengthOfPodvesnoyPotok
+    );
+  }
+
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
+
+  function toggleOpen(id: number) {
+    let array = TABLE_BODY.find((element) => element.id === Number(id));
+    console.log(array);
+    if (id === array?.id) {
+      setOpen((cur) => !cur);
+      setIsMenuOpen((cur) => !cur);
+    }
+  }
+
+  function editButton(id: number) {
+    return (
+      <>
+        <div className="grid justify-center">
+          <IconButton
+            className="h-4 md:h-8 w-4 md:w-8"
+            variant="text"
+            color="blue-gray"
+          >
+            <ChevronDownIcon
+              className={`h-4 md:h-8 w-4 md:w-8 transition-transform lg:block 
+            ${isMenuOpen ? "rotate-180" : ""}`}
+              onClick={() => toggleOpen(id)}
+            />
+          </IconButton>
         </div>
-      </CardFooter>
-    </Card>
+        <div className="grid justify-center">
+          <Collapse open={open}>
+            <Tooltip content="Редактировать">
+              <PencilSquareIcon className="h-4 md:h-8 w-4 md:w-8" />
+            </Tooltip>
+            <Tooltip content="Удалить">
+              <TrashIcon className="h-4 md:h-8 w-4 md:w-8" />
+            </Tooltip>
+          </Collapse>
+        </div>
+      </>
+    );
+  }
+
+  return (
+    //todo: добавить готовый результат с указанием стоимостей за работы и необходимые оборудование и материалы
+    <div className="result-table">
+      <table className="rounded">
+        <thead>
+          {TABLE_HEAD.map((entry) => (
+            <tr
+              key={entry.number}
+              className="grid 
+              grid-cols-9 sm:grid-cols-11 md:grid-cols-16 lg:grid-cols-9
+              text-xs sm:text-sm md:text-base
+              gap-2"
+            >
+              <th>{entry.number}</th>
+              <th className="col-span-3 lg:col-span-1">{entry.cameras}</th>
+              <th className="col-span-2 lg:col-span-1">{entry.length}</th>
+              <th className="hidden sm:grid col-span-2 lg:col-span-1">
+                {entry.status}
+              </th>
+              <th className="hidden md:grid col-span-3 lg:col-span-2">
+                {entry.equipment}
+              </th>
+              <th className="hidden md:grid col-span-2 lg:col-span-1">
+                {entry.work}
+              </th>
+              <th className="col-span-2 lg:col-span-1">{entry.total}</th>
+              <th>{entry.button}</th>
+            </tr>
+          ))}
+        </thead>
+        <tbody>
+          {TABLE_BODY.map((entry) => (
+            <tr
+              key={entry.id}
+              className="grid
+              grid-cols-9 sm:grid-cols-11 md:grid-cols-16 lg:grid-cols-9
+              text-xs sm:text-sm md:text-base
+              gap-2 items-center"
+            >
+              <th>{entry.id}</th>
+              <th className="col-span-3 lg:col-span-1">{entry.cameras}</th>
+              <th className="col-span-2 lg:col-span-1">{entry.length}</th>
+              <th className="hidden sm:grid col-span-2 lg:col-span-1">
+                {entry.status}
+              </th>
+              <th className="hidden md:grid col-span-3 lg:col-span-2">
+                {entry.costOfEquipment}
+              </th>
+              <th className="hidden md:grid col-span-2 lg:col-span-1">
+                {entry.costOfWork}
+              </th>
+              <th className="col-span-2 lg:col-span-1">{entry.total}</th>
+              <th>{entry.button(entry.id)}</th>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
