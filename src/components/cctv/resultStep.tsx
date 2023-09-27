@@ -1,7 +1,12 @@
 import { ChevronDownIcon, TrashIcon } from "@heroicons/react/24/solid";
 import PencilSquareIcon from "@heroicons/react/24/solid/PencilSquareIcon";
 import { Collapse, IconButton, Tooltip } from "@material-tailwind/react";
-import React from "react";
+import React, { useState } from "react";
+
+const initialOpenDetails = [
+  { id: 0, status: false },
+  { id: 1, status: false },
+];
 
 const TABLE_HEAD = [
   {
@@ -12,12 +17,23 @@ const TABLE_HEAD = [
     equipment: "Оборудование и материалы",
     work: "Работы",
     total: "ИТОГО",
-    button: "   ",
+    button: "",
   },
 ];
 
 export default function ResultStep() {
   const TABLE_BODY = [
+    {
+      id: 0,
+      cameras: localStorage.getItem("numberOfCameras") || "0",
+      length: getSumOfLength(),
+      status: "Черновик",
+      costOfEquipment: "Оборудование",
+      costOfWork: "Работы",
+      total: "ИТОГО",
+      button: editButton,
+      statusOfDetails: getStatusForInput(0),
+    },
     {
       id: 1,
       cameras: localStorage.getItem("numberOfCameras") || "0",
@@ -27,16 +43,7 @@ export default function ResultStep() {
       costOfWork: "Работы",
       total: "ИТОГО",
       button: editButton,
-    },
-    {
-      id: 2,
-      cameras: localStorage.getItem("numberOfCameras") || "0",
-      length: getSumOfLength(),
-      status: "Черновик",
-      costOfEquipment: "Оборудование",
-      costOfWork: "Работы",
-      total: "ИТОГО",
-      button: editButton,
+      statusOfDetails: getStatusForInput(1),
     },
   ];
 
@@ -57,19 +64,32 @@ export default function ResultStep() {
     );
   }
 
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [open, setOpen] = React.useState(false);
+  //const [openDetails, setOpenDetails] = React.useState(false);
+
+  const [details, setDetails] = useState(initialOpenDetails);
 
   function toggleOpen(id: number) {
-    let array = TABLE_BODY.find((element) => element.id === Number(id));
-    console.log(array);
-    if (id === array?.id) {
-      setOpen((cur) => !cur);
-      setIsMenuOpen((cur) => !cur);
+    //setOpenDetails((cur) => !cur);
+
+    let array = initialOpenDetails.find((element) => element.id === id);
+
+    if (array?.id == id) {
+      setDetails((cur) => [
+        ...details,
+        {
+          id: id,
+          status: !cur,
+        },
+      ]);
+      console.log(details);
     }
   }
 
-  function editButton(id: number) {
+  function getStatusForInput(id: number) {
+    return initialOpenDetails.find((element) => element.id === id).status;
+  }
+
+  function editButton(id: number, status: boolean) {
     return (
       <>
         <div className="grid justify-center">
@@ -80,13 +100,15 @@ export default function ResultStep() {
           >
             <ChevronDownIcon
               className={`h-4 md:h-8 w-4 md:w-8 transition-transform lg:block 
-            ${isMenuOpen ? "rotate-180" : ""}`}
-              onClick={() => toggleOpen(id)}
+            ${status ? "rotate-180" : ""}`}
+              onClick={() => {
+                toggleOpen(id);
+              }}
             />
           </IconButton>
         </div>
         <div className="grid justify-center">
-          <Collapse open={open}>
+          <Collapse open={status}>
             <Tooltip content="Редактировать">
               <PencilSquareIcon className="h-4 md:h-8 w-4 md:w-8" />
             </Tooltip>
@@ -151,7 +173,8 @@ export default function ResultStep() {
                 {entry.costOfWork}
               </th>
               <th className="col-span-2 lg:col-span-1">{entry.total}</th>
-              <th>{entry.button(entry.id)}</th>
+              {/*<th>{entry.button(entry.id)}</th>*/}
+              <th>{editButton(entry.id, entry.statusOfDetails)}</th>
             </tr>
           ))}
         </tbody>

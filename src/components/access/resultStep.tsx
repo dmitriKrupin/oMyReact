@@ -19,7 +19,7 @@ const TABLE_HEAD = [
 export default function ResultStep() {
   const TABLE_BODY = [
     {
-      id: 1,
+      id: 0,
       cameras: localStorage.getItem("numberOfCameras") || "0",
       length: getSumOfLength(),
       status: "Черновик",
@@ -29,7 +29,7 @@ export default function ResultStep() {
       button: editButton,
     },
     {
-      id: 2,
+      id: 1,
       cameras: localStorage.getItem("numberOfCameras") || "0",
       length: getSumOfLength(),
       status: "Черновик",
