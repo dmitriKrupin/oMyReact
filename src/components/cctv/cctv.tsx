@@ -5,7 +5,7 @@ import SecondStep from "./secondStep";
 import ThirdStep from "./thirdStep";
 import FourthStep from "./fourthStep";
 import FirstStep from "./firstStep";
-import ResultStep from "@/components/cctv/resultStep";
+import ResultStep from "@/components/cctv/result/resultStep";
 
 export default function CctvPage() {
   const [activeStep, setActiveStep] = React.useState(0);
