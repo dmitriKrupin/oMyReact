@@ -5,7 +5,7 @@ import FirstStep from "../access/firsStep";
 import SecondStep from "../access/secondStep";
 import ThirdStep from "../access/thirdStep";
 import FourthStep from "../access/fourthStep";
-import ResultStep from "../access/resultStep";
+import ResultStep from "./result/resultStep";
 import FifthStep from "../access/fifthStep";
 import SixthStep from "../access/sixthStep";
 

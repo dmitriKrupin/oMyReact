@@ -60,7 +60,7 @@ export default function Result({ result, onChange, onDelete }: any) {
         <input
           type="text"
           className="sm:grid col-span-2 lg:col-span-1 p-0"
-          value={result.cameras}
+          value={result.devices}
           onChange={(e) => {
             onChange({
               ...result,
@@ -109,7 +109,7 @@ export default function Result({ result, onChange, onDelete }: any) {
     resultContent = (
       <>
         <th>{result.id + 1}</th>
-        <th className="col-span-3 lg:col-span-1">{result.cameras}</th>
+        <th className="col-span-3 lg:col-span-1">{result.devices}</th>
         <th className="col-span-2 lg:col-span-1">{result.length}</th>
         <th className="hidden sm:grid col-span-2 lg:col-span-1">
           {result.status}

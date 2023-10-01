@@ -5,7 +5,7 @@ export default function ResultStep() {
   const TABLE_HEAD = [
     {
       number: "№",
-      cameras: "Количество камер",
+      devices: "Всего устройств",
       length: "Длина трасс",
       status: "Статус",
       equipment: "Оборудование и материалы",
@@ -16,13 +16,13 @@ export default function ResultStep() {
   ];
 
   function getSumOfLength() {
-    let lengthOfGofra = Number(localStorage.getItem("lengthOfGofra"));
-    let lengthOfCabelCanal = Number(localStorage.getItem("lengthOfCabelCanal"));
-    let lengthOfShtrob = Number(localStorage.getItem("lengthOfShtrob"));
-    let lengthOfLotok = Number(localStorage.getItem("lengthOfLotok"));
-    let lengthOfPodvesnoyPotok = Number(
-      localStorage.getItem("lengthOfPodvesnoyPotok")
-    );
+    let lengthAccess = JSON.parse(localStorage.getItem("lengthOfAccess") || "");
+    let lengthOfGofra = lengthAccess.lengthOfAccessInfo.lengthOfGofra;
+    let lengthOfCabelCanal = lengthAccess.lengthOfAccessInfo.lengthOfCabelCanal;
+    let lengthOfShtrob = lengthAccess.lengthOfAccessInfo.lengthOfShtrob;
+    let lengthOfLotok = lengthAccess.lengthOfAccessInfo.lengthOfLotok;
+    let lengthOfPodvesnoyPotok =
+      lengthAccess.lengthOfAccessInfo.lengthOfPodvesnoyPotok;
     return (
       lengthOfGofra +
       lengthOfCabelCanal +
@@ -32,11 +32,13 @@ export default function ResultStep() {
     );
   }
 
+  function getSumOfDevices() {}
+
   let resultListFromStorage = [
     {
       id: 0,
       done: true,
-      cameras: localStorage.getItem("numberOfCameras") || "0",
+      devices: localStorage.getItem("numberOfCameras") || "0",
       length: getSumOfLength(),
       status: "Черновик",
       costOfEquipment: "Оборудование",
