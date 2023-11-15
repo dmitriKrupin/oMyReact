@@ -2,7 +2,6 @@ import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "@/lib/posts";
 import { GetStaticProps } from "next";
-import Appointment from "../components/appointment";
 
 export default function Home({
   allPostsData,
@@ -19,7 +18,29 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
       <div className={"main"}>
-        <Appointment />
+        <>
+          <div className="grid grid-cols-2 gap-4 text-center h-96">
+            <div className="bg-yellow-300 hover:shadow-2xl">Фото объекта</div>
+            <div className="bg-green-300 hover:shadow-2xl">
+              Реализовано проектов
+            </div>
+
+            <div className="bg-green-300 hover:shadow-2xl">Проектирование</div>
+            <div className="bg-yellow-300 hover:shadow-2xl">
+              Фото структурных схем
+            </div>
+
+            <div className="bg-yellow-300 hover:shadow-2xl">Фото гарантии</div>
+            <div className="bg-green-300 hover:shadow-2xl">
+              Гарантия на работы
+            </div>
+
+            <div className="bg-green-300 hover:shadow-2xl">
+              Раннее бронирование
+            </div>
+            <div className="bg-yellow-300 hover:shadow-2xl">Фото календаря</div>
+          </div>
+        </>
       </div>
       {/*<div className={'main'}>
                 <section className={'headingMd'}>

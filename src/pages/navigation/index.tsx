@@ -11,6 +11,7 @@ const navigation = [
   { name: "ПРОЕКТЫ", href: "/projects" },
   { name: "СТОИМОСТЬ", href: "/pricing" },
   { name: "ОТЗЫВЫ", href: "/reviews" },
+  { name: "БАЗА ЗНАНИЙ", href: "/knowledge" },
 ];
 
 export default function Navigation() {

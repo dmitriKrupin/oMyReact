@@ -18,12 +18,17 @@ const Appointment = () => {
       <div className="grid grid-rows-3 grid-flow-col gap-4">
         <Calendar
           className="row-span-3"
-          onChange={handleDateChange}
+          onChange={
+            handleDateChange
+            //console.log(returnValue);
+          }
           value={date}
           locale="RUS"
+          returnValue="range"
+          selectRange={true}
         />
         <Button className="col-span-2" color="blue">
-          ОСТАВИТЬ ЗАЯВКУ
+          ВЫБЕРИТЕ ДАТУ
         </Button>
       </div>
     </>
