@@ -2,6 +2,9 @@ import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "@/lib/posts";
 import { GetStaticProps } from "next";
+import AllPhotoProjects from "@/components/allphotoprojects";
+import Link from "next/link";
+import { Button, Typography } from "@material-tailwind/react";
 
 export default function Home({
   allPostsData,
@@ -19,23 +22,31 @@ export default function Home({
       </Head>
       <div className={"main"}>
         <>
-          <div className="grid grid-cols-2 gap-4 text-center h-96">
-            <div className="bg-yellow-300 hover:shadow-2xl">Фото объекта</div>
-            <div className="bg-green-300 hover:shadow-2xl">
-              Реализовано проектов
+          <div className="grid grid-cols-2 gap-4 text-center">
+            <AllPhotoProjects />
+            <div className='h-52'>
+              <Typography className="flex justify-center item-middle">
+                ЗА ПЕРИОД С 2018 ГОДА РЕАЛИЗОВАНО СВЫШЕ 15 ПРОЕКТОВ ПО
+                СЛАБОТОЧНЫМ СИСТЕМАМ
+              </Typography>
+              <div className="flex justify-center">
+                <button className={"btn-secondary"}>
+                  <Link href={"/projects"}>ОСТАВИТЬ ЗАЯВКУ</Link>
+                </button>
+              </div>
             </div>
 
-            <div className="bg-green-300 hover:shadow-2xl">Проектирование</div>
+            <div className="bg-green-300 hover:shadow-2xl h-52">Проектирование</div>
             <div className="bg-yellow-300 hover:shadow-2xl">
               Фото структурных схем
             </div>
 
             <div className="bg-yellow-300 hover:shadow-2xl">Фото гарантии</div>
-            <div className="bg-green-300 hover:shadow-2xl">
+            <div className="bg-green-300 hover:shadow-2xl h-52">
               Гарантия на работы
             </div>
 
-            <div className="bg-green-300 hover:shadow-2xl">
+            <div className="bg-green-300 hover:shadow-2xl h-52">
               Раннее бронирование
             </div>
             <div className="bg-yellow-300 hover:shadow-2xl">Фото календаря</div>
