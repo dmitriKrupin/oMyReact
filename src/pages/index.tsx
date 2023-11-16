@@ -22,21 +22,26 @@ export default function Home({
       </Head>
       <div className={"main"}>
         <>
-          <div className="grid grid-cols-2 gap-4 text-center">
-            <AllPhotoProjects />
-            <div className='h-52'>
-              <Typography className="flex justify-center item-middle">
-                ЗА ПЕРИОД С 2018 ГОДА РЕАЛИЗОВАНО СВЫШЕ 15 ПРОЕКТОВ ПО
-                СЛАБОТОЧНЫМ СИСТЕМАМ
-              </Typography>
+          <div className="grid md:grid-cols-2 gap-4 text-center">
+            <div className="h-52">
+              <AllPhotoProjects />
+            </div>
+            <div className="h-full md:h-52">
               <div className="flex justify-center">
                 <button className={"btn-secondary"}>
-                  <Link href={"/projects"}>ОСТАВИТЬ ЗАЯВКУ</Link>
+                  <Link
+                    href={"/authorizations"}
+                    className="text-xs md:text-base"
+                  >
+                    ОСТАВИТЬ ЗАЯВКУ
+                  </Link>
                 </button>
               </div>
             </div>
 
-            <div className="bg-green-300 hover:shadow-2xl h-52">Проектирование</div>
+            <div className="bg-green-300 hover:shadow-2xl h-52">
+              Проектирование
+            </div>
             <div className="bg-yellow-300 hover:shadow-2xl">
               Фото структурных схем
             </div>

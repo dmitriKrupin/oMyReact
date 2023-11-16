@@ -274,3 +274,7 @@ export default function AuthorizationPage() {
     </div>
   );
 }
+function useState(arg0: boolean): [any, any] {
+  throw new Error("Function not implemented.");
+}
+

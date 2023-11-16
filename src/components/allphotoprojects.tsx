@@ -56,21 +56,17 @@ export default function AllPhotoProjects() {
   return (
     <Carousel loop={true}>
       {reviews.map((item) => (
-        <div key={item.name}>
+        <div key={item.name} className="h-full md:h-56">
           <Image
             src={item.image}
             alt={item.alt}
             fill={true}
-            className="rounded-3xl max-h-[38rem] h-56"
+            className="rounded-3xl max-h-[38rem] h-full md:h-56"
             placeholder="blur"
           ></Image>
           <div className="absolute inset-0 bg-black/50 rounded-3xl">
             <div className={"absolute text-center inset-x-0 bottom-10"}>
-              <div className="flex justify-center">
-                <button className={"btn-secondary"}>
-                  <Link href={"/projects"}>{item.name}</Link>
-                </button>
-              </div>
+              <div className="flex justify-center bg-white">{item.name}</div>
             </div>
           </div>
         </div>
