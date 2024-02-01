@@ -5,6 +5,9 @@ import { GetStaticProps } from "next";
 import AllPhotoProjects from "@/components/allphotoprojects";
 import Link from "next/link";
 import { Button, Typography } from "@material-tailwind/react";
+import Constructions from "@/components/constructions";
+import Calendar from "@/components/calendar";
+import Knowledges from "@/components/knowledges";
 
 export default function Home({
   allPostsData,
@@ -20,66 +23,21 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <div className={"main"}>
+      <div /*className={"main"}*/>
         <>
-          <div className="grid md:grid-cols-2 gap-4 text-center">
-            <div className="h-52">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
+            <div className="">
               <AllPhotoProjects />
             </div>
-            <div className="h-full md:h-52">
-              <div className="flex justify-center">
-                <button className={"btn-secondary"}>
-                  <Link
-                    href={"/authorizations"}
-                    className="text-xs md:text-base"
-                  >
-                    ОСТАВИТЬ ЗАЯВКУ
-                  </Link>
-                </button>
-              </div>
+            <div className="">
+              <Calendar />
             </div>
-
-            <div className="bg-green-300 hover:shadow-2xl h-52">
-              Проектирование
+            <div className="">
+              <Constructions />
             </div>
-            <div className="bg-yellow-300 hover:shadow-2xl">
-              Фото структурных схем
-            </div>
-
-            <div className="bg-yellow-300 hover:shadow-2xl">Фото гарантии</div>
-            <div className="bg-green-300 hover:shadow-2xl h-52">
-              Гарантия на работы
-            </div>
-
-            <div className="bg-green-300 hover:shadow-2xl h-52">
-              Раннее бронирование
-            </div>
-            <div className="bg-yellow-300 hover:shadow-2xl">Фото календаря</div>
           </div>
         </>
       </div>
-      {/*<div className={'main'}>
-                <section className={'headingMd'}>
-                    <p>
-                        (This is a sample website - you’ll be building a site like this in{' '}
-                        <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-                    </p>
-                </section>
-                <section className={`headingMd padding1px`}>
-                    <h2 className={'headingLg'}>Blog</h2>
-                    <ul className={'list'}>
-                        {allPostsData.map(({id, date, title}) => (
-                            <li className={'listItem'} key={id}>
-                                <Link href={`/posts/${id}`}>{title}</Link>
-                                <br/>
-                                <small className={'lightText'}>
-                                    <Date dateString={date}/>
-                                </small>
-                            </li>
-                        ))}
-                    </ul>
-                </section>
-            </div>*/}
     </Layout>
   );
 }

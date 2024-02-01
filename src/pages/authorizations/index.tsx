@@ -175,6 +175,7 @@ export default function AuthorizationPage() {
                       containerProps={{ className: "-ml-2.5" }}
                     />
                     <Button
+                      color="blue"
                       className="mt-6"
                       fullWidth
                       onClick={authenticateUser}
@@ -253,6 +254,7 @@ export default function AuthorizationPage() {
                       containerProps={{ className: "-ml-2.5" }}
                     />
                     <Button
+                      color="blue"
                       className="mt-6"
                       fullWidth
                       onClick={registerNewUser}
@@ -277,4 +279,3 @@ export default function AuthorizationPage() {
 function useState(arg0: boolean): [any, any] {
   throw new Error("Function not implemented.");
 }
-

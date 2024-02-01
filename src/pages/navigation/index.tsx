@@ -69,7 +69,9 @@ export default function Navigation() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button onClick={openModal}>{nameOfLoginButton}</Button>
+          <Button color="blue" onClick={openModal}>
+            {nameOfLoginButton}
+          </Button>
 
           <>
             <Transition appear show={isOpen} as={Fragment}>
@@ -145,6 +147,7 @@ export default function Navigation() {
               </div>
               <div className="lg:flex lg:flex-1 lg:justify-end">
                 <Button
+                  color="blue"
                   onClick={() => {
                     setMobileMenuOpen(false);
                     openModal();
