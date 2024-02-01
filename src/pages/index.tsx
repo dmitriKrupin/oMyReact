@@ -3,11 +3,8 @@ import Layout, { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "@/lib/posts";
 import { GetStaticProps } from "next";
 import AllPhotoProjects from "@/components/allphotoprojects";
-import Link from "next/link";
-import { Button, Typography } from "@material-tailwind/react";
 import Constructions from "@/components/constructions";
 import Calendar from "@/components/calendar";
-import Knowledges from "@/components/knowledges";
 
 export default function Home({
   allPostsData,
