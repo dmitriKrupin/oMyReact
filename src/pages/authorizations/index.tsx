@@ -105,7 +105,7 @@ export default function AuthorizationPage() {
       </Head>
       <div className={"border-gray-300"}>
         <Card color="transparent" shadow={false}>
-          <CardBody>
+          <CardBody className="p-0">
             <Tabs value={type} className="pt-4 overflow-visible">
               <TabsHeader className="relative z-0">
                 <Tab value="sighIn" onClick={() => setType("sighIn")}>
