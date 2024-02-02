@@ -83,6 +83,7 @@ export default function AccessPage() {
 
     return (
       <Button
+        color="blue"
         onClick={() => {
           if (!isLastStep) {
             setActiveStep((cur) => cur + 1);
@@ -182,6 +183,7 @@ export default function AccessPage() {
 
         <div className="mt-8 flex justify-between">
           <Button
+            color="blue"
             onClick={() => {
               if (!isFirstStep) {
                 setActiveStep((cur) => cur - 1);

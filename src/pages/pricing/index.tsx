@@ -9,10 +9,12 @@ import { Button } from "@material-tailwind/react";
 
 const calculateSystems = [
   {
+    id: 0,
     name: "ВИДЕОНАБЛЮДЕНИЕ",
     page: <CctvPage />,
   },
   {
+    id: 1,
     name: "КОНТРОЛЬ ДОСТУПА",
     page: <AccessPage />,
   },
@@ -27,9 +29,10 @@ export default function PricingPage() {
   }
 
   function openModal(event: any) {
-    let innerHtml = event.target.innerHTML;
+    let value = event.target.value;
+    console.log(value);
     calculateSystems.forEach(({ name, page }) => {
-      if (innerHtml === name) {
+      if (value === name) {
         setService(page);
       }
     });
@@ -45,7 +48,13 @@ export default function PricingPage() {
         <>
           {calculateSystems.map(({ name }) => (
             <div className="flex items-center justify-center p-10" key={name}>
-              <Button type="button" onClick={openModal} color="blue">
+              <Button
+                value={name}
+                color="blue"
+                type="button"
+                onClick={openModal}
+                className=""
+              >
                 {name}
               </Button>
             </div>
