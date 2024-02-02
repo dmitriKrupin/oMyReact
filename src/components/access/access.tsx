@@ -8,6 +8,8 @@ import FourthStep from "../access/fourthStep";
 import ResultStep from "./result/resultStep";
 import FifthStep from "../access/fifthStep";
 import SixthStep from "../access/sixthStep";
+import Appointment from "../appointment";
+import AuthorizationPage from "@/pages/authorizations";
 
 export default function AccessPage() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -63,20 +65,48 @@ export default function AccessPage() {
       stepForOutput: <SixthStep />,
     },
     {
+      id: "appointment-id",
+      stepForVisible: "appointmentStep",
+      numberOfStep: 6,
+      stepForOutput: <Appointment />,
+    },
+    {
       id: "result-id",
       stepForVisible: "resultStep",
-      numberOfStep: 6,
+      numberOfStep: 7,
       stepForOutput: <ResultStep />,
     },
   ];
 
   function getSubmitOrForwardNameOfButton() {
-    //todo: добавить изменение названия кнопки с получиь расчет на СОХРАНИТЬ
-    // и добавить уведомление, что черновик сохранен в личном кабинете
-    if (isLastStep) {
+    if (activeStep + 1 === 7) {
       return (
-        <Button color="blue" onClick={() => setStepForOutput(<ResultStep />)}>
-          СОХРАНИТЬ
+        <Button
+          size="sm"
+          color="blue"
+          value="Выбрать время"
+          onClick={() => {
+            setActiveStep((cur) => cur + 1);
+            setStepForOutput(<ResultStep />);
+          }}
+        >
+          Выбрать время
+        </Button>
+      );
+    }
+
+    if (isLastStep && activeStep + 1 == 8) {
+      console.log();
+      return (
+        <Button
+          size="sm"
+          color="blue"
+          value="Сохранить"
+          onClick={() => {
+            setStepForOutput(<AuthorizationPage />);
+          }}
+        >
+          Сохранить
         </Button>
       );
     }
@@ -84,6 +114,8 @@ export default function AccessPage() {
     return (
       <Button
         color="blue"
+        size="sm"
+        value="Вперед"
         onClick={() => {
           if (!isLastStep) {
             setActiveStep((cur) => cur + 1);
@@ -96,58 +128,10 @@ export default function AccessPage() {
         }}
         disabled={isLastStep}
       >
-        ВПЕРЕД
+        Вперед
       </Button>
     );
   }
-
-  const STEPPER = () => (
-    <Stepper
-      className="mt-8"
-      activeStep={activeStep}
-      isLastStep={(value) => {
-        console.log("STEPPER " + activeStep);
-        setIsLastStep(value);
-      }}
-      isFirstStep={(value) => setIsFirstStep(value)}
-    >
-      {arrayOfIdsForSteps.map(({ id, stepForVisible, numberOfStep }) => (
-        <Step key={id} id={stepForVisible} onClick={getPageAccessForStep}>
-          {numberOfStep + 1}
-        </Step>
-      ))}
-    </Stepper>
-  );
-
-  const PAGINATION = () => (
-    <div className="flex justify-center">
-      <Typography color="gray" className="font-normal">
-        <strong className="text-blue-500 rounded-full">{activeStep + 1}</strong>{" "}
-        - <strong className="text-blue-500">{arrayOfIdsForSteps.length}</strong>
-      </Typography>
-    </div>
-  );
-
-  const [paginationOrStepper, setPaginationOrStepper] = React.useState(STEPPER);
-
-  const changePagination = () => {
-    console.log(activeStep);
-    if (window.innerWidth > 768) {
-      setPaginationOrStepper(STEPPER);
-    } else {
-      setPaginationOrStepper(PAGINATION);
-    }
-  };
-
-  React.useEffect(() => {
-    const onResize = () => changePagination();
-
-    window.addEventListener("resize", onResize);
-
-    return () => {
-      window.removeEventListener("resize", onResize);
-    };
-  });
 
   return (
     <div className={"calculator"}>
@@ -156,10 +140,10 @@ export default function AccessPage() {
       </Head>
       <div>
         <div className={"w-full h-full py-4 px-0 p-2"}>
-          <div>{stepForOutput}</div>
+          <div className="flex flex-col justify-center items-center">
+            {stepForOutput}
+          </div>
         </div>
-
-        {/*paginationOrStepper*/}
 
         <Stepper
           className="mt-8"
@@ -184,6 +168,8 @@ export default function AccessPage() {
         <div className="mt-8 flex justify-between">
           <Button
             color="blue"
+            size="sm"
+            value="Назад"
             onClick={() => {
               if (!isFirstStep) {
                 setActiveStep((cur) => cur - 1);
@@ -196,8 +182,9 @@ export default function AccessPage() {
             }}
             disabled={isFirstStep}
           >
-            НАЗАД
+            Назад
           </Button>
+
           {getSubmitOrForwardNameOfButton()}
         </div>
       </div>

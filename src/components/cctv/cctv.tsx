@@ -6,6 +6,8 @@ import ThirdStep from "./thirdStep";
 import FourthStep from "./fourthStep";
 import FirstStep from "./firstStep";
 import ResultStep from "@/components/cctv/result/resultStep";
+import Appointment from "../appointment";
+import AuthorizationPage from "@/pages/authorizations";
 
 export default function CctvPage() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -49,9 +51,15 @@ export default function CctvPage() {
       stepForOutput: <FourthStep />,
     },
     {
+      id: "appointment-id",
+      stepForVisible: "appointmentStep",
+      numberOfStep: 4,
+      stepForOutput: <Appointment />,
+    },
+    {
       id: "result-id",
       stepForVisible: "resultStep",
-      numberOfStep: 4,
+      numberOfStep: 5,
       stepForOutput: <ResultStep />,
     },
   ];
@@ -59,10 +67,34 @@ export default function CctvPage() {
   function getSubmitOrForwardNameOfButton() {
     //todo: добавить изменение названия кнопки с получиь расчет на СОХРАНИТЬ
     // и добавить уведомление, что черновик сохранен в личном кабинете
-    if (isLastStep) {
+    if (activeStep + 1 === 5) {
       return (
-        <Button color="blue" onClick={() => setStepForOutput(<ResultStep />)}>
-          СОХРАНИТЬ
+        <Button
+          size="sm"
+          color="blue"
+          value="Выбрать время"
+          onClick={() => {
+            setActiveStep((cur) => cur + 1);
+            setStepForOutput(<ResultStep />);
+          }}
+        >
+          Выбрать время
+        </Button>
+      );
+    }
+
+    if (isLastStep && activeStep + 1 == 6) {
+      console.log();
+      return (
+        <Button
+          size="sm"
+          color="blue"
+          value="Сохранить"
+          onClick={() => {
+            setStepForOutput(<AuthorizationPage />);
+          }}
+        >
+          Сохранить
         </Button>
       );
     }
@@ -70,6 +102,7 @@ export default function CctvPage() {
     return (
       <Button
         color="blue"
+        size="sm"
         onClick={() => {
           if (!isLastStep) {
             setActiveStep((cur) => cur + 1);
@@ -94,7 +127,9 @@ export default function CctvPage() {
       </Head>
       <div>
         <div className={"w-full h-full py-4 px-0 p-2"}>
-          <div>{stepForOutput}</div>
+          <div className="flex flex-col justify-center items-center">
+            {stepForOutput}
+          </div>
         </div>
 
         <Stepper
@@ -118,6 +153,7 @@ export default function CctvPage() {
         <div className="mt-8 flex justify-between">
           <Button
             color="blue"
+            size="sm"
             onClick={() => {
               if (!isFirstStep) {
                 setActiveStep((cur) => cur - 1);
