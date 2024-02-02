@@ -378,7 +378,7 @@ export default function ThirdStep() {
   return (
     <div
       className={
-        "grid grid-rows-3 md:grid-rows-3 grid-flow-col gap-4 items-center text-center"
+        "grid grid-rows-3 md:grid-rows-3 grid-flow-col gap-4 items-center text-center w-full"
       }
     >
       <div className="grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-4">

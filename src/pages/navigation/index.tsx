@@ -9,8 +9,9 @@ import { Button } from "@material-tailwind/react";
 
 const navigation = [
   { name: "ПРОЕКТЫ", href: "/projects" },
-  { name: "СТОИМОСТЬ", href: "/pricing" },
+  { name: "ЦЕНЫ", href: "/pricing" },
   { name: "ОТЗЫВЫ", href: "/reviews" },
+  { name: "ЗНАНИЯ", href: "/knowledge" },
 ];
 
 export default function Navigation() {
@@ -68,7 +69,9 @@ export default function Navigation() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Button onClick={openModal}>{nameOfLoginButton}</Button>
+          <Button color="blue" onClick={openModal}>
+            {nameOfLoginButton}
+          </Button>
 
           <>
             <Transition appear show={isOpen} as={Fragment}>
@@ -144,6 +147,7 @@ export default function Navigation() {
               </div>
               <div className="lg:flex lg:flex-1 lg:justify-end">
                 <Button
+                  color="blue"
                   onClick={() => {
                     setMobileMenuOpen(false);
                     openModal();
