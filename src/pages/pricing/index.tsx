@@ -5,6 +5,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import CctvPage from "../../components/cctv/cctv";
 import AccessPage from "@/components/access/access";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import { Button } from "@material-tailwind/react";
 
 const calculateSystems = [
   {
@@ -44,15 +45,9 @@ export default function PricingPage() {
         <>
           {calculateSystems.map(({ name }) => (
             <div className="flex items-center justify-center p-10" key={name}>
-              <button
-                type="button"
-                onClick={openModal}
-                className="rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white
-                                hover:bg-opacity-30 focus:outline-none focus-visible:ring-2
-                                focus-visible:ring-white focus-visible:ring-opacity-75"
-              >
+              <Button type="button" onClick={openModal} color="blue">
                 {name}
-              </button>
+              </Button>
             </div>
           ))}
 

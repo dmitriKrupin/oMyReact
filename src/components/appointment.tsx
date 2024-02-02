@@ -1,4 +1,5 @@
-import { Button } from "@material-tailwind/react";
+import { Button, Typography } from "@material-tailwind/react";
+import Link from "next/link";
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
@@ -14,10 +15,9 @@ const Appointment = () => {
 
   return (
     <>
-      <div className="flex justify-center">Календарь записи на работы</div>
-      <div className="grid grid-rows-3 grid-flow-col gap-4">
+      <div className="flex flex-col justify-center rounded-3xl h-[15rem] w-[15rem] md:h-[38rem] md:w-[38rem]">
         <Calendar
-          className="row-span-3"
+          className=""
           onChange={
             handleDateChange
             //console.log(returnValue);
@@ -27,9 +27,11 @@ const Appointment = () => {
           returnValue="range"
           selectRange={true}
         />
-        <Button className="col-span-2" color="blue">
-          ВЫБЕРИТЕ ДАТУ
-        </Button>
+        <div className="flex justify-center m-1 md:m-16">
+          <Button color="white">
+            <Link href={"/authorizations"}>Запланировать работы</Link>
+          </Button>
+        </div>
       </div>
     </>
   );

@@ -162,7 +162,7 @@ export default function ProjectsPage() {
         <title>{"K-12.PRO | База знаний"}</title>
       </Head>
       <Tabs value="апс" orientation="vertical">
-        <TabsHeader className="w-32">
+        <TabsHeader className="w-15 md:w-32">
           {data.map(({ label, value }) => (
             <Tab key={value} value={value}>
               {label}

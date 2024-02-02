@@ -4,7 +4,6 @@ import { getSortedPostsData } from "@/lib/posts";
 import { GetStaticProps } from "next";
 import AllPhotoProjects from "@/components/allphotoprojects";
 import Constructions from "@/components/constructions";
-import Calendar from "@/components/calendar";
 
 export default function Home({
   allPostsData,
@@ -25,9 +24,6 @@ export default function Home({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
             <div className="">
               <AllPhotoProjects />
-            </div>
-            <div className="">
-              <Calendar />
             </div>
             <div className="">
               <Constructions />

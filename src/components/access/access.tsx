@@ -75,7 +75,7 @@ export default function AccessPage() {
     // и добавить уведомление, что черновик сохранен в личном кабинете
     if (isLastStep) {
       return (
-        <Button onClick={() => setStepForOutput(<ResultStep />)}>
+        <Button color="blue" onClick={() => setStepForOutput(<ResultStep />)}>
           СОХРАНИТЬ
         </Button>
       );

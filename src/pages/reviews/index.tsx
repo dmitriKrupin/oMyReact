@@ -1,6 +1,6 @@
 import Layout from '../../components/layout';
 import Head from 'next/head';
-import CarouselReviews from '../../components/carousel';
+import CarouselReviews from '../../components/carouselReviews';
 
 export default function ReviewsPage() {
     return (

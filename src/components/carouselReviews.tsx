@@ -1,4 +1,4 @@
-import { Carousel, Typography } from '@material-tailwind/react';
+import { Button, Carousel, Typography } from '@material-tailwind/react';
 import Image from 'next/image';
 import Img01 from '@/assets/reviews/image-01.jpg';
 import Img02 from '@/assets/reviews/image-02.jpg';
@@ -48,9 +48,9 @@ export default function CarouselReviews() {
                                     <div className={'text-xs sm:text-base'}>{item.description}</div>
                                 </Typography>
                                 <div className="flex justify-left ml-16 mb-6">
-                                    <button className={'btn-secondary'}>
+                                    <Button color='white'>
                                         <Link href={'/projects'}>Все проекты</Link>
-                                    </button>
+                                    </Button>
                                 </div>
                             </div>
                         </div>

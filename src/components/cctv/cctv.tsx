@@ -61,7 +61,7 @@ export default function CctvPage() {
     // и добавить уведомление, что черновик сохранен в личном кабинете
     if (isLastStep) {
       return (
-        <Button onClick={() => setStepForOutput(<ResultStep />)}>
+        <Button color="blue" onClick={() => setStepForOutput(<ResultStep />)}>
           СОХРАНИТЬ
         </Button>
       );
@@ -69,6 +69,7 @@ export default function CctvPage() {
 
     return (
       <Button
+        color="blue"
         onClick={() => {
           if (!isLastStep) {
             setActiveStep((cur) => cur + 1);
@@ -116,6 +117,7 @@ export default function CctvPage() {
 
         <div className="mt-8 flex justify-between">
           <Button
+            color="blue"
             onClick={() => {
               if (!isFirstStep) {
                 setActiveStep((cur) => cur - 1);

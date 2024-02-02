@@ -38,11 +38,12 @@ export default function Constructions() {
               className="rounded-3xl max-h-[38rem] h-[15rem] w-[15rem] md:h-[38rem] md:w-[38rem]"
             ></Image>
             <div className="absolute inset-0 bg-black/50 rounded-3xl">
-              <div className={"absolute text-center inset-x-0 bottom-10"}>
+              <div className={"grid grid-rows-3"}>
+                
                 <Typography
                   variant="h6"
                   color="white"
-                  className={"text-center md:text-left m-0 md:m-16"}
+                  className={"row-span-2 text-center md:text-left m-5 md:m-16"}
                 >
                   <div className="text-md md:text-2xl">{item.name}</div>
                   <br></br>
@@ -52,11 +53,13 @@ export default function Constructions() {
                     {item.description}
                   </div>
                 </Typography>
-                <div className="flex justify-center m-1 md:m-16">
+
+                <div className='m-1 md:m-16'>
                   <Button color="white">
-                    <Link href={"/projects"}>Заказать проектирование</Link>
+                    <Link href={"/pricing"}>Заказать проект</Link>
                   </Button>
                 </div>
+
               </div>
             </div>
           </div>
