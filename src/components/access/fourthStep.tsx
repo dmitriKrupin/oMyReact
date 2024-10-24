@@ -194,7 +194,7 @@ export default function FourthStep() {
 
   return (
     <>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 w-full">
         <Select
           label={"Выберите модель замка:"}
           value={lock.lockInfo.model}
@@ -214,7 +214,7 @@ export default function FourthStep() {
                 size="xs"
                 onClick={openDetailByAvatar}
               />
-              {" " + name + " " + model + " " + manufacture}
+              {" " + model + " " + manufacture}
               <span className="group/edit invisible hover:bg-slate-200 group-hover/item:visible">
                 <button className="group-hover/edit:text-blue-500 font-bold align-middle">
                   <svg

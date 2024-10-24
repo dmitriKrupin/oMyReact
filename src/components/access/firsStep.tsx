@@ -142,7 +142,7 @@ export default function FirstStep() {
   }
 
   return (
-    <div className={"flex flex-col justify-center items-center gap-4"}>
+    <div className={"flex flex-col justify-center items-center gap-4 w-full"}>
       <Select
         label={"Выберите модель контроллера:"}
         value={accessController}
@@ -165,7 +165,7 @@ export default function FirstStep() {
                 size="xs"
                 onClick={openDetailByAvatar}
               />
-              {" " + name + " " + model + " " + manufacture}
+              {" " + model + " " + manufacture}
               <span className="group/edit invisible hover:bg-slate-200 group-hover/item:visible">
                 <button
                   className="group-hover/edit:text-blue-500 font-bold align-middle"

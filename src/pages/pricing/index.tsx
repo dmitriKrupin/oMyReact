@@ -5,13 +5,16 @@ import { Dialog, Transition } from "@headlessui/react";
 import CctvPage from "../../components/cctv/cctv";
 import AccessPage from "@/components/access/access";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import { Button } from "@material-tailwind/react";
 
 const calculateSystems = [
   {
+    id: 0,
     name: "ВИДЕОНАБЛЮДЕНИЕ",
     page: <CctvPage />,
   },
   {
+    id: 1,
     name: "КОНТРОЛЬ ДОСТУПА",
     page: <AccessPage />,
   },
@@ -26,9 +29,10 @@ export default function PricingPage() {
   }
 
   function openModal(event: any) {
-    let innerHtml = event.target.innerHTML;
+    let value = event.target.value;
+    console.log(value);
     calculateSystems.forEach(({ name, page }) => {
-      if (innerHtml === name) {
+      if (value === name) {
         setService(page);
       }
     });
@@ -44,15 +48,15 @@ export default function PricingPage() {
         <>
           {calculateSystems.map(({ name }) => (
             <div className="flex items-center justify-center p-10" key={name}>
-              <button
+              <Button
+                value={name}
+                color="blue"
                 type="button"
                 onClick={openModal}
-                className="rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white
-                                hover:bg-opacity-30 focus:outline-none focus-visible:ring-2
-                                focus-visible:ring-white focus-visible:ring-opacity-75"
+                className=""
               >
                 {name}
-              </button>
+              </Button>
             </div>
           ))}
 

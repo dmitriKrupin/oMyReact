@@ -482,7 +482,9 @@ export default function SecondStep() {
   }
 
   return (
-    <div className={"grid grid-rows-4 md:grid-rows-2 grid-flow-col gap-4"}>
+    <div
+      className={"grid grid-rows-4 md:grid-rows-2 grid-flow-col gap-4 w-full"}
+    >
       <div className="flex flex-col gap-6">
         <Checkbox
           label="Считыватель"
